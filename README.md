@@ -1,2 +1,35 @@
-# 42_Portugal_GameJam2026-2
-Game jam project developed by 42 Portugal-Lisbon students for GameJam 2026, edition #2.
+# 42 Portugal GameJam #2
+
+**Event:** July 3–5, 2026  
+**Theme:** TBA at Opening Ceremony (July 3rd, 20:00)
+
+---
+
+## Team
+
+- hcarrasq
+- diosoare
+- pbongiov
+- psilva-p
+
+## Rules
+
+- Teams of 1–4 members
+- Game must run in a web browser (HTML export, `index.html` required)
+- Theme application is mandatory
+- AI-generated assets must be disclosed in the game description
+- Only use assets you made or are legally allowed to use
+
+## Evaluation
+
+| Criterion | Weight |
+|---|---|
+| Playability | 30% |
+| Work Complexity | 15% |
+| Originality | 20% |
+| Artistic Style | 20% |
+| Music & Sound | 10% |
+| Judges' Criteria | 5% |
+
+---
+42 Lisbon
