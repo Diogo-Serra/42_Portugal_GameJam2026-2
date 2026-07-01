@@ -43,6 +43,6 @@
 - [Godot Documentation](https://docs.godotengine.org/en/stable/)
 - [GDScript Documentation](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/index.html)
 - [How to make a Video Game - Godot Beginner Tutorial](https://www.youtube.com/watch?v=LOhfqjmasi0&t=459s)
-
+- Sprites: [https://brackeysgames.itch.io/brackeys-platformer-bundle]
 ---
 42 Lisbon
