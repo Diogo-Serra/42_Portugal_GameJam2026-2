@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://dr5f6broahr8m"]
 
 [ext_resource type="Texture2D" uid="uid://c72f1aw0yyuvy" path="res://assets/tilesets/TileSet_V1_water.png" id="1_ne1wp"]
-[ext_resource type="PackedScene" uid="uid://b4jdho645mer7" path="res://scenes/start_area.tscn" id="2_ilq1s"]
-[ext_resource type="PackedScene" uid="uid://uy6oycr12i31" path="res://scenes/chest.tscn" id="3_qprrj"]
+[ext_resource type="PackedScene" uid="uid://b4jdho645mer7" path="res://scenes/region/start_area.tscn" id="2_ilq1s"]
+[ext_resource type="PackedScene" uid="uid://uy6oycr12i31" path="res://scenes/objects/chest.tscn" id="3_qprrj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilq1s"]
 texture = ExtResource("1_ne1wp")
