@@ -1,3 +1,889 @@
-[gd_scene format=3 uid="uid://c1k7211ja0u74"]
+[gd_scene format=4 uid="uid://c1k7211ja0u74"]
+
+[ext_resource type="PackedScene" uid="uid://soy8pkv1uv08" path="res://scenes/grass.tscn" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://wix7g42hodxl" path="res://scenes/stone_tile_2_4.tscn" id="2_iywne"]
+[ext_resource type="PackedScene" uid="uid://dty7gb66ou1km" path="res://scenes/player.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://q4d7x3tp3mex" path="res://scenes/coffin.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://01l27fxg347y" path="res://scenes/pillar.tscn" id="5_p57ef"]
+[ext_resource type="PackedScene" uid="uid://c1m10tovo5vdo" path="res://scenes/saint.tscn" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://c0ymsi8latujs" path="res://scenes/tree_1.tscn" id="7_vtaks"]
+[ext_resource type="PackedScene" uid="uid://dbmsoscag0xth" path="res://scenes/tree_2.tscn" id="8_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://bb8sl03rxxycy" path="res://scenes/bush_1.tscn" id="9_dinhu"]
+[ext_resource type="PackedScene" uid="uid://djckags64kbkl" path="res://scenes/altar_chest.tscn" id="10_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://mvxdgf5h2ese" path="res://scenes/bush_2.tscn" id="10_kvuet"]
 
 [node name="Game" type="Node2D" unique_id=1747429142]
+
+[node name="Grass" parent="." unique_id=1293400234 instance=ExtResource("1_yqjtg")]
+
+[node name="tree141" parent="Grass" unique_id=728826270 instance=ExtResource("7_vtaks")]
+position = Vector2(-521, 3677)
+
+[node name="tree142" parent="Grass" unique_id=745364664 instance=ExtResource("8_kvpfn")]
+position = Vector2(-231, 3846)
+
+[node name="bush85" parent="Grass" unique_id=357128495 instance=ExtResource("10_kvuet")]
+position = Vector2(-212, 3660)
+
+[node name="bush86" parent="Grass" unique_id=340611293 instance=ExtResource("9_dinhu")]
+position = Vector2(71, 3910)
+
+[node name="bush87" parent="Grass" unique_id=1615716483 instance=ExtResource("10_kvuet")]
+position = Vector2(81, 3670)
+
+[node name="bush88" parent="Grass" unique_id=1178287348 instance=ExtResource("9_dinhu")]
+position = Vector2(248, 3493)
+
+[node name="bush89" parent="Grass" unique_id=2064034422 instance=ExtResource("10_kvuet")]
+position = Vector2(371, 3799)
+
+[node name="bush90" parent="Grass" unique_id=1319067091 instance=ExtResource("10_kvuet")]
+position = Vector2(-551, 4085)
+
+[node name="bush91" parent="Grass" unique_id=331916949 instance=ExtResource("9_dinhu")]
+position = Vector2(-327, 4148)
+
+[node name="tree143" parent="Grass" unique_id=2028185611 instance=ExtResource("7_vtaks")]
+position = Vector2(-535, 4226)
+
+[node name="tree144" parent="Grass" unique_id=1221087007 instance=ExtResource("8_kvpfn")]
+position = Vector2(-662, 4584)
+
+[node name="tree145" parent="Grass" unique_id=1134062200 instance=ExtResource("7_vtaks")]
+position = Vector2(-278, 4431)
+
+[node name="bush92" parent="Grass" unique_id=129613375 instance=ExtResource("10_kvuet")]
+position = Vector2(-94, 4301)
+
+[node name="bush93" parent="Grass" unique_id=254997938 instance=ExtResource("9_dinhu")]
+position = Vector2(130, 4450)
+
+[node name="bush94" parent="Grass" unique_id=594242429 instance=ExtResource("9_dinhu")]
+position = Vector2(24, 4629)
+
+[node name="bush95" parent="Grass" unique_id=1930697850 instance=ExtResource("10_kvuet")]
+position = Vector2(508, 4601)
+
+[node name="tree146" parent="Grass" unique_id=56321981 instance=ExtResource("7_vtaks")]
+position = Vector2(394, 4252)
+
+[node name="tree147" parent="Grass" unique_id=1833898796 instance=ExtResource("8_kvpfn")]
+position = Vector2(816, 4625)
+
+[node name="tree148" parent="Grass" unique_id=1580486717 instance=ExtResource("7_vtaks")]
+position = Vector2(819, 4214)
+
+[node name="bush96" parent="Grass" unique_id=1052416729 instance=ExtResource("9_dinhu")]
+position = Vector2(529, 3936)
+
+[node name="bush97" parent="Grass" unique_id=460295298 instance=ExtResource("10_kvuet")]
+position = Vector2(816, 3969)
+
+[node name="bush98" parent="Grass" unique_id=573833166 instance=ExtResource("9_dinhu")]
+position = Vector2(927, 3670)
+
+[node name="tree45" parent="Grass" unique_id=393308380 instance=ExtResource("8_kvpfn")]
+position = Vector2(3612, 2604)
+
+[node name="bush20" parent="Grass" unique_id=1697582450 instance=ExtResource("10_kvuet")]
+position = Vector2(3977, 2698)
+
+[node name="bush21" parent="Grass" unique_id=1987088627 instance=ExtResource("10_kvuet")]
+position = Vector2(4661, 2732)
+
+[node name="tree46" parent="Grass" unique_id=1211945886 instance=ExtResource("8_kvpfn")]
+position = Vector2(5476, 2740)
+
+[node name="tree47" parent="Grass" unique_id=703115576 instance=ExtResource("8_kvpfn")]
+position = Vector2(4620, 2928)
+
+[node name="bush22" parent="Grass" unique_id=717415934 instance=ExtResource("10_kvuet")]
+position = Vector2(4311, 2928)
+
+[node name="bush23" parent="Grass" unique_id=1112482519 instance=ExtResource("9_dinhu")]
+position = Vector2(3826, 3003)
+
+[node name="bush24" parent="Grass" unique_id=851008214 instance=ExtResource("10_kvuet")]
+position = Vector2(4955, 2838)
+
+[node name="tree48" parent="Grass" unique_id=300418426 instance=ExtResource("7_vtaks")]
+position = Vector2(5017, 3143)
+
+[node name="tree49" parent="Grass" unique_id=2075459723 instance=ExtResource("8_kvpfn")]
+position = Vector2(5595, 3088)
+
+[node name="tree50" parent="Grass" unique_id=1283801430 instance=ExtResource("8_kvpfn")]
+position = Vector2(4605, 3377)
+
+[node name="tree51" parent="Grass" unique_id=1447842912 instance=ExtResource("7_vtaks")]
+position = Vector2(4094, 3221)
+
+[node name="tree52" parent="Grass" unique_id=1638444777 instance=ExtResource("7_vtaks")]
+position = Vector2(3604, 3293)
+
+[node name="tree53" parent="Grass" unique_id=2093781123 instance=ExtResource("8_kvpfn")]
+position = Vector2(3932, 3583)
+
+[node name="tree54" parent="Grass" unique_id=1853080994 instance=ExtResource("7_vtaks")]
+position = Vector2(3639, 3626)
+
+[node name="tree55" parent="Grass" unique_id=424219446 instance=ExtResource("8_kvpfn")]
+position = Vector2(4322, 3561)
+
+[node name="bush25" parent="Grass" unique_id=287745782 instance=ExtResource("9_dinhu")]
+position = Vector2(5291, 3520)
+
+[node name="bush26" parent="Grass" unique_id=1209263035 instance=ExtResource("10_kvuet")]
+position = Vector2(5714, 3455)
+
+[node name="tree56" parent="Grass" unique_id=230919930 instance=ExtResource("7_vtaks")]
+position = Vector2(4917, 3740)
+
+[node name="tree57" parent="Grass" unique_id=250932300 instance=ExtResource("8_kvpfn")]
+position = Vector2(4477, 3878)
+
+[node name="tree30" parent="Grass" unique_id=1169778428 instance=ExtResource("7_vtaks")]
+position = Vector2(2938, 334)
+tile_map_data = PackedByteArray("AAAEAAQAAAABAAAAAABm/y4AAAAAAAAAAABq/zMAAAAAAAAAAABq/1kAAAAAAAAAAABq/38AAAAAAAAAAABr/zoAAAAAAAAAAABr/0oAAAAAAAAAAABr/2AAAAAAAAAAAABr/3AAAAAAAAAAAABr/4YAAAAAAAAAAABv/0AAAAAAAAAAAABv/0UAAAAAAAAAAABv/2YAAAAAAAAAAABv/2sAAAAAAAAAAABv/4wAAAAAAAAAAABv/5EAAAAAAAAAAABy/ysAAAAAAAAAAABy/1EAAAAAAAAAAABy/3cAAAAAAAAAAAB1/zoAAAAAAAAAAAB1/2AAAAAAAAAAAAB1/4YAAAAAAAAAAAB2/0oAAAAAAAAAAAB2/3AAAAAAAAAAAAB5/0UAAAAAAAAAAAB5/2sAAAAAAAAAAAB5/5EAAAAAAAAAAAB6/zMAAAAAAAAAAAB6/1kAAAAAAAAAAAB6/38AAAAAAAAAAAB8/z0AAAAAAAAAAAB8/2MAAAAAAAAAAAB8/4kAAAAAAAAAAAB+/0oAAAAAAAAAAAB+/3AAAAAAAAAAAACA/zgAAAAAAAAAAACA/14AAAAAAAAAAACA/4QAAAAAAAAAAACC/ysAAAAAAAAAAACC/1EAAAAAAAAAAACC/3cAAAAAAAAAAACE/0UAAAAAAAAAAACE/2sAAAAAAAAAAACE/5EAAAAAAAAAAACI/0AAAAAAAAAAAACI/2YAAAAAAAAAAACI/4wAAAAAAAAAAACJ/ykAAAAAAAAAAACJ/zEAAAAAAAAAAACJ/zkAAAAAAAAAAACJ/z8AAAAAAAAAAACJ/0UAAAAAAAAAAACJ/0oAAAAAAAAAAACJ/08AAAAAAAAAAACJ/1cAAAAAAAAAAACJ/18AAAAAAAAAAACJ/2UAAAAAAAAAAACJ/2sAAAAAAAAAAACJ/3AAAAAAAAAAAACJ/3UAAAAAAAAAAACJ/30AAAAAAAAAAACJ/4UAAAAAAAAAAACJ/4sAAAAAAAAAAACJ/5EAAAAAAAAAAACR/ywAAAAAAAAAAACR/zQAAAAAAAAAAACR/zwAAAAAAAAAAACR/z0AAAAAAAAAAACR/0UAAAAAAAAAAACR/0oAAAAAAAAAAACR/1IAAAAAAAAAAACR/1oAAAAAAAAAAACR/2IAAAAAAAAAAACR/2MAAAAAAAAAAACR/2sAAAAAAAAAAACR/3AAAAAAAAAAAACR/3gAAAAAAAAAAACR/4AAAAAAAAAAAACR/4gAAAAAAAAAAACR/4kAAAAAAAAAAACR/5EAAAAAAAAAAACS/0EAAAAAAAAAAACS/2cAAAAAAAAAAACS/40AAAAAAAAAAACV/ysAAAAAAAAAAACV/1EAAAAAAAAAAACV/3cAAAAAAAAAAACZ/zsAAAAAAAAAAACZ/2EAAAAAAAAAAACZ/4cAAAAAAAAAAACb/zMAAAAAAAAAAACb/1kAAAAAAAAAAACb/38AAAAAAAAAAACc/0oAAAAAAAAAAACc/3AAAAAAAAAAAACh/0MAAAAAAAAAAACh/0UAAAAAAAAAAACh/2kAAAAAAAAAAACh/2sAAAAAAAAAAACh/48AAAAAAAAAAACh/5EAAAAAAAAAAACj/zkAAAAAAAAAAACj/18AAAAAAAAAAACj/4UAAAAAAAAAAACk/zwAAAAAAAAAAACk/2IAAAAAAAAAAACk/4gAAAAAAAAAAACl/ywAAAAAAAAAAACl/1IAAAAAAAAAAACl/3gAAAAAAAAAAACr/zMAAAAAAAAAAACr/1kAAAAAAAAAAACr/38AAAAAAAAAAACs/zoAAAAAAAAAAACs/0oAAAAAAAAAAACs/2AAAAAAAAAAAACs/3AAAAAAAAAAAACs/4YAAAAAAAAAAACw/0AAAAAAAAAAAACw/0UAAAAAAAAAAACw/2YAAAAAAAAAAACw/2sAAAAAAAAAAACw/4wAAAAAAAAAAACw/5EAAAAAAAAAAACz/ysAAAAAAAAAAACz/1EAAAAAAAAAAACz/3cAAAAAAAAAAAC2/zoAAAAAAAAAAAC2/2AAAAAAAAAAAAC2/4YAAAAAAAAAAAC3/0oAAAAAAAAAAAC3/3AAAAAAAAAAAAC6/0UAAAAAAAAAAAC6/2sAAAAAAAAAAAC6/5EAAAAAAAAAAAC7/zMAAAAAAAAAAAC7/1kAAAAAAAAAAAC7/38AAAAAAAAAAAC9/z0AAAAAAAAAAAC9/2MAAAAAAAAAAAC9/4kAAAAAAAAAAAC//0oAAAAAAAAAAAC//3AAAAAAAAAAAADB/zgAAAAAAAAAAADB/14AAAAAAAAAAADB/4QAAAAAAAAAAADD/ysAAAAAAAAAAADD/1EAAAAAAAAAAADD/3cAAAAAAAAAAADF/0UAAAAAAAAAAADF/2sAAAAAAAAAAADF/5EAAAAAAAAAAADG/ywAAAAAAAAAAADG/zQAAAAAAAAAAADG/zwAAAAAAAAAAADG/z0AAAAAAAAAAADG/0UAAAAAAAAAAADG/0oAAAAAAAAAAADG/1IAAAAAAAAAAADG/1oAAAAAAAAAAADG/2IAAAAAAAAAAADG/2MAAAAAAAAAAADG/2sAAAAAAAAAAADG/3AAAAAAAAAAAADG/3gAAAAAAAAAAADG/4AAAAAAAAAAAADG/4gAAAAAAAAAAADG/4kAAAAAAAAAAADG/5EAAAAAAAAAAADH/0EAAAAAAAAAAADH/2cAAAAAAAAAAADH/40AAAAAAAAAAADJ/0AAAAAAAAAAAADJ/2YAAAAAAAAAAADJ/4wAAAAAAAAAAADK/ykAAAAAAAAAAADK/ysAAAAAAAAAAADK/zEAAAAAAAAAAADK/zkAAAAAAAAAAADK/z8AAAAAAAAAAADK/0UAAAAAAAAAAADK/0oAAAAAAAAAAADK/08AAAAAAAAAAADK/1EAAAAAAAAAAADK/1cAAAAAAAAAAADK/18AAAAAAAAAAADK/2UAAAAAAAAAAADK/2sAAAAAAAAAAADK/3AAAAAAAAAAAADK/3UAAAAAAAAAAADK/3cAAAAAAAAAAADK/30AAAAAAAAAAADK/4UAAAAAAAAAAADK/4sAAAAAAAAAAADK/5EAAAAAAAAAAADO/zsAAAAAAAAAAADO/2EAAAAAAAAAAADO/4cAAAAAAAAAAADQ/zMAAAAAAAAAAADQ/1kAAAAAAAAAAADQ/38AAAAAAAAAAADR/0oAAAAAAAAAAADR/3AAAAAAAAAAAADW/0MAAAAAAAAAAADW/0UAAAAAAAAAAADW/2kAAAAAAAAAAADW/2sAAAAAAAAAAADW/48AAAAAAAAAAADW/5EAAAAAAAAAAADY/zkAAAAAAAAAAADY/18AAAAAAAAAAADY/4UAAAAAAAAAAADZ/zwAAAAAAAAAAADZ/2IAAAAAAAAAAADZ/4gAAAAAAAAAAADa/ywAAAAAAAAAAADa/1IAAAAAAAAAAADa/3gAAAAAAAAAAADg/zMAAAAAAAAAAADg/1kAAAAAAAAAAADg/38AAAAAAAAAAADh/zoAAAAAAAAAAADh/0oAAAAAAAAAAADh/2AAAAAAAAAAAADh/3AAAAAAAAAAAADh/4YAAAAAAAAAAADl/0AAAAAAAAAAAADl/0UAAAAAAAAAAADl/2YAAAAAAAAAAADl/2sAAAAAAAAAAADl/4wAAAAAAAAAAADl/5EAAAAAAAAAAADo/ysAAAAAAAAAAADo/1EAAAAAAAAAAADo/3cAAAAAAAAAAADr/zoAAAAAAAAAAADr/2AAAAAAAAAAAADr/4YAAAAAAAAAAADs/0oAAAAAAAAAAADs/3AAAAAAAAAAAADv/0UAAAAAAAAAAADv/2sAAAAAAAAAAADv/5EAAAAAAAAAAADw/zMAAAAAAAAAAADw/1kAAAAAAAAAAADw/38AAAAAAAAAAADy/z0AAAAAAAAAAADy/2MAAAAAAAAAAADy/4kAAAAAAAAAAAD0/0oAAAAAAAAAAAD0/3AAAAAAAAAAAAC8/2cAAAAAAAAAAADA/2wAAAAAAAAAAADB/3MAAAAAAAAAAADB/4MAAAAAAAAAAADF/3kAAAAAAAAAAADF/34AAAAAAAAAAADI/2QAAAAAAAAAAADI/4oAAAAAAAAAAADL/3MAAAAAAAAAAADM/4MAAAAAAAAAAADP/34AAAAAAAAAAADQ/2wAAAAAAAAAAADS/3YAAAAAAAAAAADU/4MAAAAAAAAAAADW/3EAAAAAAAAAAADY/2QAAAAAAAAAAADY/4oAAAAAAAAAAADa/34AAAAAAAAAAADe/3kAAAAAAAAAAADf/2IAAAAAAAAAAADf/2oAAAAAAAAAAADf/3IAAAAAAAAAAADf/3gAAAAAAAAAAADf/34AAAAAAAAAAADf/4MAAAAAAAAAAADf/4gAAAAAAAAAAADn/2UAAAAAAAAAAADn/20AAAAAAAAAAADn/3UAAAAAAAAAAADn/3YAAAAAAAAAAADn/34AAAAAAAAAAADn/4MAAAAAAAAAAADn/4sAAAAAAAAAAADo/3oAAAAAAAAAAADr/2QAAAAAAAAAAADr/4oAAAAAAAAAAADv/3QAAAAAAAAAAADx/2wAAAAAAAAAAADy/4MAAAAAAAAAAAD3/3wAAAAAAAAAAAD3/34AAAAAAAAAAAD5/3IAAAAAAAAAAAD6/3UAAAAAAAAAAAD7/2UAAAAAAAAAAAD7/4sAAAAAAAAAAAABAGwAAAAAAAAAAAACAHMAAAAAAAAAAAACAIMAAAAAAAAAAAAGAHkAAAAAAAAAAAAGAH4AAAAAAAAAAAAJAGQAAAAAAAAAAAAJAIoAAAAAAAAAAAAMAHMAAAAAAAAAAAANAIMAAAAAAAAAAAAQAH4AAAAAAAAAAAARAGwAAAAAAAAAAAATAHYAAAAAAAAAAAAVAIMAAAAAAAAAAAAXAHEAAAAAAAAAAAAZAGQAAAAAAAAAAAAZAIoAAAAAAAAAAAAbAH4AAAAAAAAAAAAcAGUAAAAAAAAAAAAcAG0AAAAAAAAAAAAcAHUAAAAAAAAAAAAcAHYAAAAAAAAAAAAcAH4AAAAAAAAAAAAcAIMAAAAAAAAAAAAcAIsAAAAAAAAAAAAdAHoAAAAAAAAAAAAfAHkAAAAAAAAAAAAgAGIAAAAAAAAAAAAgAGQAAAAAAAAAAAAgAGoAAAAAAAAAAAAgAHIAAAAAAAAAAAAgAHgAAAAAAAAAAAAgAH4AAAAAAAAAAAAgAIMAAAAAAAAAAAAgAIgAAAAAAAAAAAAgAIoAAAAAAAAAAAAkAHQAAAAAAAAAAAAmAGwAAAAAAAAAAAAnAIMAAAAAAAAAAAAsAHwAAAAAAAAAAAAsAH4AAAAAAAAAAAAuAHIAAAAAAAAAAAAvAHUAAAAAAAAAAAAwAGUAAAAAAAAAAAAwAIsAAAAAAAAAAAA2AGwAAAAAAAAAAAA3AHMAAAAAAAAAAAA3AIMAAAAAAAAAAAA=")
+
+[node name="tree31" parent="Grass" unique_id=709420370 instance=ExtResource("8_kvpfn")]
+position = Vector2(2282, 374)
+
+[node name="bush12" parent="Grass" unique_id=815853861 instance=ExtResource("10_kvuet")]
+position = Vector2(2647, 468)
+
+[node name="bush13" parent="Grass" unique_id=1356108064 instance=ExtResource("10_kvuet")]
+position = Vector2(3331, 502)
+
+[node name="tree32" parent="Grass" unique_id=1997603632 instance=ExtResource("8_kvpfn")]
+position = Vector2(4146, 510)
+
+[node name="tree33" parent="Grass" unique_id=1133033278 instance=ExtResource("8_kvpfn")]
+position = Vector2(3290, 698)
+
+[node name="bush14" parent="Grass" unique_id=291694768 instance=ExtResource("10_kvuet")]
+position = Vector2(2981, 698)
+
+[node name="bush15" parent="Grass" unique_id=1852993431 instance=ExtResource("9_dinhu")]
+position = Vector2(2496, 773)
+
+[node name="bush16" parent="Grass" unique_id=1020667711 instance=ExtResource("10_kvuet")]
+position = Vector2(3625, 608)
+
+[node name="tree34" parent="Grass" unique_id=625478334 instance=ExtResource("7_vtaks")]
+position = Vector2(3687, 913)
+
+[node name="tree35" parent="Grass" unique_id=203597700 instance=ExtResource("8_kvpfn")]
+position = Vector2(4265, 858)
+
+[node name="tree36" parent="Grass" unique_id=1486958887 instance=ExtResource("7_vtaks")]
+position = Vector2(4698, 619)
+
+[node name="tree37" parent="Grass" unique_id=1050748140 instance=ExtResource("8_kvpfn")]
+position = Vector2(3275, 1147)
+
+[node name="tree38" parent="Grass" unique_id=1928040674 instance=ExtResource("7_vtaks")]
+position = Vector2(2764, 991)
+
+[node name="tree39" parent="Grass" unique_id=1561621892 instance=ExtResource("7_vtaks")]
+position = Vector2(2274, 1063)
+
+[node name="tree40" parent="Grass" unique_id=1239863403 instance=ExtResource("8_kvpfn")]
+position = Vector2(2602, 1353)
+
+[node name="stone_tile2_4" parent="Grass" unique_id=1323063555 instance=ExtResource("2_iywne")]
+position = Vector2(207, 497)
+
+[node name="pillar" parent="Grass" unique_id=293995212 instance=ExtResource("5_p57ef")]
+position = Vector2(158, 447)
+
+[node name="pillar2" parent="Grass" unique_id=871928672 instance=ExtResource("5_p57ef")]
+position = Vector2(256, 448)
+
+[node name="coffin" parent="Grass" unique_id=642592769 instance=ExtResource("3_lnu2h")]
+position = Vector2(207, 413)
+
+[node name="saint" parent="Grass" unique_id=263521187 instance=ExtResource("6_p57ef")]
+position = Vector2(209, 317)
+
+[node name="tree1" parent="Grass" unique_id=1890345167 instance=ExtResource("7_vtaks")]
+position = Vector2(-659, 94)
+
+[node name="tree2" parent="Grass" unique_id=864357107 instance=ExtResource("7_vtaks")]
+position = Vector2(-437, 624)
+
+[node name="tree3" parent="Grass" unique_id=650836028 instance=ExtResource("7_vtaks")]
+position = Vector2(63, 94)
+
+[node name="tree4" parent="Grass" unique_id=2095925076 instance=ExtResource("7_vtaks")]
+position = Vector2(583, 439)
+
+[node name="tree5" parent="Grass" unique_id=701835413 instance=ExtResource("7_vtaks")]
+position = Vector2(888, 94)
+
+[node name="tree6" parent="Grass" unique_id=1989703894 instance=ExtResource("7_vtaks")]
+position = Vector2(86, 907)
+
+[node name="tree7" parent="Grass" unique_id=856726822 instance=ExtResource("8_kvpfn")]
+position = Vector2(-676, 419)
+
+[node name="tree8" parent="Grass" unique_id=1063342481 instance=ExtResource("8_kvpfn")]
+position = Vector2(-570, 947)
+
+[node name="tree9" parent="Grass" unique_id=2074484034 instance=ExtResource("8_kvpfn")]
+position = Vector2(-251, 268)
+
+[node name="tree10" parent="Grass" unique_id=187266874 instance=ExtResource("8_kvpfn")]
+position = Vector2(508, 145)
+
+[node name="tree11" parent="Grass" unique_id=1275759770 instance=ExtResource("8_kvpfn")]
+position = Vector2(894, 416)
+
+[node name="tree12" parent="Grass" unique_id=61436104 instance=ExtResource("8_kvpfn")]
+position = Vector2(799, 893)
+
+[node name="tree13" parent="Grass" unique_id=2017609692 instance=ExtResource("8_kvpfn")]
+position = Vector2(351, 693)
+
+[node name="bush1" parent="Grass" unique_id=530357319 instance=ExtResource("9_dinhu")]
+position = Vector2(-302, 82)
+
+[node name="bush2" parent="Grass" unique_id=594610937 instance=ExtResource("10_kvuet")]
+position = Vector2(-205, 1041)
+
+[node name="bush3" parent="Grass" unique_id=33536949 instance=ExtResource("10_kvuet")]
+position = Vector2(-661, 801)
+
+[node name="bush4" parent="Grass" unique_id=1299368543 instance=ExtResource("9_dinhu")]
+position = Vector2(791, 707)
+
+[node name="bush5" parent="Grass" unique_id=103192614 instance=ExtResource("10_kvuet")]
+position = Vector2(-109, 624)
+
+[node name="bush6" parent="Grass" unique_id=2033810371 instance=ExtResource("9_dinhu")]
+position = Vector2(83, 711)
+
+[node name="bush7" parent="Grass" unique_id=1838709959 instance=ExtResource("10_kvuet")]
+position = Vector2(479, 1075)
+
+[node name="bush8" parent="Grass" unique_id=2064388833 instance=ExtResource("9_dinhu")]
+position = Vector2(1102, 837)
+
+[node name="tree14" parent="Grass" unique_id=1039781534 instance=ExtResource("7_vtaks")]
+position = Vector2(1265, 198)
+
+[node name="tree15" parent="Grass" unique_id=54396249 instance=ExtResource("8_kvpfn")]
+position = Vector2(1323, 594)
+
+[node name="tree16" parent="Grass" unique_id=1338374845 instance=ExtResource("8_kvpfn")]
+position = Vector2(1294, 1083)
+
+[node name="tree17" parent="Grass" unique_id=2061449823 instance=ExtResource("7_vtaks")]
+position = Vector2(1741, 398)
+
+[node name="tree18" parent="Grass" unique_id=1705785715 instance=ExtResource("8_kvpfn")]
+position = Vector2(1595, 110)
+
+[node name="tree19" parent="Grass" unique_id=1287286191 instance=ExtResource("7_vtaks")]
+position = Vector2(1637, 866)
+
+[node name="tree20" parent="Grass" unique_id=1469551859 instance=ExtResource("8_kvpfn")]
+position = Vector2(438, 1271)
+
+[node name="bush9" parent="Grass" unique_id=912287209 instance=ExtResource("10_kvuet")]
+position = Vector2(129, 1271)
+
+[node name="bush10" parent="Grass" unique_id=2122687141 instance=ExtResource("9_dinhu")]
+position = Vector2(-356, 1346)
+
+[node name="bush11" parent="Grass" unique_id=291455321 instance=ExtResource("10_kvuet")]
+position = Vector2(773, 1181)
+
+[node name="tree21" parent="Grass" unique_id=789529720 instance=ExtResource("7_vtaks")]
+position = Vector2(835, 1486)
+
+[node name="tree22" parent="Grass" unique_id=1271248901 instance=ExtResource("8_kvpfn")]
+position = Vector2(1413, 1431)
+
+[node name="tree23" parent="Grass" unique_id=1465393632 instance=ExtResource("7_vtaks")]
+position = Vector2(1846, 1192)
+
+[node name="tree24" parent="Grass" unique_id=462834461 instance=ExtResource("8_kvpfn")]
+position = Vector2(1969, 663)
+
+[node name="tree25" parent="Grass" unique_id=2028106477 instance=ExtResource("8_kvpfn")]
+position = Vector2(2035, 141)
+
+[node name="tree26" parent="Grass" unique_id=40196724 instance=ExtResource("8_kvpfn")]
+position = Vector2(423, 1720)
+
+[node name="tree27" parent="Grass" unique_id=1035837287 instance=ExtResource("7_vtaks")]
+position = Vector2(-88, 1564)
+
+[node name="tree28" parent="Grass" unique_id=459318280 instance=ExtResource("7_vtaks")]
+position = Vector2(-578, 1636)
+
+[node name="tree29" parent="Grass" unique_id=1122258033 instance=ExtResource("8_kvpfn")]
+position = Vector2(-250, 1926)
+
+[node name="tree41" parent="Grass" unique_id=925881594 instance=ExtResource("7_vtaks")]
+position = Vector2(-543, 1969)
+
+[node name="tree42" parent="Grass" unique_id=298922561 instance=ExtResource("8_kvpfn")]
+position = Vector2(140, 1904)
+
+[node name="bush17" parent="Grass" unique_id=1672671803 instance=ExtResource("9_dinhu")]
+position = Vector2(1109, 1863)
+
+[node name="bush18" parent="Grass" unique_id=63106636 instance=ExtResource("10_kvuet")]
+position = Vector2(2037, 1464)
+
+[node name="bush19" parent="Grass" unique_id=1858563722 instance=ExtResource("10_kvuet")]
+position = Vector2(1532, 1798)
+
+[node name="tree43" parent="Grass" unique_id=1437028033 instance=ExtResource("7_vtaks")]
+position = Vector2(735, 2083)
+
+[node name="tree44" parent="Grass" unique_id=80660299 instance=ExtResource("8_kvpfn")]
+position = Vector2(295, 2221)
+
+[node name="tree58" parent="Grass" unique_id=1724412785 instance=ExtResource("8_kvpfn")]
+position = Vector2(-292, 2290)
+
+[node name="bush27" parent="Grass" unique_id=2095169773 instance=ExtResource("10_kvuet")]
+position = Vector2(73, 2384)
+
+[node name="bush28" parent="Grass" unique_id=1410920806 instance=ExtResource("10_kvuet")]
+position = Vector2(757, 2418)
+
+[node name="tree59" parent="Grass" unique_id=1327422392 instance=ExtResource("8_kvpfn")]
+position = Vector2(1572, 2426)
+
+[node name="tree60" parent="Grass" unique_id=1549995537 instance=ExtResource("8_kvpfn")]
+position = Vector2(716, 2614)
+
+[node name="bush29" parent="Grass" unique_id=729930298 instance=ExtResource("10_kvuet")]
+position = Vector2(407, 2614)
+
+[node name="bush30" parent="Grass" unique_id=1801054995 instance=ExtResource("9_dinhu")]
+position = Vector2(-78, 2689)
+
+[node name="bush31" parent="Grass" unique_id=1900628586 instance=ExtResource("10_kvuet")]
+position = Vector2(1051, 2524)
+
+[node name="tree61" parent="Grass" unique_id=1028580422 instance=ExtResource("7_vtaks")]
+position = Vector2(1113, 2829)
+
+[node name="tree62" parent="Grass" unique_id=1478277573 instance=ExtResource("8_kvpfn")]
+position = Vector2(1691, 2774)
+
+[node name="tree63" parent="Grass" unique_id=1129639488 instance=ExtResource("8_kvpfn")]
+position = Vector2(701, 3063)
+
+[node name="tree64" parent="Grass" unique_id=245267511 instance=ExtResource("7_vtaks")]
+position = Vector2(190, 2907)
+
+[node name="tree65" parent="Grass" unique_id=1143921853 instance=ExtResource("7_vtaks")]
+position = Vector2(-300, 2979)
+
+[node name="tree66" parent="Grass" unique_id=542669334 instance=ExtResource("8_kvpfn")]
+position = Vector2(28, 3269)
+
+[node name="tree67" parent="Grass" unique_id=1075647763 instance=ExtResource("7_vtaks")]
+position = Vector2(-265, 3312)
+
+[node name="tree68" parent="Grass" unique_id=1327540795 instance=ExtResource("8_kvpfn")]
+position = Vector2(418, 3247)
+
+[node name="bush32" parent="Grass" unique_id=1268076495 instance=ExtResource("9_dinhu")]
+position = Vector2(1387, 3206)
+
+[node name="bush33" parent="Grass" unique_id=1998013684 instance=ExtResource("10_kvuet")]
+position = Vector2(1810, 3141)
+
+[node name="tree69" parent="Grass" unique_id=452839955 instance=ExtResource("7_vtaks")]
+position = Vector2(1013, 3426)
+
+[node name="tree70" parent="Grass" unique_id=1597842660 instance=ExtResource("8_kvpfn")]
+position = Vector2(573, 3564)
+
+[node name="tree71" parent="Grass" unique_id=890590109 instance=ExtResource("8_kvpfn")]
+position = Vector2(1310, 3365)
+
+[node name="bush34" parent="Grass" unique_id=2106152977 instance=ExtResource("10_kvuet")]
+position = Vector2(1675, 3459)
+
+[node name="bush35" parent="Grass" unique_id=1505188365 instance=ExtResource("10_kvuet")]
+position = Vector2(2359, 3493)
+
+[node name="tree72" parent="Grass" unique_id=676607710 instance=ExtResource("8_kvpfn")]
+position = Vector2(3174, 3501)
+
+[node name="tree73" parent="Grass" unique_id=1716471975 instance=ExtResource("8_kvpfn")]
+position = Vector2(2318, 3689)
+
+[node name="bush36" parent="Grass" unique_id=492322742 instance=ExtResource("10_kvuet")]
+position = Vector2(2009, 3689)
+
+[node name="bush37" parent="Grass" unique_id=622031746 instance=ExtResource("9_dinhu")]
+position = Vector2(1524, 3764)
+
+[node name="bush38" parent="Grass" unique_id=2087648785 instance=ExtResource("10_kvuet")]
+position = Vector2(2653, 3599)
+
+[node name="tree74" parent="Grass" unique_id=1283662479 instance=ExtResource("7_vtaks")]
+position = Vector2(2715, 3904)
+
+[node name="tree75" parent="Grass" unique_id=1696212855 instance=ExtResource("8_kvpfn")]
+position = Vector2(3293, 3849)
+
+[node name="tree76" parent="Grass" unique_id=1014410922 instance=ExtResource("8_kvpfn")]
+position = Vector2(4940, 2173)
+
+[node name="bush39" parent="Grass" unique_id=1890847739 instance=ExtResource("9_dinhu")]
+position = Vector2(5909, 2132)
+
+[node name="bush40" parent="Grass" unique_id=1524319494 instance=ExtResource("10_kvuet")]
+position = Vector2(6332, 2067)
+
+[node name="tree77" parent="Grass" unique_id=312102766 instance=ExtResource("7_vtaks")]
+position = Vector2(5535, 2352)
+
+[node name="tree78" parent="Grass" unique_id=1088812838 instance=ExtResource("8_kvpfn")]
+position = Vector2(5095, 2490)
+
+[node name="tree79" parent="Grass" unique_id=1838675582 instance=ExtResource("8_kvpfn")]
+position = Vector2(5886, 141)
+
+[node name="bush41" parent="Grass" unique_id=1981199159 instance=ExtResource("10_kvuet")]
+position = Vector2(6251, 235)
+
+[node name="bush42" parent="Grass" unique_id=1893776180 instance=ExtResource("10_kvuet")]
+position = Vector2(6935, 269)
+
+[node name="tree80" parent="Grass" unique_id=2015155276 instance=ExtResource("8_kvpfn")]
+position = Vector2(7750, 277)
+
+[node name="tree81" parent="Grass" unique_id=349888947 instance=ExtResource("8_kvpfn")]
+position = Vector2(6894, 465)
+
+[node name="bush43" parent="Grass" unique_id=1657204929 instance=ExtResource("10_kvuet")]
+position = Vector2(6585, 465)
+
+[node name="bush44" parent="Grass" unique_id=633964632 instance=ExtResource("9_dinhu")]
+position = Vector2(6100, 540)
+
+[node name="bush45" parent="Grass" unique_id=613319944 instance=ExtResource("10_kvuet")]
+position = Vector2(7229, 375)
+
+[node name="tree82" parent="Grass" unique_id=696666181 instance=ExtResource("7_vtaks")]
+position = Vector2(7291, 680)
+
+[node name="tree83" parent="Grass" unique_id=812487616 instance=ExtResource("8_kvpfn")]
+position = Vector2(7869, 625)
+
+[node name="tree84" parent="Grass" unique_id=1600225460 instance=ExtResource("8_kvpfn")]
+position = Vector2(6879, 914)
+
+[node name="tree85" parent="Grass" unique_id=1898312519 instance=ExtResource("7_vtaks")]
+position = Vector2(6368, 758)
+
+[node name="tree86" parent="Grass" unique_id=1140299794 instance=ExtResource("7_vtaks")]
+position = Vector2(5878, 830)
+
+[node name="tree87" parent="Grass" unique_id=177673925 instance=ExtResource("8_kvpfn")]
+position = Vector2(6206, 1120)
+
+[node name="tree88" parent="Grass" unique_id=1189570048 instance=ExtResource("7_vtaks")]
+position = Vector2(5913, 1163)
+
+[node name="tree89" parent="Grass" unique_id=197626494 instance=ExtResource("8_kvpfn")]
+position = Vector2(6596, 1098)
+
+[node name="bush46" parent="Grass" unique_id=327945556 instance=ExtResource("9_dinhu")]
+position = Vector2(7565, 1057)
+
+[node name="bush47" parent="Grass" unique_id=1348629165 instance=ExtResource("10_kvuet")]
+position = Vector2(7988, 992)
+
+[node name="tree90" parent="Grass" unique_id=1470017738 instance=ExtResource("7_vtaks")]
+position = Vector2(7191, 1277)
+
+[node name="tree91" parent="Grass" unique_id=429433967 instance=ExtResource("8_kvpfn")]
+position = Vector2(6751, 1415)
+
+[node name="tree92" parent="Grass" unique_id=36702129 instance=ExtResource("8_kvpfn")]
+position = Vector2(5967, 2326)
+
+[node name="bush48" parent="Grass" unique_id=2082710010 instance=ExtResource("10_kvuet")]
+position = Vector2(6332, 2420)
+
+[node name="bush49" parent="Grass" unique_id=143441809 instance=ExtResource("10_kvuet")]
+position = Vector2(7016, 2454)
+
+[node name="tree93" parent="Grass" unique_id=1744220735 instance=ExtResource("8_kvpfn")]
+position = Vector2(7831, 2462)
+
+[node name="tree94" parent="Grass" unique_id=937689824 instance=ExtResource("8_kvpfn")]
+position = Vector2(6975, 2650)
+
+[node name="bush50" parent="Grass" unique_id=631919091 instance=ExtResource("10_kvuet")]
+position = Vector2(6666, 2650)
+
+[node name="bush51" parent="Grass" unique_id=1054753007 instance=ExtResource("9_dinhu")]
+position = Vector2(6181, 2725)
+
+[node name="bush52" parent="Grass" unique_id=2096693118 instance=ExtResource("10_kvuet")]
+position = Vector2(7310, 2560)
+
+[node name="tree95" parent="Grass" unique_id=38173953 instance=ExtResource("7_vtaks")]
+position = Vector2(7372, 2865)
+
+[node name="tree96" parent="Grass" unique_id=410189439 instance=ExtResource("8_kvpfn")]
+position = Vector2(7950, 2810)
+
+[node name="tree97" parent="Grass" unique_id=735267228 instance=ExtResource("8_kvpfn")]
+position = Vector2(6960, 3099)
+
+[node name="tree98" parent="Grass" unique_id=382216418 instance=ExtResource("7_vtaks")]
+position = Vector2(6449, 2943)
+
+[node name="tree99" parent="Grass" unique_id=1287034502 instance=ExtResource("7_vtaks")]
+position = Vector2(5959, 3015)
+
+[node name="tree100" parent="Grass" unique_id=1234171493 instance=ExtResource("8_kvpfn")]
+position = Vector2(6287, 3305)
+
+[node name="tree101" parent="Grass" unique_id=1527470644 instance=ExtResource("7_vtaks")]
+position = Vector2(5994, 3348)
+
+[node name="tree102" parent="Grass" unique_id=636534498 instance=ExtResource("8_kvpfn")]
+position = Vector2(6677, 3283)
+
+[node name="bush53" parent="Grass" unique_id=85355660 instance=ExtResource("9_dinhu")]
+position = Vector2(7646, 3242)
+
+[node name="bush54" parent="Grass" unique_id=2064679744 instance=ExtResource("10_kvuet")]
+position = Vector2(8069, 3177)
+
+[node name="tree103" parent="Grass" unique_id=530670 instance=ExtResource("7_vtaks")]
+position = Vector2(7272, 3462)
+
+[node name="tree104" parent="Grass" unique_id=76709839 instance=ExtResource("8_kvpfn")]
+position = Vector2(6832, 3600)
+
+[node name="bush55" parent="Grass" unique_id=763740178 instance=ExtResource("9_dinhu")]
+position = Vector2(4715, 990)
+
+[node name="bush56" parent="Grass" unique_id=829668285 instance=ExtResource("10_kvuet")]
+position = Vector2(5127, 864)
+
+[node name="bush57" parent="Grass" unique_id=2017664309 instance=ExtResource("9_dinhu")]
+position = Vector2(5413, 927)
+
+[node name="bush58" parent="Grass" unique_id=239790728 instance=ExtResource("10_kvuet")]
+position = Vector2(2082, 2807)
+
+[node name="bush59" parent="Grass" unique_id=1529009980 instance=ExtResource("9_dinhu")]
+position = Vector2(2082, 3121)
+
+[node name="bush60" parent="Grass" unique_id=586835960 instance=ExtResource("10_kvuet")]
+position = Vector2(2906, 3085)
+tile_map_data = PackedByteArray("AAABAAEAAAACAAwAAABC/0AAAAAAAAAAAABG/0UAAAAAAAAAAABH/0wAAAAAAAAAAABH/1wAAAAAAAAAAABL/1IAAAAAAAAAAABL/1cAAAAAAAAAAABO/z0AAAAAAAAAAABO/2MAAAAAAAAAAABR/0wAAAAAAAAAAABS/1wAAAAAAAAAAABV/1cAAAAAAAAAAABW/0UAAAAAAAAAAABY/08AAAAAAAAAAABa/1wAAAAAAAAAAABc/0oAAAAAAAAAAABe/z0AAAAAAAAAAABe/2MAAAAAAAAAAABg/1cAAAAAAAAAAABk/1IAAAAAAAAAAABl/zsAAAAAAAAAAABl/0MAAAAAAAAAAABl/0sAAAAAAAAAAABl/1EAAAAAAAAAAABl/1cAAAAAAAAAAABl/1wAAAAAAAAAAABl/2EAAAAAAAAAAABt/z4AAAAAAAAAAABt/0YAAAAAAAAAAABt/04AAAAAAAAAAABt/08AAAAAAAAAAABt/1cAAAAAAAAAAABt/1wAAAAAAAAAAABt/2QAAAAAAAAAAABu/1MAAAAAAAAAAABx/z0AAAAAAAAAAABx/2MAAAAAAAAAAAB1/00AAAAAAAAAAAB3/0UAAAAAAAAAAAB4/1wAAAAAAAAAAAB9/1UAAAAAAAAAAAB9/1cAAAAAAAAAAAB//0sAAAAAAAAAAACA/04AAAAAAAAAAACB/z4AAAAAAAAAAACB/2QAAAAAAAAAAACH/0UAAAAAAAAAAACI/0wAAAAAAAAAAACI/1wAAAAAAAAAAACM/1IAAAAAAAAAAACM/1cAAAAAAAAAAACP/z0AAAAAAAAAAACP/2MAAAAAAAAAAACS/0wAAAAAAAAAAACT/1wAAAAAAAAAAACW/1cAAAAAAAAAAACX/0UAAAAAAAAAAACZ/08AAAAAAAAAAACb/1wAAAAAAAAAAACd/0oAAAAAAAAAAACf/z0AAAAAAAAAAACf/2MAAAAAAAAAAACh/1cAAAAAAAAAAACi/z4AAAAAAAAAAACi/0YAAAAAAAAAAACi/04AAAAAAAAAAACi/08AAAAAAAAAAACi/1cAAAAAAAAAAACi/1wAAAAAAAAAAACi/2QAAAAAAAAAAACj/1MAAAAAAAAAAACl/1IAAAAAAAAAAACm/zsAAAAAAAAAAACm/z0AAAAAAAAAAACm/0MAAAAAAAAAAACm/0sAAAAAAAAAAACm/1EAAAAAAAAAAACm/1cAAAAAAAAAAACm/1wAAAAAAAAAAACm/2EAAAAAAAAAAACm/2MAAAAAAAAAAACq/00AAAAAAAAAAACs/0UAAAAAAAAAAACt/1wAAAAAAAAAAACy/1UAAAAAAAAAAACy/1cAAAAAAAAAAAC0/0sAAAAAAAAAAAC1/04AAAAAAAAAAAC2/z4AAAAAAAAAAAC2/2QAAAAAAAAAAAC8/0UAAAAAAAAAAAC9/0wAAAAAAAAAAAC9/1wAAAAAAAAAAAA=")
+
+[node name="tree105" parent="Grass" unique_id=525313667 instance=ExtResource("8_kvpfn")]
+position = Vector2(2303, 4138)
+
+[node name="tree106" parent="Grass" unique_id=1926235311 instance=ExtResource("7_vtaks")]
+position = Vector2(1792, 3982)
+
+[node name="tree107" parent="Grass" unique_id=934093898 instance=ExtResource("7_vtaks")]
+position = Vector2(1302, 4054)
+
+[node name="tree108" parent="Grass" unique_id=1527591896 instance=ExtResource("8_kvpfn")]
+position = Vector2(1630, 4344)
+
+[node name="tree109" parent="Grass" unique_id=1308797133 instance=ExtResource("7_vtaks")]
+position = Vector2(1337, 4387)
+
+[node name="tree110" parent="Grass" unique_id=1657820897 instance=ExtResource("8_kvpfn")]
+position = Vector2(2020, 4322)
+
+[node name="bush61" parent="Grass" unique_id=1269627828 instance=ExtResource("9_dinhu")]
+position = Vector2(2989, 4281)
+
+[node name="bush62" parent="Grass" unique_id=439977128 instance=ExtResource("10_kvuet")]
+position = Vector2(3412, 4216)
+
+[node name="tree111" parent="Grass" unique_id=664426643 instance=ExtResource("7_vtaks")]
+position = Vector2(2615, 4501)
+
+[node name="tree112" parent="Grass" unique_id=539195056 instance=ExtResource("8_kvpfn")]
+position = Vector2(2175, 4639)
+
+[node name="tree113" parent="Grass" unique_id=413381750 instance=ExtResource("8_kvpfn")]
+position = Vector2(1767, 1466)
+
+[node name="bush63" parent="Grass" unique_id=746643928 instance=ExtResource("10_kvuet")]
+position = Vector2(2132, 1560)
+
+[node name="bush64" parent="Grass" unique_id=865938260 instance=ExtResource("10_kvuet")]
+position = Vector2(2816, 1594)
+
+[node name="tree114" parent="Grass" unique_id=939724463 instance=ExtResource("8_kvpfn")]
+position = Vector2(3631, 1602)
+
+[node name="tree115" parent="Grass" unique_id=976007989 instance=ExtResource("8_kvpfn")]
+position = Vector2(2775, 1790)
+
+[node name="bush65" parent="Grass" unique_id=181974529 instance=ExtResource("10_kvuet")]
+position = Vector2(2466, 1790)
+
+[node name="bush66" parent="Grass" unique_id=1209630498 instance=ExtResource("9_dinhu")]
+position = Vector2(1981, 1865)
+
+[node name="bush67" parent="Grass" unique_id=1115482265 instance=ExtResource("10_kvuet")]
+position = Vector2(3110, 1700)
+
+[node name="tree116" parent="Grass" unique_id=2089999867 instance=ExtResource("7_vtaks")]
+position = Vector2(3172, 2005)
+
+[node name="tree117" parent="Grass" unique_id=642000492 instance=ExtResource("8_kvpfn")]
+position = Vector2(3750, 1950)
+
+[node name="tree118" parent="Grass" unique_id=1039331661 instance=ExtResource("8_kvpfn")]
+position = Vector2(2760, 2239)
+
+[node name="tree119" parent="Grass" unique_id=439077518 instance=ExtResource("7_vtaks")]
+position = Vector2(2249, 2083)
+
+[node name="tree120" parent="Grass" unique_id=1272711299 instance=ExtResource("7_vtaks")]
+position = Vector2(1759, 2155)
+
+[node name="tree121" parent="Grass" unique_id=377686938 instance=ExtResource("8_kvpfn")]
+position = Vector2(2087, 2445)
+
+[node name="tree122" parent="Grass" unique_id=798906102 instance=ExtResource("7_vtaks")]
+position = Vector2(1794, 2488)
+
+[node name="tree123" parent="Grass" unique_id=1582285895 instance=ExtResource("8_kvpfn")]
+position = Vector2(2477, 2423)
+
+[node name="bush68" parent="Grass" unique_id=527788127 instance=ExtResource("9_dinhu")]
+position = Vector2(3446, 2382)
+
+[node name="bush69" parent="Grass" unique_id=612723613 instance=ExtResource("10_kvuet")]
+position = Vector2(3869, 2317)
+
+[node name="tree124" parent="Grass" unique_id=1590989088 instance=ExtResource("7_vtaks")]
+position = Vector2(3072, 2602)
+
+[node name="tree125" parent="Grass" unique_id=1572589494 instance=ExtResource("8_kvpfn")]
+position = Vector2(2632, 2740)
+
+[node name="tree126" parent="Grass" unique_id=1191395301 instance=ExtResource("8_kvpfn")]
+position = Vector2(4230, 1216)
+
+[node name="bush70" parent="Grass" unique_id=167739016 instance=ExtResource("10_kvuet")]
+position = Vector2(4595, 1310)
+
+[node name="bush71" parent="Grass" unique_id=147455428 instance=ExtResource("10_kvuet")]
+position = Vector2(5279, 1344)
+
+[node name="tree127" parent="Grass" unique_id=786522162 instance=ExtResource("8_kvpfn")]
+position = Vector2(6094, 1352)
+
+[node name="tree128" parent="Grass" unique_id=2069777885 instance=ExtResource("8_kvpfn")]
+position = Vector2(5238, 1540)
+
+[node name="bush72" parent="Grass" unique_id=1169690545 instance=ExtResource("10_kvuet")]
+position = Vector2(4929, 1540)
+
+[node name="bush73" parent="Grass" unique_id=1877616461 instance=ExtResource("9_dinhu")]
+position = Vector2(4444, 1615)
+
+[node name="bush74" parent="Grass" unique_id=2135391708 instance=ExtResource("10_kvuet")]
+position = Vector2(5573, 1450)
+
+[node name="tree129" parent="Grass" unique_id=1899605329 instance=ExtResource("7_vtaks")]
+position = Vector2(5635, 1755)
+
+[node name="tree130" parent="Grass" unique_id=1477828535 instance=ExtResource("8_kvpfn")]
+position = Vector2(6213, 1700)
+
+[node name="tree131" parent="Grass" unique_id=2006642365 instance=ExtResource("8_kvpfn")]
+position = Vector2(5223, 1989)
+
+[node name="tree132" parent="Grass" unique_id=1537042081 instance=ExtResource("7_vtaks")]
+position = Vector2(4712, 1833)
+
+[node name="tree133" parent="Grass" unique_id=1627566193 instance=ExtResource("7_vtaks")]
+position = Vector2(4222, 1905)
+
+[node name="tree134" parent="Grass" unique_id=1939887255 instance=ExtResource("8_kvpfn")]
+position = Vector2(4550, 2195)
+
+[node name="tree135" parent="Grass" unique_id=561762668 instance=ExtResource("7_vtaks")]
+position = Vector2(4257, 2238)
+
+[node name="bush75" parent="Grass" unique_id=1932093673 instance=ExtResource("10_kvuet")]
+position = Vector2(-67, 3568)
+
+[node name="bush76" parent="Grass" unique_id=1360926620 instance=ExtResource("9_dinhu")]
+position = Vector2(-568, 3443)
+
+[node name="bush77" parent="Grass" unique_id=1337935682 instance=ExtResource("9_dinhu")]
+position = Vector2(-622, 2404)
+
+[node name="bush78" parent="Grass" unique_id=150677831 instance=ExtResource("10_kvuet")]
+position = Vector2(-425, 2610)
+
+[node name="bush79" parent="Grass" unique_id=17448374 instance=ExtResource("9_dinhu")]
+position = Vector2(-595, 2897)
+
+[node name="bush80" parent="Grass" unique_id=941169139 instance=ExtResource("10_kvuet")]
+position = Vector2(1068, 2067)
+
+[node name="bush81" parent="Grass" unique_id=1270977717 instance=ExtResource("9_dinhu")]
+position = Vector2(1368, 2115)
+
+[node name="bush82" parent="Grass" unique_id=1322269908 instance=ExtResource("10_kvuet")]
+position = Vector2(1270, 2348)
+
+[node name="bush83" parent="Grass" unique_id=1891510465 instance=ExtResource("10_kvuet")]
+position = Vector2(3796, 286)
+
+[node name="bush84" parent="Grass" unique_id=593314396 instance=ExtResource("9_dinhu")]
+position = Vector2(4477, 345)
+
+[node name="tree136" parent="Grass" unique_id=1926092462 instance=ExtResource("7_vtaks")]
+position = Vector2(5180, 464)
+
+[node name="tree137" parent="Grass" unique_id=1111443694 instance=ExtResource("8_kvpfn")]
+position = Vector2(5631, 419)
+
+[node name="tree138" parent="Grass" unique_id=1594936351 instance=ExtResource("7_vtaks")]
+position = Vector2(5357, 131)
+
+[node name="tree139" parent="Grass" unique_id=1305295858 instance=ExtResource("8_kvpfn")]
+position = Vector2(4832, 182)
+
+[node name="tree140" parent="Grass" unique_id=898628021 instance=ExtResource("7_vtaks")]
+position = Vector2(2560, 131)
+
+[node name="altar_chest" parent="Grass" unique_id=280157700 instance=ExtResource("10_kvpfn")]
+position = Vector2(3565, 3850)
+
+[node name="altar_chest2" parent="Grass" unique_id=573933551 instance=ExtResource("10_kvpfn")]
+position = Vector2(6321, 1780)
+
+[node name="altar_chest3" parent="Grass" unique_id=756365040 instance=ExtResource("10_kvpfn")]
+position = Vector2(6784, 3700)
+
+[node name="altar_chest4" parent="Grass" unique_id=615716550 instance=ExtResource("10_kvpfn")]
+position = Vector2(3297, 1080)
+
+[node name="altar_chest5" parent="Grass" unique_id=362681745 instance=ExtResource("10_kvpfn")]
+position = Vector2(2815, 2755)
+
+[node name="altar_chest6" parent="Grass" unique_id=1995737035 instance=ExtResource("10_kvpfn")]
+position = Vector2(5200, 4237)
+
+[node name="tree149" parent="Grass" unique_id=834467424 instance=ExtResource("7_vtaks")]
+position = Vector2(4557, 4106)
+
+[node name="tree150" parent="Grass" unique_id=642996978 instance=ExtResource("7_vtaks")]
+position = Vector2(4780, 4329)
+
+[node name="tree151" parent="Grass" unique_id=1805325506 instance=ExtResource("8_kvpfn")]
+position = Vector2(3666, 4263)
+
+[node name="tree152" parent="Grass" unique_id=581756523 instance=ExtResource("8_kvpfn")]
+position = Vector2(1503, 4525)
+
+[node name="altar_chest7" parent="Grass" unique_id=757879990 instance=ExtResource("10_kvpfn")]
+position = Vector2(834, 2441)
+
+[node name="tree153" parent="Grass" unique_id=336636103 instance=ExtResource("7_vtaks")]
+position = Vector2(5479, 3746)
+
+[node name="tree154" parent="Grass" unique_id=1633067061 instance=ExtResource("8_kvpfn")]
+position = Vector2(5932, 3675)
+
+[node name="tree155" parent="Grass" unique_id=969833170 instance=ExtResource("7_vtaks")]
+position = Vector2(6314, 3699)
+
+[node name="bush99" parent="Grass" unique_id=1088124071 instance=ExtResource("10_kvuet")]
+position = Vector2(6611, 3901)
+
+[node name="bush100" parent="Grass" unique_id=1242249055 instance=ExtResource("9_dinhu")]
+position = Vector2(5920, 3985)
+
+[node name="altar_chest8" parent="Grass" unique_id=965731490 instance=ExtResource("10_kvpfn")]
+position = Vector2(498, 1039)
+
+[node name="bush101" parent="Grass" unique_id=1238213776 instance=ExtResource("9_dinhu")]
+position = Vector2(7090, 1541)
+
+[node name="tree156" parent="Grass" unique_id=231440034 instance=ExtResource("7_vtaks")]
+position = Vector2(7681, 1403)
+
+[node name="tree157" parent="Grass" unique_id=2052670138 instance=ExtResource("8_kvpfn")]
+position = Vector2(7376, 1630)
+
+[node name="tree158" parent="Grass" unique_id=809128390 instance=ExtResource("7_vtaks")]
+position = Vector2(7435, 2034)
+
+[node name="tree159" parent="Grass" unique_id=651155250 instance=ExtResource("8_kvpfn")]
+position = Vector2(7779, 1778)
+
+[node name="tree160" parent="Grass" unique_id=59076878 instance=ExtResource("7_vtaks")]
+position = Vector2(6204, 4171)
+
+[node name="tree161" parent="Grass" unique_id=867051662 instance=ExtResource("8_kvpfn")]
+position = Vector2(6814, 4112)
+
+[node name="tree162" parent="Grass" unique_id=25349111 instance=ExtResource("7_vtaks")]
+position = Vector2(6499, 4398)
+
+[node name="tree163" parent="Grass" unique_id=1467145046 instance=ExtResource("8_kvpfn")]
+position = Vector2(7218, 4339)
+
+[node name="tree164" parent="Grass" unique_id=802969265 instance=ExtResource("7_vtaks")]
+position = Vector2(3229, 4506)
+
+[node name="tree165" parent="Grass" unique_id=1017223629 instance=ExtResource("8_kvpfn")]
+position = Vector2(4027, 4477)
+
+[node name="bush102" parent="Grass" unique_id=2093796607 instance=ExtResource("10_kvuet")]
+position = Vector2(4460, 4477)
+
+[node name="bush103" parent="Grass" unique_id=417976479 instance=ExtResource("9_dinhu")]
+position = Vector2(7671, 3561)
+
+[node name="bush104" parent="Grass" unique_id=242066214 instance=ExtResource("10_kvuet")]
+position = Vector2(7770, 3807)
+
+[node name="bush105" parent="Grass" unique_id=997296111 instance=ExtResource("9_dinhu")]
+position = Vector2(7691, 4211)
+
+[node name="bush106" parent="Grass" unique_id=2059331024 instance=ExtResource("10_kvuet")]
+position = Vector2(2353, 3036)
+
+[node name="tree166" parent="Grass" unique_id=1028635115 instance=ExtResource("7_vtaks")]
+position = Vector2(2595, 3206)
+
+[node name="altar_chest9" parent="Grass" unique_id=584946557 instance=ExtResource("10_kvpfn")]
+position = Vector2(-379, 3874)
+
+[node name="altar_chest12" parent="Grass" unique_id=2111550603 instance=ExtResource("10_kvpfn")]
+position = Vector2(1486, 3148)
+
+[node name="altar_chest11" parent="Grass" unique_id=1278014635 instance=ExtResource("10_kvpfn")]
+position = Vector2(4681, 2613)
+
+[node name="altar_chest10" parent="Grass" unique_id=51201852 instance=ExtResource("10_kvpfn")]
+position = Vector2(5047, 913)
+
+[node name="Player" parent="." unique_id=953319153 instance=ExtResource("2_lnu2h")]
+position = Vector2(239, 513)

@@ -430,6 +430,6 @@ position = Vector2(0, 8)
 shape = SubResource("CapsuleShape2D_31fhe")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1672621343]
-zoom = Vector2(3, 3)
+zoom = Vector2(2, 2)
 limit_enabled = false
 position_smoothing_enabled = true

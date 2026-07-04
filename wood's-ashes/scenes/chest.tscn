@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://uy6oycr12i31"]
+
+[ext_resource type="Texture2D" uid="uid://bvkogtg13vmts" path="res://assets/ruins/Extra/TX Props with Shadow.png" id="1_oii8l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sy5e1"]
+atlas = ExtResource("1_oii8l")
+region = Rect2(73, 0, 73, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qyysj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sy5e1")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6uwf"]
+size = Vector2(28.5, 24.5)
+
+[node name="chest" type="StaticBody2D" unique_id=35712856]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=222128799]
+position = Vector2(17.75, 23)
+scale = Vector2(1.0068493, 0.96875)
+sprite_frames = SubResource("SpriteFrames_qyysj")
+frame_progress = 0.9849594
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1003460929]
+position = Vector2(20.25, 38)
+shape = SubResource("RectangleShape2D_m6uwf")
