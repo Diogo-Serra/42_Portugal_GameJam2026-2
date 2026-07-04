@@ -10,6 +10,7 @@ var is_attacking := false
 
 
 func _ready():
+	add_to_group("player")
 	sprite.stop()
 	sprite.flip_h = false
 	sprite.play("idle_right")
