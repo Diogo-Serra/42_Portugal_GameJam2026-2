@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dh61j6ho8kiii" path="res://assets/ruins/Extra/TX Plant with Shadow.png" id="1_tohpd"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tohpd"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts26i"]
 texture = ExtResource("1_tohpd")
 4:0/0 = 0
 5:0/0 = 0
@@ -159,22 +159,18 @@ texture = ExtResource("1_tohpd")
 23:9/0 = 0
 10:11/0 = 0
 11:11/0 = 0
-14:11/0 = 0
-15:11/0 = 0
 18:11/0 = 0
 19:11/0 = 0
 22:11/0 = 0
 23:11/0 = 0
+2:12/0 = 0
+3:12/0 = 0
 6:12/0 = 0
 7:12/0 = 0
 9:12/0 = 0
 10:12/0 = 0
 11:12/0 = 0
 12:12/0 = 0
-13:12/0 = 0
-14:12/0 = 0
-15:12/0 = 0
-16:12/0 = 0
 17:12/0 = 0
 18:12/0 = 0
 19:12/0 = 0
@@ -183,16 +179,14 @@ texture = ExtResource("1_tohpd")
 22:12/0 = 0
 23:12/0 = 0
 24:12/0 = 0
+2:13/0 = 0
+3:13/0 = 0
 6:13/0 = 0
 7:13/0 = 0
 9:13/0 = 0
 10:13/0 = 0
 11:13/0 = 0
 12:13/0 = 0
-13:13/0 = 0
-14:13/0 = 0
-15:13/0 = 0
-16:13/0 = 0
 17:13/0 = 0
 18:13/0 = 0
 19:13/0 = 0
@@ -201,10 +195,6 @@ texture = ExtResource("1_tohpd")
 22:13/0 = 0
 23:13/0 = 0
 24:13/0 = 0
-13:14/0 = 0
-14:14/0 = 0
-15:14/0 = 0
-16:14/0 = 0
 18:14/0 = 0
 19:14/0 = 0
 20:14/0 = 0
@@ -273,13 +263,21 @@ texture = ExtResource("1_tohpd")
 5:31/0 = 0
 6:31/0 = 0
 7:31/0 = 0
-2:12/size_in_atlas = Vector2i(2, 2)
-2:12/0 = 0
+13:11/size_in_atlas = Vector2i(4, 4)
+13:11/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_m02gy"]
-sources/0 = SubResource("TileSetAtlasSource_tohpd")
+[sub_resource type="TileSet" id="TileSet_m6uwf"]
+sources/0 = SubResource("TileSetAtlasSource_ts26i")
 
-[node name="bush1" type="TileMapLayer" unique_id=1472767714]
-z_index = 1
-tile_map_data = PackedByteArray(0, 0, 1, 0, 1, 0, 0, 0, 2, 0, 12, 0, 0, 0)
-tile_set = SubResource("TileSet_m02gy")
+[sub_resource type="CircleShape2D" id="CircleShape2D_qyysj"]
+radius = 17.029387
+
+[node name="bush1" type="TileMapLayer" unique_id=340611293]
+tile_map_data = PackedByteArray(0, 0, 2, 0, 2, 0, 0, 0, 13, 0, 11, 0, 0, 0)
+tile_set = SubResource("TileSet_m6uwf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2144444230]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1113871153]
+position = Vector2(38, 39)
+shape = SubResource("CircleShape2D_qyysj")
