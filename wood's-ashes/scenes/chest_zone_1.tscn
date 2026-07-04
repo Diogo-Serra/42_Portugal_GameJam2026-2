@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://djex7nidx6krc"]
+
+[ext_resource type="PackedScene" uid="uid://bkutov5ast8o0" path="res://scenes/cemitery.tscn" id="1_71877"]
+[ext_resource type="PackedScene" uid="uid://defa7yqiuqicf" path="res://scenes/coffin_1.tscn" id="2_jq6e2"]
+[ext_resource type="PackedScene" uid="uid://bb8sl03rxxycy" path="res://scenes/bush_1.tscn" id="3_qxgi2"]
+[ext_resource type="PackedScene" uid="uid://hgn0qqum3hex" path="res://scenes/ruinwell.tscn" id="4_c52gi"]
+[ext_resource type="PackedScene" uid="uid://uy6oycr12i31" path="res://scenes/chest.tscn" id="5_x8p1n"]
+[ext_resource type="PackedScene" uid="uid://dlpgtobps031y" path="res://scenes/pillar_1.tscn" id="6_uf52i"]
+[ext_resource type="PackedScene" uid="uid://c0ymsi8latujs" path="res://scenes/tree_1.tscn" id="7_o7321"]
+[ext_resource type="PackedScene" uid="uid://dbmsoscag0xth" path="res://scenes/tree_2.tscn" id="8_y1oiq"]
+[ext_resource type="PackedScene" uid="uid://mvxdgf5h2ese" path="res://scenes/bush_2.tscn" id="9_mxa6m"]
+
+[node name="chest_zone1" type="TileMapLayer" unique_id=866369676]
+
+[node name="cemitery" parent="." unique_id=1629375297 instance=ExtResource("1_71877")]
+position = Vector2(51, 48)
+
+[node name="coffin1" parent="." unique_id=1376293668 instance=ExtResource("2_jq6e2")]
+position = Vector2(83, -11)
+
+[node name="bush1" parent="." unique_id=1472767714 instance=ExtResource("3_qxgi2")]
+position = Vector2(75, 26)
+
+[node name="ruinwell" parent="." unique_id=655028148 instance=ExtResource("4_c52gi")]
+position = Vector2(170, 101)
+
+[node name="chest" parent="." unique_id=261175846 instance=ExtResource("5_x8p1n")]
+position = Vector2(67, 112)
+
+[node name="pillar1" parent="." unique_id=56820012 instance=ExtResource("6_uf52i")]
+position = Vector2(0, 123)
+
+[node name="pillar2" parent="." unique_id=683917140 instance=ExtResource("6_uf52i")]
+position = Vector2(131, 124)
+
+[node name="tree1" parent="." unique_id=147964418 instance=ExtResource("7_o7321")]
+position = Vector2(-150, -2)
+
+[node name="tree2" parent="." unique_id=67925733 instance=ExtResource("8_y1oiq")]
+position = Vector2(221, -65)
+
+[node name="bush2" parent="." unique_id=1733496228 instance=ExtResource("3_qxgi2")]
+position = Vector2(10, 186)
+
+[node name="bush3" parent="." unique_id=699216350 instance=ExtResource("9_mxa6m")]
+position = Vector2(-57, -5)
+
+[node name="bush4" parent="." unique_id=1011656082 instance=ExtResource("9_mxa6m")]
+position = Vector2(274, 183)
+
+[node name="bush5" parent="." unique_id=1098674305 instance=ExtResource("9_mxa6m")]
+position = Vector2(316, 42)
+
+[node name="bush6" parent="." unique_id=537949118 instance=ExtResource("9_mxa6m")]
+position = Vector2(78, 311)
+
+[node name="bush7" parent="." unique_id=1548313807 instance=ExtResource("9_mxa6m")]
+position = Vector2(-115, 184)
+
+[node name="tree3" parent="." unique_id=958318520 instance=ExtResource("8_y1oiq")]
+position = Vector2(-94, 280)
+
+[node name="tree4" parent="." unique_id=1747565403 instance=ExtResource("8_y1oiq")]
+position = Vector2(206, 195)

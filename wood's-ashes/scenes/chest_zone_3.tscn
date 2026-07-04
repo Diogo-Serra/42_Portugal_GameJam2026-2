@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://c47lrnect1vk2"]
+
+[ext_resource type="PackedScene" uid="uid://c1m10tovo5vdo" path="res://scenes/saint.tscn" id="1_st0iv"]
+[ext_resource type="PackedScene" uid="uid://dlpgtobps031y" path="res://scenes/pillar_1.tscn" id="2_6i7jl"]
+[ext_resource type="PackedScene" uid="uid://uy6oycr12i31" path="res://scenes/chest.tscn" id="3_yunhe"]
+[ext_resource type="PackedScene" uid="uid://bb8sl03rxxycy" path="res://scenes/bush_1.tscn" id="4_7tj4h"]
+[ext_resource type="PackedScene" uid="uid://c0ymsi8latujs" path="res://scenes/tree_1.tscn" id="5_3jkar"]
+[ext_resource type="PackedScene" uid="uid://dbmsoscag0xth" path="res://scenes/tree_2.tscn" id="6_j4y3h"]
+[ext_resource type="PackedScene" uid="uid://mvxdgf5h2ese" path="res://scenes/bush_2.tscn" id="7_to0e7"]
+
+[sub_resource type="TileSet" id="TileSet_flns0"]
+
+[node name="chest_zone_3" type="TileMapLayer" unique_id=377321376]
+tile_set = SubResource("TileSet_flns0")
+
+[node name="saint" parent="." unique_id=1086125946 instance=ExtResource("1_st0iv")]
+position = Vector2(112, 47)
+
+[node name="pillar1" parent="." unique_id=56820012 instance=ExtResource("2_6i7jl")]
+position = Vector2(43, 14)
+
+[node name="pillar2" parent="." unique_id=571411937 instance=ExtResource("2_6i7jl")]
+position = Vector2(184, 15)
+
+[node name="chest" parent="." unique_id=261175846 instance=ExtResource("3_yunhe")]
+position = Vector2(111, 161)
+
+[node name="bush1" parent="." unique_id=1472767714 instance=ExtResource("4_7tj4h")]
+position = Vector2(118, 106)
+
+[node name="bush2" parent="." unique_id=2120172870 instance=ExtResource("4_7tj4h")]
+position = Vector2(206, 78)
+
+[node name="tree1" parent="." unique_id=147964418 instance=ExtResource("5_3jkar")]
+position = Vector2(-10, 145)
+
+[node name="tree2" parent="." unique_id=67925733 instance=ExtResource("6_j4y3h")]
+position = Vector2(298, -18)
+
+[node name="tree3" parent="." unique_id=620222132 instance=ExtResource("6_j4y3h")]
+position = Vector2(-114, -87)
+
+[node name="bush3" parent="." unique_id=1698261785 instance=ExtResource("4_7tj4h")]
+position = Vector2(-90, 98)
+
+[node name="bush4" parent="." unique_id=699216350 instance=ExtResource("7_to0e7")]
+position = Vector2(234, 147)
+
+[node name="bush5" parent="." unique_id=1045296937 instance=ExtResource("7_to0e7")]
+position = Vector2(97, -54)

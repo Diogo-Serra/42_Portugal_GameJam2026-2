@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://c6vw5wgb7bhj"]
+
+[ext_resource type="PackedScene" uid="uid://defa7yqiuqicf" path="res://scenes/coffin_1.tscn" id="1_8dvvb"]
+[ext_resource type="PackedScene" uid="uid://bkutov5ast8o0" path="res://scenes/cemitery.tscn" id="2_wdd0c"]
+[ext_resource type="PackedScene" uid="uid://dlpgtobps031y" path="res://scenes/pillar_1.tscn" id="3_1ueak"]
+[ext_resource type="PackedScene" uid="uid://bb8sl03rxxycy" path="res://scenes/bush_1.tscn" id="4_hmpfc"]
+[ext_resource type="PackedScene" uid="uid://c0ymsi8latujs" path="res://scenes/tree_1.tscn" id="5_88gwl"]
+[ext_resource type="PackedScene" uid="uid://dbmsoscag0xth" path="res://scenes/tree_2.tscn" id="6_jtanw"]
+[ext_resource type="PackedScene" uid="uid://uy6oycr12i31" path="res://scenes/chest.tscn" id="7_d5pee"]
+
+[node name="chest_zone_2" type="TileMapLayer" unique_id=2112812680]
+
+[node name="coffin1" parent="." unique_id=1376293668 instance=ExtResource("1_8dvvb")]
+position = Vector2(21, 7)
+
+[node name="coffin2" parent="." unique_id=1600285949 instance=ExtResource("1_8dvvb")]
+position = Vector2(55, 7)
+
+[node name="cemitery" parent="." unique_id=1629375297 instance=ExtResource("2_wdd0c")]
+position = Vector2(4, 130)
+
+[node name="pillar1" parent="." unique_id=56820012 instance=ExtResource("3_1ueak")]
+position = Vector2(140, -7)
+
+[node name="bush1" parent="." unique_id=1472767714 instance=ExtResource("4_hmpfc")]
+position = Vector2(148, 57)
+
+[node name="tree1" parent="." unique_id=147964418 instance=ExtResource("5_88gwl")]
+position = Vector2(206, -86)
+
+[node name="tree2" parent="." unique_id=67925733 instance=ExtResource("6_jtanw")]
+position = Vector2(-152, -34)
+
+[node name="tree3" parent="." unique_id=230748987 instance=ExtResource("5_88gwl")]
+position = Vector2(-142, 159)
+
+[node name="tree4" parent="." unique_id=1805540898 instance=ExtResource("6_jtanw")]
+position = Vector2(91, 232)
+
+[node name="chest" parent="." unique_id=261175846 instance=ExtResource("7_d5pee")]
+position = Vector2(189, 141)
+
+[node name="bush2" parent="." unique_id=1713340908 instance=ExtResource("4_hmpfc")]
+position = Vector2(251, 33)
+
+[node name="pillar2" parent="." unique_id=1617243471 instance=ExtResource("3_1ueak")]
+position = Vector2(151, 88)
+
+[node name="tree5" parent="." unique_id=171498004 instance=ExtResource("6_jtanw")]
+position = Vector2(301, 175)
+
+[node name="bush3" parent="." unique_id=1746553412 instance=ExtResource("4_hmpfc")]
+position = Vector2(331, 277)
