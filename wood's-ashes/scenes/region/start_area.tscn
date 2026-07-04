@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://b4jdho645mer7"]
 
 [ext_resource type="Texture2D" uid="uid://bvkogtg13vmts" path="res://assets/ruins/Extra/TX Props with Shadow.png" id="1_30bs3"]
-[ext_resource type="PackedScene" uid="uid://bb8sl03rxxycy" path="res://scenes/bush_1.tscn" id="2_ig5xn"]
-[ext_resource type="PackedScene" uid="uid://defa7yqiuqicf" path="res://scenes/coffin_1.tscn" id="4_hc5xp"]
-[ext_resource type="PackedScene" uid="uid://c0ymsi8latujs" path="res://scenes/tree_1.tscn" id="5_6fu4b"]
-[ext_resource type="PackedScene" uid="uid://bkutov5ast8o0" path="res://scenes/cemitery.tscn" id="6_ig5xn"]
-[ext_resource type="PackedScene" uid="uid://dbmsoscag0xth" path="res://scenes/tree_2.tscn" id="6_o1gh4"]
-[ext_resource type="PackedScene" uid="uid://dauwqfhlndmm5" path="res://scenes/portal.tscn" id="7_ig5xn"]
-[ext_resource type="PackedScene" uid="uid://dlpgtobps031y" path="res://scenes/pillar_1.tscn" id="7_xs7je"]
+[ext_resource type="PackedScene" uid="uid://bb8sl03rxxycy" path="res://scenes/objects/bush_1.tscn" id="2_ig5xn"]
+[ext_resource type="PackedScene" uid="uid://defa7yqiuqicf" path="res://scenes/objects/coffin_1.tscn" id="4_hc5xp"]
+[ext_resource type="PackedScene" uid="uid://c0ymsi8latujs" path="res://scenes/objects/tree_1.tscn" id="5_6fu4b"]
+[ext_resource type="PackedScene" uid="uid://bkutov5ast8o0" path="res://scenes/region/cemitery.tscn" id="6_ig5xn"]
+[ext_resource type="PackedScene" uid="uid://dbmsoscag0xth" path="res://scenes/objects/tree_2.tscn" id="6_o1gh4"]
+[ext_resource type="PackedScene" uid="uid://dauwqfhlndmm5" path="res://scenes/objects/portal.tscn" id="7_ig5xn"]
+[ext_resource type="PackedScene" uid="uid://dlpgtobps031y" path="res://scenes/objects/pillar_1.tscn" id="7_xs7je"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5mvc"]
 texture = ExtResource("1_30bs3")
