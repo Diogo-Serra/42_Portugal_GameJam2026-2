@@ -392,7 +392,7 @@ position = Vector2(-204, 182)
 position = Vector2(-47, 225)
 
 [node name="portal" parent="." unique_id=1067540629 instance=ExtResource("7_ig5xn")]
-position = Vector2(106, 101)
+position = Vector2(107, 126)
 
 [node name="cemitery" parent="." unique_id=1629375297 instance=ExtResource("6_ig5xn")]
 position = Vector2(115, 36)
