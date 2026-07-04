@@ -4,7 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://wix7g42hodxl" path="res://scenes/stone_tile_2_4.tscn" id="2_iywne"]
 [ext_resource type="PackedScene" uid="uid://dty7gb66ou1km" path="res://scenes/player.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://q4d7x3tp3mex" path="res://scenes/coffin.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://cxxchmvg341vm" path="res://scenes/EnemySpawner.tscn" id="3_p57ef"]
 [ext_resource type="PackedScene" uid="uid://01l27fxg347y" path="res://scenes/pillar.tscn" id="5_p57ef"]
+[ext_resource type="PackedScene" uid="uid://dgr3t574wj5ah" path="res://scenes/Enemy.tscn" id="5_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://c1m10tovo5vdo" path="res://scenes/saint.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://c0ymsi8latujs" path="res://scenes/tree_1.tscn" id="7_vtaks"]
 [ext_resource type="PackedScene" uid="uid://dbmsoscag0xth" path="res://scenes/tree_2.tscn" id="8_kvpfn"]
@@ -885,5 +887,11 @@ position = Vector2(4681, 2613)
 [node name="altar_chest10" parent="Grass" unique_id=51201852 instance=ExtResource("10_kvpfn")]
 position = Vector2(5047, 913)
 
-[node name="Player" parent="." unique_id=953319153 instance=ExtResource("2_lnu2h")]
+[node name="Objects" type="Node2D" parent="." unique_id=181097562]
+
+[node name="Player" parent="Objects" unique_id=953319153 instance=ExtResource("2_lnu2h")]
 position = Vector2(239, 513)
+
+[node name="EnemySpawner" parent="Objects" unique_id=64854175 node_paths=PackedStringArray("player") instance=ExtResource("3_p57ef")]
+enemy_scene = ExtResource("5_u5sy4")
+player = NodePath("../Player")
