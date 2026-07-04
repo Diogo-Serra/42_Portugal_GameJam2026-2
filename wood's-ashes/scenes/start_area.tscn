@@ -1,9 +1,16 @@
-[gd_scene format=3 uid="uid://01l27fxg347y"]
+[gd_scene format=3 uid="uid://b4jdho645mer7"]
 
-[ext_resource type="Texture2D" uid="uid://bvkogtg13vmts" path="res://assets/ruins/Extra/TX Props with Shadow.png" id="1_fv82l"]
+[ext_resource type="Texture2D" uid="uid://bvkogtg13vmts" path="res://assets/ruins/Extra/TX Props with Shadow.png" id="1_30bs3"]
+[ext_resource type="PackedScene" uid="uid://bb8sl03rxxycy" path="res://scenes/bush_1.tscn" id="2_ig5xn"]
+[ext_resource type="PackedScene" uid="uid://defa7yqiuqicf" path="res://scenes/coffin_1.tscn" id="4_hc5xp"]
+[ext_resource type="PackedScene" uid="uid://c0ymsi8latujs" path="res://scenes/tree_1.tscn" id="5_6fu4b"]
+[ext_resource type="PackedScene" uid="uid://bkutov5ast8o0" path="res://scenes/cemitery.tscn" id="6_ig5xn"]
+[ext_resource type="PackedScene" uid="uid://dbmsoscag0xth" path="res://scenes/tree_2.tscn" id="6_o1gh4"]
+[ext_resource type="PackedScene" uid="uid://dauwqfhlndmm5" path="res://scenes/portal.tscn" id="7_ig5xn"]
+[ext_resource type="PackedScene" uid="uid://dlpgtobps031y" path="res://scenes/pillar_1.tscn" id="7_xs7je"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01pxi"]
-texture = ExtResource("1_fv82l")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5mvc"]
+texture = ExtResource("1_30bs3")
 14:0/0 = 0
 15:0/0 = 0
 24:0/0 = 0
@@ -86,8 +93,6 @@ texture = ExtResource("1_fv82l")
 8:5/0 = 0
 10:5/0 = 0
 11:5/0 = 0
-14:5/0 = 0
-15:5/0 = 0
 18:5/0 = 0
 19:5/0 = 0
 20:5/0 = 0
@@ -107,8 +112,6 @@ texture = ExtResource("1_fv82l")
 10:6/0 = 0
 11:6/0 = 0
 12:6/0 = 0
-14:6/0 = 0
-15:6/0 = 0
 16:6/0 = 0
 17:6/0 = 0
 18:6/0 = 0
@@ -128,8 +131,6 @@ texture = ExtResource("1_fv82l")
 10:7/0 = 0
 11:7/0 = 0
 12:7/0 = 0
-14:7/0 = 0
-15:7/0 = 0
 16:7/0 = 0
 17:7/0 = 0
 18:7/0 = 0
@@ -140,21 +141,15 @@ texture = ExtResource("1_fv82l")
 24:7/0 = 0
 25:7/0 = 0
 26:7/0 = 0
-28:7/0 = 0
-29:7/0 = 0
 1:8/0 = 0
 2:8/0 = 0
 3:8/0 = 0
 4:8/0 = 0
-14:8/0 = 0
-15:8/0 = 0
 16:8/0 = 0
 17:8/0 = 0
 24:8/0 = 0
 25:8/0 = 0
 26:8/0 = 0
-28:8/0 = 0
-29:8/0 = 0
 30:8/0 = 0
 1:9/0 = 0
 2:9/0 = 0
@@ -162,8 +157,6 @@ texture = ExtResource("1_fv82l")
 4:9/0 = 0
 10:9/0 = 0
 11:9/0 = 0
-14:9/0 = 0
-15:9/0 = 0
 16:9/0 = 0
 17:9/0 = 0
 18:9/0 = 0
@@ -171,15 +164,11 @@ texture = ExtResource("1_fv82l")
 24:9/0 = 0
 25:9/0 = 0
 26:9/0 = 0
-28:9/0 = 0
-29:9/0 = 0
 30:9/0 = 0
 1:10/0 = 0
 2:10/0 = 0
 3:10/0 = 0
 4:10/0 = 0
-6:10/0 = 0
-7:10/0 = 0
 10:10/0 = 0
 11:10/0 = 0
 12:10/0 = 0
@@ -190,8 +179,6 @@ texture = ExtResource("1_fv82l")
 2:11/0 = 0
 3:11/0 = 0
 4:11/0 = 0
-6:11/0 = 0
-7:11/0 = 0
 10:11/0 = 0
 11:11/0 = 0
 12:11/0 = 0
@@ -258,8 +245,6 @@ texture = ExtResource("1_fv82l")
 19:16/0 = 0
 20:16/0 = 0
 21:16/0 = 0
-24:16/0 = 0
-25:16/0 = 0
 14:17/0 = 0
 15:17/0 = 0
 16:17/0 = 0
@@ -267,23 +252,10 @@ texture = ExtResource("1_fv82l")
 19:17/0 = 0
 20:17/0 = 0
 21:17/0 = 0
-22:17/0 = 0
-23:17/0 = 0
-24:17/0 = 0
-25:17/0 = 0
-26:17/0 = 0
-27:17/0 = 0
 10:18/0 = 0
 11:18/0 = 0
 14:18/0 = 0
 15:18/0 = 0
-22:18/0 = 0
-23:18/0 = 0
-24:18/0 = 0
-25:18/0 = 0
-26:18/0 = 0
-27:18/0 = 0
-28:18/0 = 0
 10:19/0 = 0
 11:19/0 = 0
 14:19/0 = 0
@@ -291,25 +263,12 @@ texture = ExtResource("1_fv82l")
 18:19/0 = 0
 19:19/0 = 0
 20:19/0 = 0
-22:19/0 = 0
-23:19/0 = 0
-24:19/0 = 0
-25:19/0 = 0
-26:19/0 = 0
-27:19/0 = 0
-28:19/0 = 0
 14:20/0 = 0
 15:20/0 = 0
 16:20/0 = 0
 18:20/0 = 0
 19:20/0 = 0
 20:20/0 = 0
-22:20/0 = 0
-23:20/0 = 0
-24:20/0 = 0
-25:20/0 = 0
-26:20/0 = 0
-27:20/0 = 0
 10:21/0 = 0
 11:21/0 = 0
 14:21/0 = 0
@@ -317,10 +276,6 @@ texture = ExtResource("1_fv82l")
 18:21/0 = 0
 19:21/0 = 0
 20:21/0 = 0
-23:21/0 = 0
-24:21/0 = 0
-25:21/0 = 0
-26:21/0 = 0
 10:22/0 = 0
 11:22/0 = 0
 26:22/0 = 0
@@ -390,21 +345,72 @@ texture = ExtResource("1_fv82l")
 17:31/0 = 0
 18:31/0 = 0
 19:31/0 = 0
+6:10/size_in_atlas = Vector2i(2, 2)
+6:10/0 = 0
+14:5/size_in_atlas = Vector2i(2, 5)
+14:5/0 = 0
 22:10/size_in_atlas = Vector2i(2, 6)
 22:10/0 = 0
+22:16/size_in_atlas = Vector2i(6, 6)
+22:16/0 = 0
+28:7/size_in_atlas = Vector2i(2, 3)
+28:7/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_ukuoi"]
-sources/0 = SubResource("TileSetAtlasSource_01pxi")
+[sub_resource type="TileSet" id="TileSet_m02gy"]
+sources/0 = SubResource("TileSetAtlasSource_a5mvc")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m02gy"]
-size = Vector2(24, 73)
+[node name="start_area" type="TileMapLayer" unique_id=1385541177]
+tile_map_data = PackedByteArray(0, 0, 18, 0, 3, 0, 0, 0, 6, 0, 10, 0, 0, 0)
+tile_set = SubResource("TileSet_m02gy")
 
-[node name="pillar" type="TileMapLayer" unique_id=293995212]
-tile_map_data = PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 22, 0, 10, 0, 0, 0)
-tile_set = SubResource("TileSet_ukuoi")
+[node name="coffin1" parent="." unique_id=1376293668 instance=ExtResource("4_hc5xp")]
+z_index = 1
+position = Vector2(7, -2)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=186021063]
+[node name="tree1" parent="." unique_id=147964418 instance=ExtResource("5_6fu4b")]
+position = Vector2(291, 160)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=75745041]
-position = Vector2(24, 44.5)
-shape = SubResource("RectangleShape2D_m02gy")
+[node name="tree2" parent="." unique_id=67925733 instance=ExtResource("6_o1gh4")]
+position = Vector2(175, 232)
+
+[node name="tree3" parent="." unique_id=377652707 instance=ExtResource("6_o1gh4")]
+position = Vector2(315, 0)
+
+[node name="tree4" parent="." unique_id=904915737 instance=ExtResource("6_o1gh4")]
+position = Vector2(437, 98)
+
+[node name="tree5" parent="." unique_id=1913511470 instance=ExtResource("5_6fu4b")]
+position = Vector2(-155, -41)
+
+[node name="tree6" parent="." unique_id=721106801 instance=ExtResource("6_o1gh4")]
+position = Vector2(-96, 98)
+
+[node name="tree7" parent="." unique_id=1961167097 instance=ExtResource("5_6fu4b")]
+position = Vector2(-204, 182)
+
+[node name="tree8" parent="." unique_id=1809758108 instance=ExtResource("6_o1gh4")]
+position = Vector2(-47, 225)
+
+[node name="portal" parent="." unique_id=1067540629 instance=ExtResource("7_ig5xn")]
+position = Vector2(106, 101)
+
+[node name="cemitery" parent="." unique_id=1629375297 instance=ExtResource("6_ig5xn")]
+position = Vector2(115, 36)
+
+[node name="bush1" parent="." unique_id=1472767714 instance=ExtResource("2_ig5xn")]
+position = Vector2(-2, 36)
+
+[node name="bush2" parent="." unique_id=1003353805 instance=ExtResource("2_ig5xn")]
+position = Vector2(172, 64)
+
+[node name="bush3" parent="." unique_id=681766109 instance=ExtResource("2_ig5xn")]
+position = Vector2(-153, 302)
+
+[node name="bush4" parent="." unique_id=1465073351 instance=ExtResource("2_ig5xn")]
+position = Vector2(339, 277)
+
+[node name="pillar1" parent="." unique_id=56820012 instance=ExtResource("7_xs7je")]
+position = Vector2(35, 148)
+
+[node name="pillar2" parent="." unique_id=980217816 instance=ExtResource("7_xs7je")]
+position = Vector2(228, 149)
