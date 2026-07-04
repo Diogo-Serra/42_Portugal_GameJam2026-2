@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dh61j6ho8kiii" path="res://assets/ruins/Extra/TX Plant with Shadow.png" id="1_tem7l"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b2jax"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tem7l"]
 texture = ExtResource("1_tem7l")
 11:1/0 = 0
 12:1/0 = 0
@@ -218,28 +218,29 @@ texture = ExtResource("1_tem7l")
 5:31/0 = 0
 6:31/0 = 0
 7:31/0 = 0
-1:0/size_in_atlas = Vector2i(8, 10)
-1:0/0 = 0
+1:1/size_in_atlas = Vector2i(8, 9)
+1:1/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_m6uwf"]
-sources/0 = SubResource("TileSetAtlasSource_b2jax")
+[sub_resource type="TileSet" id="TileSet_m02gy"]
+sources/0 = SubResource("TileSetAtlasSource_tem7l")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qyysj"]
-size = Vector2(7, 32)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m02gy"]
+size = Vector2(9, 35)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qyysj"]
-radius = 46.010868
+[sub_resource type="CircleShape2D" id="CircleShape2D_m02gy"]
+radius = 28.0
 
-[node name="tree1" type="TileMapLayer" unique_id=728826270]
-tile_map_data = PackedByteArray(0, 0, 4, 0, 4, 0, 0, 0, 1, 0, 0, 0, 0, 0)
-tile_set = SubResource("TileSet_m6uwf")
+[node name="tree1" type="TileMapLayer" unique_id=147964418]
+z_index = 1
+tile_map_data = PackedByteArray(0, 0, 4, 0, 5, 0, 0, 0, 1, 0, 1, 0, 0, 0)
+tile_set = SubResource("TileSet_m02gy")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=39175935]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1555500749]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1598562115]
-position = Vector2(71.5, 127)
-shape = SubResource("RectangleShape2D_qyysj")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1668519633]
+position = Vector2(71.5, 134.5)
+shape = SubResource("RectangleShape2D_m02gy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=730394205]
-position = Vector2(70, 66)
-shape = SubResource("CircleShape2D_qyysj")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=2130133061]
+position = Vector2(72, 86)
+shape = SubResource("CircleShape2D_m02gy")
