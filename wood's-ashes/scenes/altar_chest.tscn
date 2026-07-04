@@ -1,9 +1,17 @@
-[gd_scene format=3 uid="uid://c1m10tovo5vdo"]
+[gd_scene format=3 uid="uid://djckags64kbkl"]
 
-[ext_resource type="Texture2D" uid="uid://bvkogtg13vmts" path="res://assets/ruins/Extra/TX Props with Shadow.png" id="1_1fvg4"]
+[ext_resource type="Texture2D" uid="uid://bvkogtg13vmts" path="res://assets/ruins/Extra/TX Props with Shadow.png" id="1_ymc4b"]
+[ext_resource type="PackedScene" uid="uid://uy6oycr12i31" path="res://scenes/chest.tscn" id="2_8lwx7"]
+[ext_resource type="PackedScene" uid="uid://c1m10tovo5vdo" path="res://scenes/saint.tscn" id="3_qdfv6"]
+[ext_resource type="PackedScene" uid="uid://q4d7x3tp3mex" path="res://scenes/coffin.tscn" id="4_h66js"]
+[ext_resource type="PackedScene" uid="uid://dauwqfhlndmm5" path="res://scenes/portal.tscn" id="5_o1djc"]
+[ext_resource type="PackedScene" uid="uid://01l27fxg347y" path="res://scenes/pillar.tscn" id="6_r0f4j"]
+[ext_resource type="PackedScene" uid="uid://mvxdgf5h2ese" path="res://scenes/bush_2.tscn" id="7_11l8x"]
+[ext_resource type="PackedScene" uid="uid://bb8sl03rxxycy" path="res://scenes/bush_1.tscn" id="8_d2klc"]
+[ext_resource type="PackedScene" uid="uid://c0ymsi8latujs" path="res://scenes/tree_1.tscn" id="9_f60en"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqfew"]
-texture = ExtResource("1_1fvg4")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qnw3u"]
+texture = ExtResource("1_ymc4b")
 14:0/0 = 0
 15:0/0 = 0
 24:0/0 = 0
@@ -27,6 +35,8 @@ texture = ExtResource("1_1fvg4")
 24:1/0 = 0
 25:1/0 = 0
 26:1/0 = 0
+28:1/0 = 0
+29:1/0 = 0
 2:2/0 = 0
 3:2/0 = 0
 4:2/0 = 0
@@ -48,6 +58,8 @@ texture = ExtResource("1_1fvg4")
 24:2/0 = 0
 25:2/0 = 0
 26:2/0 = 0
+28:2/0 = 0
+29:2/0 = 0
 2:3/0 = 0
 3:3/0 = 0
 4:3/0 = 0
@@ -68,8 +80,15 @@ texture = ExtResource("1_1fvg4")
 24:3/0 = 0
 25:3/0 = 0
 26:3/0 = 0
+28:3/0 = 0
+29:3/0 = 0
+30:3/0 = 0
 6:4/0 = 0
 7:4/0 = 0
+27:4/0 = 0
+28:4/0 = 0
+29:4/0 = 0
+30:4/0 = 0
 6:5/0 = 0
 7:5/0 = 0
 8:5/0 = 0
@@ -82,6 +101,10 @@ texture = ExtResource("1_1fvg4")
 20:5/0 = 0
 21:5/0 = 0
 22:5/0 = 0
+27:5/0 = 0
+28:5/0 = 0
+29:5/0 = 0
+30:5/0 = 0
 1:6/0 = 0
 2:6/0 = 0
 3:6/0 = 0
@@ -151,8 +174,6 @@ texture = ExtResource("1_1fvg4")
 15:9/0 = 0
 16:9/0 = 0
 17:9/0 = 0
-18:9/0 = 0
-19:9/0 = 0
 24:9/0 = 0
 25:9/0 = 0
 26:9/0 = 0
@@ -168,11 +189,6 @@ texture = ExtResource("1_1fvg4")
 10:10/0 = 0
 11:10/0 = 0
 12:10/0 = 0
-18:10/0 = 0
-19:10/0 = 0
-20:10/0 = 0
-22:10/0 = 0
-23:10/0 = 0
 1:11/0 = 0
 2:11/0 = 0
 3:11/0 = 0
@@ -184,11 +200,6 @@ texture = ExtResource("1_1fvg4")
 12:11/0 = 0
 14:11/0 = 0
 15:11/0 = 0
-18:11/0 = 0
-19:11/0 = 0
-20:11/0 = 0
-22:11/0 = 0
-23:11/0 = 0
 1:12/0 = 0
 2:12/0 = 0
 3:12/0 = 0
@@ -197,11 +208,6 @@ texture = ExtResource("1_1fvg4")
 15:12/0 = 0
 16:12/0 = 0
 17:12/0 = 0
-18:12/0 = 0
-19:12/0 = 0
-20:12/0 = 0
-22:12/0 = 0
-23:12/0 = 0
 24:12/0 = 0
 26:12/0 = 0
 27:12/0 = 0
@@ -215,11 +221,6 @@ texture = ExtResource("1_1fvg4")
 15:13/0 = 0
 16:13/0 = 0
 17:13/0 = 0
-18:13/0 = 0
-19:13/0 = 0
-20:13/0 = 0
-22:13/0 = 0
-23:13/0 = 0
 24:13/0 = 0
 26:13/0 = 0
 27:13/0 = 0
@@ -228,10 +229,6 @@ texture = ExtResource("1_1fvg4")
 7:14/0 = 0
 10:14/0 = 0
 11:14/0 = 0
-14:14/0 = 0
-15:14/0 = 0
-22:14/0 = 0
-23:14/0 = 0
 24:14/0 = 0
 26:14/0 = 0
 27:14/0 = 0
@@ -240,29 +237,13 @@ texture = ExtResource("1_1fvg4")
 7:15/0 = 0
 10:15/0 = 0
 11:15/0 = 0
-14:15/0 = 0
-15:15/0 = 0
-18:15/0 = 0
-19:15/0 = 0
-22:15/0 = 0
-23:15/0 = 0
 26:15/0 = 0
 27:15/0 = 0
-14:16/0 = 0
-15:16/0 = 0
 16:16/0 = 0
-18:16/0 = 0
-19:16/0 = 0
-20:16/0 = 0
 21:16/0 = 0
 24:16/0 = 0
 25:16/0 = 0
-14:17/0 = 0
-15:17/0 = 0
 16:17/0 = 0
-18:17/0 = 0
-19:17/0 = 0
-20:17/0 = 0
 21:17/0 = 0
 22:17/0 = 0
 23:17/0 = 0
@@ -387,22 +368,62 @@ texture = ExtResource("1_1fvg4")
 17:31/0 = 0
 18:31/0 = 0
 19:31/0 = 0
-27:1/size_in_atlas = Vector2i(4, 5)
-27:1/0 = 0
+18:15/size_in_atlas = Vector2i(2, 3)
+18:15/0 = 0
+18:9/size_in_atlas = Vector2i(2, 5)
+18:9/0 = 0
+22:10/size_in_atlas = Vector2i(2, 6)
+22:10/0 = 0
+14:14/size_in_atlas = Vector2i(2, 4)
+14:14/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_ukuoi"]
-sources/0 = SubResource("TileSetAtlasSource_jqfew")
+[sub_resource type="TileSet" id="TileSet_qyysj"]
+sources/0 = SubResource("TileSetAtlasSource_qnw3u")
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m02gy"]
-radius = 15.0
-height = 72.0
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4dbve"]
 
-[node name="saint" type="TileMapLayer" unique_id=263521187]
-tile_map_data = PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 27, 0, 1, 0, 0, 0)
-tile_set = SubResource("TileSet_ukuoi")
+[node name="altar_chest" type="TileMapLayer" unique_id=280157700]
+tile_set = SubResource("TileSet_qyysj")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1018763503]
+[node name="chest" parent="." unique_id=35712856 instance=ExtResource("2_8lwx7")]
+position = Vector2(531, 222)
+physics_material_override = SubResource("PhysicsMaterial_4dbve")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=210416654]
-position = Vector2(24, 41)
-shape = SubResource("CapsuleShape2D_m02gy")
+[node name="saint" parent="." unique_id=263521187 instance=ExtResource("3_qdfv6")]
+position = Vector2(527, 135)
+
+[node name="coffin" parent="." unique_id=642592769 instance=ExtResource("4_h66js")]
+position = Vector2(435, 142)
+
+[node name="coffin2" parent="." unique_id=528290100 instance=ExtResource("4_h66js")]
+position = Vector2(618, 142)
+
+[node name="portal" parent="." unique_id=1987145418 instance=ExtResource("5_o1djc")]
+position = Vector2(495, 295)
+
+[node name="pillar" parent="." unique_id=293995212 instance=ExtResource("6_r0f4j")]
+position = Vector2(381, 244)
+
+[node name="pillar2" parent="." unique_id=100597886 instance=ExtResource("6_r0f4j")]
+position = Vector2(669, 244)
+
+[node name="bush2" parent="." unique_id=357128495 instance=ExtResource("7_11l8x")]
+position = Vector2(485, 282)
+
+[node name="bush3" parent="." unique_id=378438917 instance=ExtResource("7_11l8x")]
+position = Vector2(545, 346)
+
+[node name="bush4" parent="." unique_id=824084465 instance=ExtResource("7_11l8x")]
+position = Vector2(681, 299)
+
+[node name="bush5" parent="." unique_id=265737036 instance=ExtResource("7_11l8x")]
+position = Vector2(428, 185)
+
+[node name="bush1" parent="." unique_id=340611293 instance=ExtResource("8_d2klc")]
+position = Vector2(704, 166)
+
+[node name="bush6" parent="." unique_id=258502193 instance=ExtResource("8_d2klc")]
+position = Vector2(416, 342)
+
+[node name="tree1" parent="." unique_id=728826270 instance=ExtResource("9_f60en")]
+position = Vector2(271, 71)

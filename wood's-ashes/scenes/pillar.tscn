@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://c1m10tovo5vdo"]
+[gd_scene format=3 uid="uid://01l27fxg347y"]
 
-[ext_resource type="Texture2D" uid="uid://bvkogtg13vmts" path="res://assets/ruins/Extra/TX Props with Shadow.png" id="1_1fvg4"]
+[ext_resource type="Texture2D" uid="uid://bvkogtg13vmts" path="res://assets/ruins/Extra/TX Props with Shadow.png" id="1_fv82l"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqfew"]
-texture = ExtResource("1_1fvg4")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01pxi"]
+texture = ExtResource("1_fv82l")
 14:0/0 = 0
 15:0/0 = 0
 24:0/0 = 0
@@ -27,6 +27,8 @@ texture = ExtResource("1_1fvg4")
 24:1/0 = 0
 25:1/0 = 0
 26:1/0 = 0
+28:1/0 = 0
+29:1/0 = 0
 2:2/0 = 0
 3:2/0 = 0
 4:2/0 = 0
@@ -48,6 +50,8 @@ texture = ExtResource("1_1fvg4")
 24:2/0 = 0
 25:2/0 = 0
 26:2/0 = 0
+28:2/0 = 0
+29:2/0 = 0
 2:3/0 = 0
 3:3/0 = 0
 4:3/0 = 0
@@ -68,8 +72,15 @@ texture = ExtResource("1_1fvg4")
 24:3/0 = 0
 25:3/0 = 0
 26:3/0 = 0
+28:3/0 = 0
+29:3/0 = 0
+30:3/0 = 0
 6:4/0 = 0
 7:4/0 = 0
+27:4/0 = 0
+28:4/0 = 0
+29:4/0 = 0
+30:4/0 = 0
 6:5/0 = 0
 7:5/0 = 0
 8:5/0 = 0
@@ -82,6 +93,10 @@ texture = ExtResource("1_1fvg4")
 20:5/0 = 0
 21:5/0 = 0
 22:5/0 = 0
+27:5/0 = 0
+28:5/0 = 0
+29:5/0 = 0
+30:5/0 = 0
 1:6/0 = 0
 2:6/0 = 0
 3:6/0 = 0
@@ -171,8 +186,6 @@ texture = ExtResource("1_1fvg4")
 18:10/0 = 0
 19:10/0 = 0
 20:10/0 = 0
-22:10/0 = 0
-23:10/0 = 0
 1:11/0 = 0
 2:11/0 = 0
 3:11/0 = 0
@@ -187,8 +200,6 @@ texture = ExtResource("1_1fvg4")
 18:11/0 = 0
 19:11/0 = 0
 20:11/0 = 0
-22:11/0 = 0
-23:11/0 = 0
 1:12/0 = 0
 2:12/0 = 0
 3:12/0 = 0
@@ -200,8 +211,6 @@ texture = ExtResource("1_1fvg4")
 18:12/0 = 0
 19:12/0 = 0
 20:12/0 = 0
-22:12/0 = 0
-23:12/0 = 0
 24:12/0 = 0
 26:12/0 = 0
 27:12/0 = 0
@@ -218,8 +227,6 @@ texture = ExtResource("1_1fvg4")
 18:13/0 = 0
 19:13/0 = 0
 20:13/0 = 0
-22:13/0 = 0
-23:13/0 = 0
 24:13/0 = 0
 26:13/0 = 0
 27:13/0 = 0
@@ -230,8 +237,6 @@ texture = ExtResource("1_1fvg4")
 11:14/0 = 0
 14:14/0 = 0
 15:14/0 = 0
-22:14/0 = 0
-23:14/0 = 0
 24:14/0 = 0
 26:14/0 = 0
 27:14/0 = 0
@@ -244,8 +249,6 @@ texture = ExtResource("1_1fvg4")
 15:15/0 = 0
 18:15/0 = 0
 19:15/0 = 0
-22:15/0 = 0
-23:15/0 = 0
 26:15/0 = 0
 27:15/0 = 0
 14:16/0 = 0
@@ -387,22 +390,21 @@ texture = ExtResource("1_1fvg4")
 17:31/0 = 0
 18:31/0 = 0
 19:31/0 = 0
-27:1/size_in_atlas = Vector2i(4, 5)
-27:1/0 = 0
+22:10/size_in_atlas = Vector2i(2, 6)
+22:10/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_ukuoi"]
-sources/0 = SubResource("TileSetAtlasSource_jqfew")
+sources/0 = SubResource("TileSetAtlasSource_01pxi")
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m02gy"]
-radius = 15.0
-height = 72.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m02gy"]
+size = Vector2(24, 73)
 
-[node name="saint" type="TileMapLayer" unique_id=263521187]
-tile_map_data = PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 27, 0, 1, 0, 0, 0)
+[node name="pillar" type="TileMapLayer" unique_id=293995212]
+tile_map_data = PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 22, 0, 10, 0, 0, 0)
 tile_set = SubResource("TileSet_ukuoi")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1018763503]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=186021063]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=210416654]
-position = Vector2(24, 41)
-shape = SubResource("CapsuleShape2D_m02gy")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=75745041]
+position = Vector2(24, 44.5)
+shape = SubResource("RectangleShape2D_m02gy")

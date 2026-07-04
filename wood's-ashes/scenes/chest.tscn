@@ -1,58 +1,33 @@
 [gd_scene format=3 uid="uid://uy6oycr12i31"]
 
-[ext_resource type="Script" uid="uid://cpq7tyl3xcqpc" path="res://scripts/chest.gd" id="1_gqd3d"]
-[ext_resource type="Texture2D" uid="uid://dhjlf2fk43uys" path="res://assets/ruins/TX Props.png" id="2_gqd3d"]
-[ext_resource type="FontFile" uid="uid://cxna5wwgu0upf" path="res://assets/Fonts/Star Crush.otf" id="3_yue2o"]
+[ext_resource type="Texture2D" uid="uid://bvkogtg13vmts" path="res://assets/ruins/Extra/TX Props with Shadow.png" id="1_oii8l"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yue2o"]
-atlas = ExtResource("2_gqd3d")
-region = Rect2(73, 0, 73, 73)
+[sub_resource type="AtlasTexture" id="AtlasTexture_sy5e1"]
+atlas = ExtResource("1_oii8l")
+region = Rect2(73, 0, 73, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yhylo"]
-atlas = ExtResource("2_gqd3d")
-region = Rect2(73, 73, 73, 73)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_m02gy"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_qyysj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yue2o")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yhylo")
+"texture": SubResource("AtlasTexture_sy5e1")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m02gy"]
-size = Vector2(30, 29)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_tymkp"]
-radius = 88.09086
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6uwf"]
+size = Vector2(28.5, 24.5)
 
 [node name="chest" type="StaticBody2D" unique_id=35712856]
-script = ExtResource("1_gqd3d")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=343884985]
-position = Vector2(18, 29)
-sprite_frames = SubResource("SpriteFrames_m02gy")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=222128799]
+position = Vector2(17.75, 23)
+scale = Vector2(1.0068493, 0.96875)
+sprite_frames = SubResource("SpriteFrames_qyysj")
+frame_progress = 0.9849594
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1003460929]
 position = Vector2(20.25, 38)
-shape = SubResource("RectangleShape2D_m02gy")
-
-[node name="InteractionArea" type="Area2D" parent="." unique_id=907439088]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1631212490]
-position = Vector2(21, 37)
-shape = SubResource("CircleShape2D_tymkp")
-
-[node name="PromptLabel" type="Label" parent="." unique_id=1613378388]
-offset_left = -32.0
-offset_top = 1.0
-offset_right = 101.0
-offset_bottom = 24.0
-theme_override_fonts/font = ExtResource("3_yue2o")
-text = "Press \"E\" to open"
+shape = SubResource("RectangleShape2D_m6uwf")
