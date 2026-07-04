@@ -9,9 +9,9 @@ var is_open: bool = false
 
 func _ready() -> void:
 	prompt_label.visible = false
+	sprite.frame = 0
 	$InteractionArea.body_entered.connect(_on_body_entered)
 	$InteractionArea.body_exited.connect(_on_body_exited)
-	sprite.frame = 0
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and not is_open:
@@ -31,12 +31,12 @@ func open_chest() -> void:
 	is_open = true
 	prompt_label.visible = false
 	sprite.stop()
-	sprite.frame = 1 
+	sprite.frame = 1
 	var popup = RewardPopup.instantiate()
-	get_tree().root.add_child(popup)   # add to root so it's not affected by chest's position/pause
+	get_tree().root.add_child(popup)
 	popup.life_chosen.connect(_on_life_chosen)
 	popup.damage_chosen.connect(_on_damage_chosen)
-	
+
 func _on_life_chosen() -> void:
 	print("Player chose Life!")
 
