@@ -1,33 +1,268 @@
 [gd_scene format=3 uid="uid://c77331y245q71"]
 
 [ext_resource type="Script" uid="uid://bayfsjj5x4na3" path="res://scripts/volume.gd" id="1_c2u1v"]
+[ext_resource type="Texture2D" uid="uid://dswaossueltw6" path="res://assets/Backgrounds/frame0001.png" id="2_2iy26"]
+[ext_resource type="FontFile" uid="uid://cxna5wwgu0upf" path="res://assets/Fonts/Star Crush.otf" id="2_yjkok"]
+[ext_resource type="Texture2D" uid="uid://cnchutno341ca" path="res://assets/GUI/20250420manaSoul9SlicesC-Sheet.png" id="3_1sggn"]
 
 [node name="MENU" type="Control" unique_id=544758027]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 3.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_c2u1v")
 
+[node name="BackGround" type="TextureRect" parent="." unique_id=182936052]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 645.0
+texture = ExtResource("2_2iy26")
+
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1740785980]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 400.0
+offset_top = 534.0
+offset_right = 816.0
+offset_bottom = 631.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=822925559]
 layout_mode = 2
-
-[node name="Volume" type="Button" parent="MarginContainer/VBoxContainer" unique_id=576953735]
-layout_mode = 2
-text = "Volume"
+theme_override_constants/separation = 30
 
 [node name="Back" type="Button" parent="MarginContainer/VBoxContainer" unique_id=258054281]
+custom_minimum_size = Vector2(10, 50)
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.46229035, 0.46229053, 0.46229148, 1)
+theme_override_colors/font_outline_color = Color(0.5764706, 0.11372549, 0.60784316, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_fonts/font = ExtResource("2_yjkok")
+theme_override_font_sizes/font_size = 50
 text = "Back"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_pressed"]
+[node name="Label" type="Label" parent="." unique_id=576186091]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 13.0
+offset_right = 762.0
+offset_bottom = 108.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.5764706, 0.11372549, 0.60784316, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_yjkok")
+theme_override_font_sizes/font_size = 100
+text = "Controls"
+
+[node name="Control" type="Control" parent="." unique_id=1378398349]
+anchors_preset = 0
+offset_left = 27.0
+offset_top = 106.0
+offset_right = 98.0
+offset_bottom = 175.0
+
+[node name="Control" type="Control" parent="Control" unique_id=1039049115]
+anchors_preset = 0
+offset_left = -9.0
+offset_top = -14.0
+offset_right = 31.0
+offset_bottom = 26.0
+
+[node name="Tecla_W4" type="TextureRect" parent="Control/Control" unique_id=2031621103]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 289.0
+offset_right = 334.0
+offset_bottom = 385.0
+texture = ExtResource("3_1sggn")
+
+[node name="Label5" type="Label" parent="Control/Control/Tecla_W4" unique_id=743061063]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 25.0
+offset_right = 80.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.827451, 0.6862745, 0.21568628, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_yjkok")
+theme_override_font_sizes/font_size = 50
+text = "D"
+
+[node name="Tecla_W3" type="TextureRect" parent="Control/Control" unique_id=1646173465]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 288.0
+offset_right = 237.0
+offset_bottom = 384.0
+texture = ExtResource("3_1sggn")
+
+[node name="Label3" type="Label" parent="Control/Control/Tecla_W3" unique_id=1103587769]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 25.0
+offset_right = 81.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.827451, 0.6862745, 0.21568628, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_yjkok")
+theme_override_font_sizes/font_size = 50
+text = "S"
+
+[node name="Tecla_W2" type="TextureRect" parent="Control/Control" unique_id=590660140]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 288.0
+offset_right = 141.0
+offset_bottom = 384.0
+texture = ExtResource("3_1sggn")
+
+[node name="Label2" type="Label" parent="Control/Control/Tecla_W2" unique_id=237389471]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 26.0
+offset_right = 75.0
+offset_bottom = 125.0
+theme_override_colors/font_color = Color(0.827451, 0.6862745, 0.21568628, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_yjkok")
+theme_override_font_sizes/font_size = 50
+text = "A
+"
+
+[node name="Tecla_W" type="TextureRect" parent="Control/Control" unique_id=1157937506]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 190.0
+offset_right = 236.0
+offset_bottom = 286.0
+texture = ExtResource("3_1sggn")
+
+[node name="Label4" type="Label" parent="Control/Control/Tecla_W" unique_id=1481275005]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 23.0
+offset_right = 74.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0.827451, 0.6862745, 0.21568628, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_yjkok")
+theme_override_font_sizes/font_size = 50
+text = "W"
+
+[node name="Label" type="Label" parent="Control" unique_id=790723971]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 120.0
+offset_right = 294.0
+offset_bottom = 168.0
+theme_override_colors/font_outline_color = Color(0.5764706, 0.11372549, 0.60784316, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_yjkok")
+theme_override_font_sizes/font_size = 50
+text = "Movement"
+
+[node name="Control2" type="Control" parent="." unique_id=1345870631]
+anchors_preset = 0
+offset_left = 541.0
+offset_top = 238.0
+offset_right = 581.0
+offset_bottom = 278.0
+
+[node name="Label" type="Label" parent="Control2" unique_id=801314116]
+layout_mode = 0
+offset_left = 24.0
+offset_top = -6.0
+offset_right = 163.0
+offset_bottom = 42.0
+theme_override_colors/font_outline_color = Color(0.5764706, 0.11372549, 0.60784316, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_yjkok")
+theme_override_font_sizes/font_size = 50
+text = "Attack"
+
+[node name="TextureRect" type="TextureRect" parent="Control2" unique_id=1007137659]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 48.0
+offset_right = 139.0
+offset_bottom = 144.0
+texture = ExtResource("3_1sggn")
+
+[node name="Label3" type="Label" parent="Control2/TextureRect" unique_id=898702412]
+layout_mode = 0
+offset_left = -57.0
+offset_top = 98.0
+offset_right = 156.0
+offset_bottom = 146.0
+theme_override_colors/font_outline_color = Color(0.5764706, 0.11372549, 0.60784316, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_yjkok")
+theme_override_font_sizes/font_size = 50
+text = "Space Bar"
+
+[node name="Label2" type="Label" parent="Control2/TextureRect" unique_id=1420107271]
+layout_mode = 0
+offset_left = -27.0
+offset_top = -11.0
+offset_right = 68.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0.827451, 0.6862745, 0.21568628, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_yjkok")
+theme_override_font_sizes/font_size = 60
+text = "   ␣"
+
+[node name="Control3" type="Control" parent="." unique_id=1280078978]
+anchors_preset = 0
+offset_left = 894.0
+offset_top = 246.0
+offset_right = 934.0
+offset_bottom = 286.0
+
+[node name="Label" type="Label" parent="Control3" unique_id=1148344393]
+layout_mode = 0
+offset_left = 24.0
+offset_top = -6.0
+offset_right = 163.0
+offset_bottom = 42.0
+theme_override_colors/font_outline_color = Color(0.5764706, 0.11372549, 0.60784316, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_yjkok")
+theme_override_font_sizes/font_size = 50
+text = "Interact"
+
+[node name="TextureRect" type="TextureRect" parent="Control3" unique_id=1819901944]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 45.0
+offset_right = 165.0
+offset_bottom = 141.0
+texture = ExtResource("3_1sggn")
+
+[node name="Label2" type="Label" parent="Control3/TextureRect" unique_id=167336324]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 23.0
+offset_right = 129.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.827451, 0.6862745, 0.21568628, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_yjkok")
+theme_override_font_sizes/font_size = 60
+text = "E"
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_2_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

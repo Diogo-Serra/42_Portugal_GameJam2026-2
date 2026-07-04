@@ -61,9 +61,9 @@ script = ExtResource("1_yqeox")
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1645365583]
 layout_mode = 0
 offset_left = 2.0
-offset_top = -16.0
+offset_top = 1.0
 offset_right = 1154.0
-offset_bottom = 632.0
+offset_bottom = 649.0
 texture = ExtResource("2_con2f")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1740785980]
@@ -104,7 +104,7 @@ theme_override_fonts/font = ExtResource("3_v86rl")
 theme_override_styles/normal = SubResource("StyleBoxTexture_13sgg")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_i6lef")
 theme_override_styles/hover = SubResource("StyleBoxTexture_70i5f")
-text = "Options"
+text = "Controls"
 
 [node name="Exit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1580333436]
 custom_minimum_size = Vector2(30, 30)
@@ -127,6 +127,7 @@ offset_top = 43.0
 offset_right = 835.0
 offset_bottom = 144.0
 theme_override_colors/font_color = Color(0.76862746, 0.35686275, 0.21568628, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("3_v86rl")
 theme_override_font_sizes/font_size = 100
 text = "Wood's Ashes"
