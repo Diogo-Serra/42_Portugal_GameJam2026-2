@@ -1,7 +1,6 @@
-[gd_scene format=4 uid="uid://c1k7211ja0u74"]
+[gd_scene format=3 uid="uid://c1k7211ja0u74"]
 
-[ext_resource type="PackedScene" uid="uid://soy8pkv1uv08" path="res://scenes/grass.tscn" id="1_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://wix7g42hodxl" path="res://scenes/stone_tile_2_4.tscn" id="2_iywne"]
+[ext_resource type="PackedScene" uid="uid://dr5f6broahr8m" path="res://scenes/1_layer_map.tscn" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dty7gb66ou1km" path="res://scenes/player.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://q4d7x3tp3mex" path="res://scenes/coffin.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cxxchmvg341vm" path="res://scenes/EnemySpawner.tscn" id="3_p57ef"]

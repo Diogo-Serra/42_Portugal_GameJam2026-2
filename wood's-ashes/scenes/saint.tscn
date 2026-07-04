@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bvkogtg13vmts" path="res://assets/ruins/Extra/TX Props with Shadow.png" id="1_1fvg4"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqfew"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1fvg4"]
 texture = ExtResource("1_1fvg4")
 14:0/0 = 0
 15:0/0 = 0
@@ -390,19 +390,26 @@ texture = ExtResource("1_1fvg4")
 27:1/size_in_atlas = Vector2i(4, 5)
 27:1/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_ukuoi"]
-sources/0 = SubResource("TileSetAtlasSource_jqfew")
+[sub_resource type="TileSet" id="TileSet_m02gy"]
+sources/0 = SubResource("TileSetAtlasSource_1fvg4")
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m02gy"]
-radius = 15.0
-height = 72.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m02gy"]
+size = Vector2(20, 42)
 
-[node name="saint" type="TileMapLayer" unique_id=263521187]
-tile_map_data = PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 27, 0, 1, 0, 0, 0)
-tile_set = SubResource("TileSet_ukuoi")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_flns0"]
+size = Vector2(35, 23)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1018763503]
+[node name="saint" type="TileMapLayer" unique_id=1086125946]
+z_index = 1
+tile_map_data = PackedByteArray(0, 0, 2, 0, 3, 0, 0, 0, 27, 0, 1, 0, 0, 0)
+tile_set = SubResource("TileSet_m02gy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=210416654]
-position = Vector2(24, 41)
-shape = SubResource("CapsuleShape2D_m02gy")
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2117270040]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1468792036]
+position = Vector2(40, 48)
+shape = SubResource("RectangleShape2D_m02gy")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1686407750]
+position = Vector2(39.5, 80.5)
+shape = SubResource("RectangleShape2D_flns0")

@@ -45,6 +45,7 @@ var state: PlayerState = PlayerState.NORMAL
 
 
 func _ready():
+	add_to_group("player")
 	health = max_health
 
 	update_attack_hitbox_size()
