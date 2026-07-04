@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bch7rhcxvw50e" path="res://assets/tilesets/plains.png" id="1_1di36"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mek2u"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1di36"]
 texture = ExtResource("1_1di36")
 0:0/0 = 0
 1:0/0 = 0
@@ -73,9 +73,18 @@ texture = ExtResource("1_1di36")
 4:11/0 = 0
 5:11/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_flns0"]
-sources/0 = SubResource("TileSetAtlasSource_mek2u")
+[sub_resource type="TileSet" id="TileSet_31fhe"]
+sources/0 = SubResource("TileSetAtlasSource_1di36")
 
-[node name="rock" type="TileMapLayer" unique_id=1613996356]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m02gy"]
+size = Vector2(9, 10)
+
+[node name="rock" type="TileMapLayer" unique_id=925538896]
 tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0)
-tile_set = SubResource("TileSet_flns0")
+tile_set = SubResource("TileSet_31fhe")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=794386807]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=447625519]
+position = Vector2(8.5, 9)
+shape = SubResource("RectangleShape2D_m02gy")
