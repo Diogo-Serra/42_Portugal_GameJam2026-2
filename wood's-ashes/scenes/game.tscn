@@ -7,5 +7,5 @@
 
 [node name="1layer_map" parent="." unique_id=102117543 instance=ExtResource("1_yqjtg")]
 
-[node name="Player" parent="." unique_id=953319153 instance=ExtResource("2_lnu2h")]
+[node name="Player" parent="1layer_map" unique_id=953319153 instance=ExtResource("2_lnu2h")]
 position = Vector2(411, 187)
