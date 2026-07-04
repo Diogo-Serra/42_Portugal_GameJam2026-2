@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Wood's_Ashes"
-run/main_scene="uid://c1k7211ja0u74"
+run/main_scene="uid://byfw5c77b5tcd"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

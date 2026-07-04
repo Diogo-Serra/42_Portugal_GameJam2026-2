@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://byfw5c77b5tcd"]
+
+[ext_resource type="Script" uid="uid://qimdjnbpe1vw" path="res://scripts/menu.gd" id="1_yqeox"]
+[ext_resource type="Texture2D" uid="uid://befy4yygp28ta" path="res://assets/Backgrounds/frame0000.png" id="2_con2f"]
+[ext_resource type="FontFile" uid="uid://cxna5wwgu0upf" path="res://assets/Fonts/Star Crush.otf" id="3_v86rl"]
+[ext_resource type="Texture2D" uid="uid://bngbytc5i1m6f" path="res://assets/GUI/UI_Flat_Banner01a.png" id="4_mhnvy"]
+[ext_resource type="Texture2D" uid="uid://61g7hwqdv0hx" path="res://assets/GUI/UI_Flat_Banner02a.png" id="5_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://cjkxacn3xqk4o" path="res://assets/GUI/UI_Flat_Banner03a.png" id="5_g3eks"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_con2f"]
+texture = ExtResource("4_mhnvy")
+expand_margin_top = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v86rl"]
+texture = ExtResource("5_4ytvr")
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g3eks"]
+texture = ExtResource("5_4ytvr")
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mhnvy"]
+texture = ExtResource("5_g3eks")
+expand_margin_bottom = 5.0
+
+[sub_resource type="MeshTexture" id="MeshTexture_c2u1v"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_13sgg"]
+texture = ExtResource("4_mhnvy")
+expand_margin_top = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i6lef"]
+texture = ExtResource("5_4ytvr")
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_70i5f"]
+texture = ExtResource("5_g3eks")
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mj5lg"]
+texture = ExtResource("4_mhnvy")
+expand_margin_top = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ufwb2"]
+texture = ExtResource("5_4ytvr")
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6cdou"]
+texture = ExtResource("5_g3eks")
+expand_margin_bottom = 5.0
+
+[node name="MENU" type="Control" unique_id=544758027]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqeox")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1645365583]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -16.0
+offset_right = 1154.0
+offset_bottom = 632.0
+texture = ExtResource("2_con2f")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1740785980]
+texture_filter = 1
+layout_mode = 0
+offset_left = 388.0
+offset_top = 211.0
+offset_right = 639.0
+offset_bottom = 372.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=822925559]
+layout_mode = 2
+theme_override_constants/separation = 31
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1419597357]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_v86rl")
+theme_override_styles/normal = SubResource("StyleBoxTexture_con2f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v86rl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_g3eks")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mhnvy")
+text = "Play"
+icon = SubResource("MeshTexture_c2u1v")
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2078524721]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_v86rl")
+theme_override_styles/normal = SubResource("StyleBoxTexture_13sgg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_i6lef")
+theme_override_styles/hover = SubResource("StyleBoxTexture_70i5f")
+text = "Options"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1580333436]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_v86rl")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_mj5lg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ufwb2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6cdou")
+text = "Quit"
+
+[node name="Label" type="Label" parent="." unique_id=1654610857]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 43.0
+offset_right = 835.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(0.76862746, 0.35686275, 0.21568628, 1)
+theme_override_fonts/font = ExtResource("3_v86rl")
+theme_override_font_sizes/font_size = 100
+text = "Wood's Ashes"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
