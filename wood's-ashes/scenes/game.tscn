@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c1k7211ja0u74"]
+
+[ext_resource type="PackedScene" uid="uid://soy8pkv1uv08" path="res://scenes/grass.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://b4ppi7gdyojlp" path="res://scenes/mount.tscn" id="2_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://dty7gb66ou1km" path="res://scenes/player.tscn" id="3_lnu2h"]
+
+[node name="Game" type="Node2D" unique_id=1747429142]
+
+[node name="Grass" parent="." unique_id=1553636088 instance=ExtResource("1_uwrxv")]
+
+[node name="Mount" parent="." unique_id=1941560683 instance=ExtResource("2_lbhrr")]
+position = Vector2(78, 60)
+
+[node name="Player" parent="." unique_id=953319153 instance=ExtResource("3_lnu2h")]
+position = Vector2(192, 111)
