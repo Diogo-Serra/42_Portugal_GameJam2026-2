@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://gl6gfjjdkkoe"]
 
+[ext_resource type="Script" uid="uid://7nbfsjgtr8gj" path="res://scripts/enemy.gd" id="1_3ypwq"]
 [ext_resource type="Texture2D" uid="uid://iiv1hf3jmvn4" path="res://assets/characters/Villagers/4 Woman/Woman_attack.png" id="1_4o7s4"]
 [ext_resource type="Texture2D" uid="uid://crk23nb28m6w8" path="res://assets/characters/Villagers/4 Woman/Woman_death.png" id="2_3ypwq"]
 [ext_resource type="Texture2D" uid="uid://dghq5oxvil84h" path="res://assets/characters/Villagers/4 Woman/Woman_hurt.png" id="3_xf4ur"]
@@ -181,6 +182,7 @@ height = 32.0
 [node name="Woman" type="CharacterBody2D" unique_id=662905327]
 collision_layer = 4
 collision_mask = 5
+script = ExtResource("1_3ypwq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=996476155]
 sprite_frames = SubResource("SpriteFrames_a8ku5")

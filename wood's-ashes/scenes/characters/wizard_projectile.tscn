@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dw8purux2l2pt"]
+
+[ext_resource type="Script" uid="uid://bk50rxclwx1e1" path="res://scripts/enemy_projectile.gd" id="1_batxs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_826xb"]
+
+[node name="WizardProjectile" type="Area2D" unique_id=1452390021]
+script = ExtResource("1_batxs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1767836787]
+shape = SubResource("CircleShape2D_826xb")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=2131957614]
+color = Color(0.98112506, 0.00085133675, 0.98996073, 1)
+polygon = PackedVector2Array(0, -8, 8, 0, 0, 8, -8, 0)

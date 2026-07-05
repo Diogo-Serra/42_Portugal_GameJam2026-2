@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cxxchmvg341vm" path="res://scenes/EnemySpawner.tscn" id="3_p57ef"]
 [ext_resource type="FontFile" uid="uid://cxna5wwgu0upf" path="res://assets/Fonts/Star Crush.otf" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://dgr3t574wj5ah" path="res://scenes/Enemy.tscn" id="5_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://dty7gb66ou1km" path="res://scenes/characters/player.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://cxxchmvg341vm" path="res://scenes/characters/EnemySpawner.tscn" id="3_p57ef"]
 
 [node name="Game" type="Node2D" unique_id=1747429142]
 
@@ -29,3 +31,4 @@ offset_right = -385.0
 offset_bottom = 141.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_iywne")
+[node name="EnemySpawner" parent="." unique_id=64854175 instance=ExtResource("3_p57ef")]

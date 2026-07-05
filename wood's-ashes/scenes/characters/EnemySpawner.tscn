@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cxxchmvg341vm"]
+
+[ext_resource type="Script" uid="uid://bjr44eh58dyf1" path="res://scripts/enemySpawner.gd" id="1_wimyj"]
+[ext_resource type="PackedScene" uid="uid://63mu61tydgoc" path="res://scenes/characters/mobs_villagers/boy.tscn" id="2_gtc37"]
+[ext_resource type="PackedScene" uid="uid://sotjnit8cqdi" path="res://scenes/characters/mobs_villagers/girl.tscn" id="3_j64qd"]
+[ext_resource type="PackedScene" uid="uid://dgibpc7ry50cl" path="res://scenes/characters/mobs_villagers/man.tscn" id="4_h61l3"]
+[ext_resource type="PackedScene" uid="uid://dk7mmfl1j7hew" path="res://scenes/characters/mobs_villagers/old_man.tscn" id="5_r4lwu"]
+[ext_resource type="PackedScene" uid="uid://b7sxm1ixssqk4" path="res://scenes/characters/mobs_villagers/old_women.tscn" id="6_b71rc"]
+[ext_resource type="PackedScene" uid="uid://gl6gfjjdkkoe" path="res://scenes/characters/mobs_villagers/woman.tscn" id="7_v2yov"]
+[ext_resource type="PackedScene" uid="uid://dgr3t574wj5ah" path="res://scenes/characters/Enemy.tscn" id="8_sui36"]
+[ext_resource type="PackedScene" uid="uid://beroixqp35ccj" path="res://scenes/characters/wizard_enemy.tscn" id="9_2a5fq"]
+
+[node name="EnemySpawner" type="Node2D" unique_id=64854175]
+script = ExtResource("1_wimyj")
+villager_scenes = Array[PackedScene]([ExtResource("2_gtc37"), ExtResource("3_j64qd"), ExtResource("4_h61l3"), ExtResource("5_r4lwu"), ExtResource("6_b71rc"), ExtResource("7_v2yov")])
+knight_scene = ExtResource("8_sui36")
+ranged_scene = ExtResource("9_2a5fq")
