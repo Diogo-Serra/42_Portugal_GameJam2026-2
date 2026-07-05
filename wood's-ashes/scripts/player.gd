@@ -16,16 +16,16 @@ signal health_changed(current_health, max_health)
 
 @export var max_health := 100
 @export var attack_damage := 10
-@export var attack_size := Vector2(70.0, 35.0)
-@export var attack_cooldown := 0.35
+@export var attack_size := Vector2(160.0, 160.0)
+@export var attack_cooldown := 0.15
 const DemonScene = preload("res://scenes/characters/demon.tscn")
 
 @export var max_rage := 100
 var rage := 0
 var has_transformed := false
 
-@export var attack_offset := Vector2(45.0, 40.0)
-@export var attack_impact_frame := 3
+@export var attack_offset := Vector2(0.0, 0.0)
+@export var attack_impact_frame := 1
 
 var health: int
 var last_horizontal_direction := 1
@@ -54,6 +54,9 @@ enum PlayerState {
 }
 
 var state: PlayerState = PlayerState.NORMAL
+
+var hurt_invincibility_timer := 0.0
+const HURT_INVINCIBILITY_DURATION := 0.8
 
 
 func _ready():
@@ -104,7 +107,7 @@ func on_rage_full() -> void:
 	print("RAGE FULL!")
 	is_enraged = true
 	transform_to_demon()
-	await get_tree().create_timer(10.0).timeout
+	await get_tree().create_timer(8.0).timeout
 	transform_to_demon()
 	is_enraged = false
 
@@ -120,14 +123,12 @@ func on_time_up() -> void:
 func _physics_process(delta):
 	z_index = int(global_position.y) + 45
 
+	if hurt_invincibility_timer > 0:
+		hurt_invincibility_timer -= delta
+
 	if state == PlayerState.DEAD:
 		velocity = Vector2.ZERO
 		return
-
-	if Input.is_action_just_pressed("transform"):
-		transform_to_demon()
-		return
-
 
 	if attack_cooldown_timer > 0:
 		attack_cooldown_timer -= delta
@@ -136,7 +137,7 @@ func _physics_process(delta):
 		attack()
 		return
 
-	if state == PlayerState.ATTACKING or state == PlayerState.HURT or state == PlayerState.SPAWNING:
+	if state == PlayerState.ATTACKING or state == PlayerState.SPAWNING:
 		velocity = Vector2.ZERO
 		move_and_slide()
 		return
@@ -298,6 +299,10 @@ func take_damage(amount: int):
 	if state == PlayerState.SPAWNING:
 		return
 
+	if hurt_invincibility_timer > 0:
+		return
+
+	hurt_invincibility_timer = HURT_INVINCIBILITY_DURATION
 	health -= amount
 	health_changed.emit(health, max_health)
 
@@ -308,8 +313,8 @@ func take_damage(amount: int):
 
 
 func get_hit():
-	state = PlayerState.HURT
-	velocity = Vector2.ZERO
+	if state == PlayerState.ATTACKING:
+		return
 	update_sprite_direction()
 	play_animation_base("hurt")
 
@@ -338,7 +343,7 @@ func _on_player_died() -> void:
 
 func upgrade_max_health(amount: int):
 	max_health += amount
-	health += amount
+	health = max_health
 	health_changed.emit(health, max_health)
 
 
@@ -381,6 +386,15 @@ func add_rage(amount: int):
 	if rage >= max_rage:
 		rage = max_rage
 		transform_to_demon()
+
+func add_rage_time(amount: float):
+	if is_enraged or has_transformed:
+		return
+	rage_time = min(rage_time + amount, RAGE_DURATION)
+	rage_bar.value = rage_time
+	if rage_time >= RAGE_DURATION:
+		rage_time = 0.0
+		on_rage_full()
 
 func transform_to_demon():
 	if has_transformed:
