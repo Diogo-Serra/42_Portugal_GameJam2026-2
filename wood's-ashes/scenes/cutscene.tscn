@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://c0liyhyqt3hoy"]
+
+[ext_resource type="Script" uid="uid://cts3iklco257a" path="res://scripts/cutscene.gd" id="1_0sipp"]
+[ext_resource type="FontFile" uid="uid://cxna5wwgu0upf" path="res://assets/Fonts/Star Crush.otf" id="2_2bm7f"]
+[ext_resource type="Texture2D" uid="uid://dhlv2j0462d8g" path="res://assets/GUI/20250420manaSoulHeaderA-Sheet.png" id="3_fs8wb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tymkp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_14vfr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jocau"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tymkp"]
+texture = ExtResource("3_fs8wb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_14vfr"]
+texture = ExtResource("3_fs8wb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jocau"]
+texture = ExtResource("3_fs8wb")
+
+[node name="Cutscene" type="Control" unique_id=1470734587]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0sipp")
+
+[node name="ClickArea" type="Button" parent="." unique_id=389726137]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_colors/font_color = Color(0.9691369, 0.9691369, 0.9691368, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tymkp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_14vfr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jocau")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=713510300]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="StoryLabel" type="Label" parent="." unique_id=166110548]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 481.0
+offset_right = 812.0
+offset_bottom = 617.0
+theme_override_fonts/font = ExtResource("2_2bm7f")
+theme_override_font_sizes/font_size = 30
+
+[node name="SkipButton" type="Button" parent="." unique_id=1242272468]
+layout_mode = 0
+offset_left = 967.0
+offset_top = 537.0
+offset_right = 1089.0
+offset_bottom = 591.0
+theme_override_colors/font_color = Color(0.5254902, 0.4, 0.21176471, 1)
+theme_override_colors/font_pressed_color = Color(0.5254902, 0.4, 0.21176471, 1)
+theme_override_colors/font_hover_color = Color(0.5254902, 0.4, 0.21176471, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.5254902, 0.4, 0.21176471, 1)
+theme_override_fonts/font = ExtResource("2_2bm7f")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_tymkp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_14vfr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jocau")
+text = "SKIP"
+
+[connection signal="pressed" from="ClickArea" to="." method="_on_click_area_pressed"]
+[connection signal="pressed" from="SkipButton" to="." method="_on_skip_button_pressed"]
