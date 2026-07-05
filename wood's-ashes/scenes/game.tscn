@@ -4,9 +4,23 @@
 [ext_resource type="PackedScene" uid="uid://dty7gb66ou1km" path="res://scenes/characters/player.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cxxchmvg341vm" path="res://scenes/characters/EnemySpawner.tscn" id="3_p57ef"]
 [ext_resource type="FontFile" uid="uid://cxna5wwgu0upf" path="res://assets/Fonts/Star Crush.otf" id="5_iywne"]
+[ext_resource type="Script" uid="uid://bne8tbahl4mjt" path="res://scenes/Health_Bar.gd" id="5_p57ef"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
 bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8ku5"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eu64u"]
+bg_color = Color(0, 1, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Game" type="Node2D" unique_id=1747429142]
 
@@ -41,4 +55,19 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_styles/fill = SubResource("StyleBoxFlat_lbhrr")
 max_value = 60.0
 show_percentage = false
+
+[node name="HealthBar" type="ProgressBar" parent="UI" unique_id=1655597215]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -156.0
+offset_top = 126.0
+offset_right = -2.0
+offset_bottom = 153.0
+grow_horizontal = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_a8ku5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_eu64u")
+show_percentage = false
+script = ExtResource("5_p57ef")
+
 [node name="EnemySpawner3" parent="." unique_id=2103695454 instance=ExtResource("3_p57ef")]
