@@ -16,15 +16,7 @@ signal health_changed(current_health, max_health)
 @export var attack_size := Vector2(70.0, 35.0)
 @export var attack_cooldown := 0.35
 
-# Posição da hitbox em relação ao Player.
-# X = lado do ataque.
-# Y = mais baixo/mais alto.
-# Em Godot 2D, Y positivo é para baixo.
 @export var attack_offset := Vector2(45.0, 40.0)
-
-# Frame da animação em que a arma realmente bate.
-# A contagem começa em 0.
-# Exemplo: frame 0, 1, 2, 3...
 @export var attack_impact_frame := 3
 
 var health: int
@@ -33,12 +25,16 @@ var attack_cooldown_timer := 0.0
 
 var attack_has_hit := false
 var hit_enemies_this_attack := []
+
+var is_basic_form := true
+
 const DeathScreen = preload("res://scenes/Dead.tscn")
 
 enum PlayerState {
 	NORMAL,
 	ATTACKING,
 	HURT,
+	SPAWNING,
 	DEAD
 }
 
@@ -60,8 +56,14 @@ func _ready():
 	if not sprite.frame_changed.is_connected(_on_sprite_frame_changed):
 		sprite.frame_changed.connect(_on_sprite_frame_changed)
 
-	play_animation("idle")
 	health_changed.emit(health, max_health)
+
+	if sprite.sprite_frames.has_animation("spawn"):
+		state = PlayerState.SPAWNING
+		sprite.play("spawn")
+	else:
+		state = PlayerState.NORMAL
+		play_animation_base("idle")
 
 
 func _physics_process(delta):
@@ -72,11 +74,15 @@ func _physics_process(delta):
 	if attack_cooldown_timer > 0:
 		attack_cooldown_timer -= delta
 
+	if Input.is_action_just_pressed("transform") and state == PlayerState.NORMAL:
+		toggle_form()
+		return
+
 	if Input.is_action_just_pressed("attack") and can_attack():
 		attack()
 		return
 
-	if state == PlayerState.ATTACKING or state == PlayerState.HURT:
+	if state == PlayerState.ATTACKING or state == PlayerState.HURT or state == PlayerState.SPAWNING:
 		velocity = Vector2.ZERO
 		move_and_slide()
 		return
@@ -103,11 +109,44 @@ func handle_movement():
 	update_attack_hitbox_position()
 
 	if input_direction.length() > 0:
-		play_animation("walk")
+		play_animation_base("walk")
 	else:
-		play_animation("idle")
+		play_animation_base("idle")
 
 	move_and_slide()
+
+
+func toggle_form():
+	is_basic_form = !is_basic_form
+	update_sprite_direction()
+	play_animation_base("idle")
+
+
+func get_animation_name(base_name: String) -> String:
+	if is_basic_form:
+		var basic_name := "basic_" + base_name
+
+		if sprite.sprite_frames != null and sprite.sprite_frames.has_animation(basic_name):
+			return basic_name
+
+	return base_name
+
+
+func play_animation_base(base_name: String):
+	var animation_name := get_animation_name(base_name)
+	play_animation(animation_name)
+
+
+func play_animation(animation_name: String):
+	if sprite.sprite_frames == null:
+		return
+
+	if not sprite.sprite_frames.has_animation(animation_name):
+		print("Animation does not exist: ", animation_name)
+		return
+
+	if sprite.animation != animation_name:
+		sprite.play(animation_name)
 
 
 func can_attack() -> bool:
@@ -125,16 +164,14 @@ func attack():
 	update_sprite_direction()
 	update_attack_hitbox_position()
 
-	sprite.play("attack")
-	
-	print(max_health)
-	print(attack_damage)
+	play_animation_base("attack")
+
 
 func _on_sprite_frame_changed():
 	if state != PlayerState.ATTACKING:
 		return
 
-	if sprite.animation != "attack":
+	if sprite.animation != get_animation_name("attack"):
 		return
 
 	if attack_has_hit:
@@ -180,7 +217,7 @@ func update_attack_hitbox_position():
 
 func update_attack_hitbox_size():
 	if attack_shape == null:
-		print("AttackArea/CollisionShape2D não encontrado")
+		print("AttackArea/CollisionShape2D not found")
 		return
 
 	if attack_shape.shape == null:
@@ -190,27 +227,21 @@ func update_attack_hitbox_size():
 		var rectangle := attack_shape.shape as RectangleShape2D
 		rectangle.size = attack_size
 	else:
-		print("A shape do ataque não é RectangleShape2D")
+		print("Attack shape is not RectangleShape2D")
 
 
 func update_sprite_direction():
-	# Mantém a correção que fizemos antes.
-	sprite.flip_h = last_horizontal_direction > 0
-
-
-func play_animation(animation_name: String):
-	if sprite.sprite_frames == null:
-		return
-
-	if not sprite.sprite_frames.has_animation(animation_name):
-		return
-
-	if sprite.animation != animation_name:
-		sprite.play(animation_name)
+	if is_basic_form:
+		sprite.flip_h = last_horizontal_direction < 0
+	else:
+		sprite.flip_h = last_horizontal_direction > 0
 
 
 func take_damage(amount: int):
 	if state == PlayerState.DEAD:
+		return
+
+	if state == PlayerState.SPAWNING:
 		return
 
 	health -= amount
@@ -226,7 +257,7 @@ func get_hit():
 	state = PlayerState.HURT
 	velocity = Vector2.ZERO
 	update_sprite_direction()
-	sprite.play("hurt")
+	play_animation_base("hurt")
 
 
 func die():
@@ -236,10 +267,13 @@ func die():
 	collision.set_deferred("disabled", true)
 
 	update_sprite_direction()
-	sprite.play("die")
+
+	if sprite.sprite_frames.has_animation("die"):
+		sprite.play("die")
 
 	died.emit()
 	_on_player_died()
+
 
 func _on_player_died() -> void:
 	get_tree().paused = true
@@ -247,13 +281,16 @@ func _on_player_died() -> void:
 	death_screen.process_mode = Node.PROCESS_MODE_ALWAYS
 	get_tree().root.add_child(death_screen)
 
+
 func upgrade_max_health(amount: int):
 	max_health += amount
 	health += amount
 	health_changed.emit(health, max_health)
 
+
 func upgrade_attack_damage(amount: int):
 	attack_damage += amount
+
 
 func upgrade_attack_range(amount: float):
 	attack_size.x += amount
@@ -264,14 +301,19 @@ func upgrade_attack_range(amount: float):
 func upgrade_speed(amount: float):
 	speed += amount
 
+
 func _on_animation_finished():
-	if state == PlayerState.ATTACKING:
+	if state == PlayerState.SPAWNING:
 		state = PlayerState.NORMAL
-		play_animation("idle")
+		play_animation_base("idle")
+
+	elif state == PlayerState.ATTACKING:
+		state = PlayerState.NORMAL
+		play_animation_base("idle")
 
 	elif state == PlayerState.HURT:
 		state = PlayerState.NORMAL
-		play_animation("idle")
+		play_animation_base("idle")
 
 	elif state == PlayerState.DEAD:
 		pass
