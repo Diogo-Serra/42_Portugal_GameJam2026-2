@@ -37,11 +37,17 @@ func _ready():
 
 
 func _physics_process(delta):
+
 	z_index = int(global_position.y) + 45
 
 	if state == EnemyState.DEAD:
 		velocity = Vector2.ZERO
 		return
+
+	if player == null or not is_instance_valid(player):
+		player = get_tree().get_first_node_in_group("player")
+		if player == null:
+			return
 
 	if state == EnemyState.HURT:
 		hurt_timer -= delta
