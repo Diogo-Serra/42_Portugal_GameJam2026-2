@@ -6,6 +6,7 @@ signal health_changed(current_health, max_health)
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
 @onready var timer_label: Label = get_node("/root/Game/UI/TimerLabel")
+@onready var rage_bar: ProgressBar = get_node("/root/Game/UI/ProgressBar")
 
 @onready var attack_area: Area2D = $AttackArea
 @onready var attack_shape: CollisionShape2D = $AttackArea/CollisionShape2D
@@ -29,7 +30,11 @@ var hit_enemies_this_attack := []
 
 var is_basic_form := true
 
-var time_left := 60.0
+var rage_time = 0.0
+const RAGE_DURATION := 60.0
+var is_enraged := false
+
+var time_left := 600.0
 var timer_running := true
 
 const DeathScreen = preload("res://scenes/Dead.tscn")
@@ -81,6 +86,23 @@ func _process(delta: float) -> void:
 		timer_running = false
 		on_time_up()
 	update_timer_label()
+	if not is_enraged:
+		rage_time += delta
+		if rage_time >= RAGE_DURATION:
+			rage_time = 0.0
+			on_rage_full()
+		rage_bar.value = rage_time
+
+
+func on_rage_full() -> void:
+	print("RAGE FULL!")
+	is_enraged = true
+	attack_damage *= 4
+	toggle_form()
+	await get_tree().create_timer(10.0).timeout
+	toggle_form()
+	attack_damage /= 4
+	is_enraged = false
 
 func update_timer_label() -> void:
 	var minutes := int(time_left / 60)
