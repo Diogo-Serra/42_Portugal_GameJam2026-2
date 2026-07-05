@@ -5,6 +5,8 @@ signal health_changed(current_health, max_health)
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
+@onready var collision_circle: CollisionShape2D = $CollisionShape2D3
+@onready var collision_rect: CollisionShape2D = $CollisionShape2D2
 
 @onready var attack_area: Area2D = $AttackArea
 @onready var attack_shape: CollisionShape2D = $AttackArea/CollisionShape2D
@@ -27,12 +29,40 @@ signal health_changed(current_health, max_health)
 # Exemplo: frame 0, 1, 2, 3...
 @export var attack_impact_frame := 3
 
+# Demon form collision (tunable in inspector)
+@export var demon_capsule_radius: float = 10.0
+@export var demon_capsule_height: float = 50.0
+@export var demon_capsule_offset: Vector2 = Vector2(2, 28)
+@export var demon_circle_radius: float = 5.0
+@export var demon_circle_offset: Vector2 = Vector2(2, 28)
+@export var demon_rect_size: Vector2 = Vector2(28, 8)
+@export var demon_rect_offset: Vector2 = Vector2(2.5, 50)
+
+# Z-sort feet offsets per form (distance from node origin to feet)
+@export var basic_sort_offset: float = 15.0
+@export var demon_sort_offset: float = 45.0
+
 var health: int
 var last_horizontal_direction := 1
 var attack_cooldown_timer := 0.0
 
 var attack_has_hit := false
 var hit_enemies_this_attack := []
+<<<<<<< Updated upstream
+=======
+
+var is_basic_form := true
+
+var current_sort_offset: float = 15.0
+var _basic_capsule_radius: float
+var _basic_capsule_height: float
+var _basic_capsule_offset: Vector2
+var _basic_circle_radius: float
+var _basic_circle_offset: Vector2
+var _basic_rect_size: Vector2
+var _basic_rect_offset: Vector2
+
+>>>>>>> Stashed changes
 const DeathScreen = preload("res://scenes/Dead.tscn")
 
 enum PlayerState {
@@ -50,6 +80,23 @@ func _ready():
 	health = max_health
 	z_as_relative = false
 
+	# Save basic form collision data so we can restore it on form swap
+	if collision.shape is CapsuleShape2D:
+		var cap := collision.shape as CapsuleShape2D
+		_basic_capsule_radius = cap.radius
+		_basic_capsule_height = cap.height
+	_basic_capsule_offset = collision.position
+
+	if collision_circle.shape is CircleShape2D:
+		_basic_circle_radius = (collision_circle.shape as CircleShape2D).radius
+	_basic_circle_offset = collision_circle.position
+
+	if collision_rect.shape is RectangleShape2D:
+		_basic_rect_size = (collision_rect.shape as RectangleShape2D).size
+	_basic_rect_offset = collision_rect.position
+
+	current_sort_offset = basic_sort_offset
+
 	update_attack_hitbox_size()
 	update_attack_hitbox_position()
 
@@ -66,7 +113,7 @@ func _ready():
 
 
 func _physics_process(delta):
-	z_index = int(global_position.y) + 45
+	z_index = int(global_position.y + current_sort_offset)
 
 	if state == PlayerState.DEAD:
 		velocity = Vector2.ZERO
@@ -113,6 +160,79 @@ func handle_movement():
 	move_and_slide()
 
 
+<<<<<<< Updated upstream
+=======
+func toggle_form():
+	is_basic_form = !is_basic_form
+	update_collision_for_form()
+	update_sprite_direction()
+	play_animation_base("idle")
+
+
+func update_collision_for_form():
+	if collision.shape is CapsuleShape2D:
+		var cap := collision.shape as CapsuleShape2D
+		if is_basic_form:
+			cap.radius = _basic_capsule_radius
+			cap.height = _basic_capsule_height
+			collision.position = _basic_capsule_offset
+		else:
+			cap.radius = demon_capsule_radius
+			cap.height = demon_capsule_height
+			collision.position = demon_capsule_offset
+
+	if collision_circle.shape is CircleShape2D:
+		var cir := collision_circle.shape as CircleShape2D
+		if is_basic_form:
+			cir.radius = _basic_circle_radius
+			collision_circle.position = _basic_circle_offset
+		else:
+			cir.radius = demon_circle_radius
+			collision_circle.position = demon_circle_offset
+
+	if collision_rect.shape is RectangleShape2D:
+		var rec := collision_rect.shape as RectangleShape2D
+		if is_basic_form:
+			rec.size = _basic_rect_size
+			collision_rect.position = _basic_rect_offset
+		else:
+			rec.size = demon_rect_size
+			collision_rect.position = demon_rect_offset
+
+	if is_basic_form:
+		current_sort_offset = basic_sort_offset
+	else:
+		current_sort_offset = demon_sort_offset
+
+
+func get_animation_name(base_name: String) -> String:
+	if is_basic_form:
+		var basic_name := "basic_" + base_name
+
+		if sprite.sprite_frames != null and sprite.sprite_frames.has_animation(basic_name):
+			return basic_name
+
+	return base_name
+
+
+func play_animation_base(base_name: String):
+	var animation_name := get_animation_name(base_name)
+	play_animation(animation_name)
+
+
+func play_animation(animation_name: String):
+	if sprite.sprite_frames == null:
+		return
+
+	if not sprite.sprite_frames.has_animation(animation_name):
+		print("Animation does not exist: ", animation_name)
+		return
+
+	if sprite.animation != animation_name:
+		sprite.play(animation_name)
+
+
+>>>>>>> Stashed changes
 func can_attack() -> bool:
 	return state == PlayerState.NORMAL and attack_cooldown_timer <= 0
 

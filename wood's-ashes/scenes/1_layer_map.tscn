@@ -420,14 +420,8 @@ shape = SubResource("WorldBoundaryShape2D_31fhe")
 position = Vector2(3895, -9)
 shape = SubResource("WorldBoundaryShape2D_k5rcn")
 
-[node name="cemitery" parent="." unique_id=1629375297 instance=ExtResource("2_ilq1s")]
-position = Vector2(59, 57)
-
 [node name="start_zone" parent="." unique_id=812287001 instance=ExtResource("3_lgbkm")]
 position = Vector2(382, 243)
-
-[node name="cemitery2" parent="." unique_id=1974177871 instance=ExtResource("2_ilq1s")]
-position = Vector2(902, 527)
 
 [node name="chest_area1" parent="." unique_id=1048155401 instance=ExtResource("4_apqwv")]
 position = Vector2(1160, 11)
@@ -452,9 +446,6 @@ position = Vector2(2349, 99)
 
 [node name="chest_area_3" parent="." unique_id=633432120 instance=ExtResource("7_57der")]
 position = Vector2(6, 596)
-
-[node name="cemitery8" parent="." unique_id=642110440 instance=ExtResource("2_ilq1s")]
-position = Vector2(63, 531)
 
 [node name="chest_area3" parent="." unique_id=1093791368 instance=ExtResource("4_apqwv")]
 position = Vector2(1989, 584)

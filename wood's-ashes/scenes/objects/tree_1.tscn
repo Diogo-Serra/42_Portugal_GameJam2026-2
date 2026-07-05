@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c0ymsi8latujs"]
 
-[ext_resource type="Script" uid="uid://bysrtobj00001" path="res://scripts/ysort_object.gd" id="2_ysort"]
 [ext_resource type="Texture2D" uid="uid://dh61j6ho8kiii" path="res://assets/ruins/Extra/TX Plant with Shadow.png" id="1_tem7l"]
+[ext_resource type="Script" uid="uid://bysrtobj00001" path="res://scripts/ysort_object.gd" id="2_ysort"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tem7l"]
 texture = ExtResource("1_tem7l")
@@ -229,14 +229,14 @@ sources/0 = SubResource("TileSetAtlasSource_tem7l")
 size = Vector2(9, 35)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m02gy"]
-radius = 21.023796
+radius = 13.0
 
 [node name="tree1" type="TileMapLayer" unique_id=147964418]
-script = ExtResource("2_ysort")
-sort_y_offset = 134.0
 z_index = 1
 tile_map_data = PackedByteArray(0, 0, 4, 0, 5, 0, 0, 0, 1, 0, 1, 0, 0, 0)
 tile_set = SubResource("TileSet_m02gy")
+script = ExtResource("2_ysort")
+sort_y_offset = 134.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1555500749]
 
@@ -245,5 +245,5 @@ position = Vector2(71.5, 134.5)
 shape = SubResource("RectangleShape2D_m02gy")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=2130133061]
-position = Vector2(72, 86)
+position = Vector2(72, 94)
 shape = SubResource("CircleShape2D_m02gy")
