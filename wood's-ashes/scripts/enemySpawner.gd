@@ -16,7 +16,7 @@ extends Node2D
 var timer := 0.0
 var game_time := 0.0
 
-@onready var player: Node2D = $"../Player"
+var player: Node2D
 
 
 func _process(delta):
@@ -29,6 +29,8 @@ func _process(delta):
 
 
 func spawn_enemy():
+	update_player_reference()
+	
 	if player == null:
 		print("Player not found")
 		return
@@ -82,3 +84,6 @@ func choose_random_villager_scene() -> PackedScene:
 
 	var index := randi_range(0, villager_scenes.size() - 1)
 	return villager_scenes[index]
+
+func update_player_reference():
+	player = get_tree().get_first_node_in_group("player")

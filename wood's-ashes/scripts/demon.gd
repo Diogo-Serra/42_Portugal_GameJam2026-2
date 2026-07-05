@@ -6,25 +6,24 @@ signal health_changed(current_health, max_health)
 @onready var camera: Camera2D = $Camera2D
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
-@onready var timer_label: Label = get_node("/root/Game/UI/TimerLabel")
 
 @onready var attack_area: Area2D = $AttackArea
 @onready var attack_shape: CollisionShape2D = $AttackArea/CollisionShape2D
 
-@export var speed := 250.0
+@export var speed := 300.0
 
-@export var max_health := 100
-@export var attack_damage := 10
-@export var attack_size := Vector2(70.0, 35.0)
-@export var attack_cooldown := 0.35
-const DemonScene = preload("res://scenes/characters/demon.tscn")
+@export var max_health := 150
+@export var attack_damage := 25
+@export var attack_size := Vector2(100.0, 55.0)
+@export var attack_cooldown := 0.25
+
+@export var attack_offset := Vector2(65.0, 50.0)
+@export var attack_impact_frame := 3
 
 @export var max_rage := 100
-var rage := 0
-var has_transformed := false
+@export var rage_drain_per_second := 10.0
 
-@export var attack_offset := Vector2(45.0, 40.0)
-@export var attack_impact_frame := 3
+var rage := 100.0
 
 var health: int
 var last_horizontal_direction := 1
@@ -33,18 +32,12 @@ var attack_cooldown_timer := 0.0
 var attack_has_hit := false
 var hit_enemies_this_attack := []
 
-var is_basic_form := true
-
-var time_left := 60.0
-var timer_running := true
-
 const DeathScreen = preload("res://scenes/Dead.tscn")
 
 enum PlayerState {
 	NORMAL,
 	ATTACKING,
 	HURT,
-	SPAWNING,
 	DEAD
 }
 
@@ -53,11 +46,9 @@ var state: PlayerState = PlayerState.NORMAL
 
 func _ready():
 	add_to_group("player")
-	randomize()
-	health = max_health
-	z_as_relative = false
 
-	update_timer_label()
+	health = max_health
+
 	update_attack_hitbox_size()
 	update_attack_hitbox_position()
 
@@ -69,58 +60,34 @@ func _ready():
 	if not sprite.frame_changed.is_connected(_on_sprite_frame_changed):
 		sprite.frame_changed.connect(_on_sprite_frame_changed)
 
+	play_animation("idle")
 	health_changed.emit(health, max_health)
 
-	if sprite.sprite_frames.has_animation("spawn"):
-		state = PlayerState.SPAWNING
-		sprite.play("spawn")
-	else:
-		state = PlayerState.NORMAL
-		play_animation_base("idle")
-
-func _process(delta: float) -> void:
-	if not timer_running:
-		return
-	time_left -= delta
-	if time_left <= 0:
-		time_left = 0
-		timer_running = false
-		on_time_up()
-	update_timer_label()
-
-func update_timer_label() -> void:
-	var minutes := int(time_left / 60)
-	var seconds := int(time_left) % 60
-	timer_label.text = "%02d:%02d" % [minutes, seconds]
-
-func on_time_up() -> void:
-	print("Time's up!")
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 func _physics_process(delta):
-	z_index = int(global_position.y) + 45
-
 	if state == PlayerState.DEAD:
 		velocity = Vector2.ZERO
 		return
 
 	if Input.is_action_just_pressed("transform"):
-		transform_to_demon()
+		transform_back_to_player()
 		return
 
+	rage -= rage_drain_per_second * delta
+
+	if rage <= 0:
+		rage = 0
+		transform_back_to_player()
+		return
 
 	if attack_cooldown_timer > 0:
 		attack_cooldown_timer -= delta
-
-	if Input.is_action_just_pressed("transform") and state == PlayerState.NORMAL:
-		toggle_form()
-		return
 
 	if Input.is_action_just_pressed("attack") and can_attack():
 		attack()
 		return
 
-	if state == PlayerState.ATTACKING or state == PlayerState.HURT or state == PlayerState.SPAWNING:
+	if state == PlayerState.ATTACKING or state == PlayerState.HURT:
 		velocity = Vector2.ZERO
 		move_and_slide()
 		return
@@ -147,44 +114,11 @@ func handle_movement():
 	update_attack_hitbox_position()
 
 	if input_direction.length() > 0:
-		play_animation_base("walk")
+		play_animation("walk")
 	else:
-		play_animation_base("idle")
+		play_animation("idle")
 
 	move_and_slide()
-
-
-func toggle_form():
-	is_basic_form = !is_basic_form
-	update_sprite_direction()
-	play_animation_base("idle")
-
-
-func get_animation_name(base_name: String) -> String:
-	if is_basic_form:
-		var basic_name := "basic_" + base_name
-
-		if sprite.sprite_frames != null and sprite.sprite_frames.has_animation(basic_name):
-			return basic_name
-
-	return base_name
-
-
-func play_animation_base(base_name: String):
-	var animation_name := get_animation_name(base_name)
-	play_animation(animation_name)
-
-
-func play_animation(animation_name: String):
-	if sprite.sprite_frames == null:
-		return
-
-	if not sprite.sprite_frames.has_animation(animation_name):
-		print("Animation does not exist: ", animation_name)
-		return
-
-	if sprite.animation != animation_name:
-		sprite.play(animation_name)
 
 
 func can_attack() -> bool:
@@ -202,14 +136,14 @@ func attack():
 	update_sprite_direction()
 	update_attack_hitbox_position()
 
-	play_animation_base("attack")
+	play_animation("attack")
 
 
 func _on_sprite_frame_changed():
 	if state != PlayerState.ATTACKING:
 		return
 
-	if sprite.animation != get_animation_name("attack"):
+	if sprite.animation != "attack":
 		return
 
 	if attack_has_hit:
@@ -255,7 +189,7 @@ func update_attack_hitbox_position():
 
 func update_attack_hitbox_size():
 	if attack_shape == null:
-		print("AttackArea/CollisionShape2D not found")
+		print("AttackArea/CollisionShape2D não encontrado")
 		return
 
 	if attack_shape.shape == null:
@@ -265,21 +199,28 @@ func update_attack_hitbox_size():
 		var rectangle := attack_shape.shape as RectangleShape2D
 		rectangle.size = attack_size
 	else:
-		print("Attack shape is not RectangleShape2D")
+		print("A shape do ataque não é RectangleShape2D")
 
 
 func update_sprite_direction():
-	if is_basic_form:
-		sprite.flip_h = last_horizontal_direction < 0
-	else:
-		sprite.flip_h = last_horizontal_direction > 0
+	# Se o demon estiver invertido, troca o sinal aqui.
+	sprite.flip_h = last_horizontal_direction > 0
+
+
+func play_animation(animation_name: String):
+	if sprite.sprite_frames == null:
+		return
+
+	if not sprite.sprite_frames.has_animation(animation_name):
+		print("Animation does not exist: ", animation_name)
+		return
+
+	if sprite.animation != animation_name:
+		sprite.play(animation_name)
 
 
 func take_damage(amount: int):
 	if state == PlayerState.DEAD:
-		return
-
-	if state == PlayerState.SPAWNING:
 		return
 
 	health -= amount
@@ -295,7 +236,7 @@ func get_hit():
 	state = PlayerState.HURT
 	velocity = Vector2.ZERO
 	update_sprite_direction()
-	play_animation_base("hurt")
+	play_animation("hurt")
 
 
 func die():
@@ -308,9 +249,12 @@ func die():
 
 	if sprite.sprite_frames.has_animation("die"):
 		sprite.play("die")
+	elif sprite.sprite_frames.has_animation("death"):
+		sprite.play("death")
+	else:
+		_on_player_died()
 
 	died.emit()
-	_on_player_died()
 
 
 func _on_player_died() -> void:
@@ -318,6 +262,21 @@ func _on_player_died() -> void:
 	var death_screen = DeathScreen.instantiate()
 	death_screen.process_mode = Node.PROCESS_MODE_ALWAYS
 	get_tree().root.add_child(death_screen)
+
+
+func receive_stats_from_player(
+	old_health: int,
+	old_max_health: int,
+	old_attack_damage: int,
+	old_speed: float
+):
+	max_health = old_max_health + 50
+	health = max_health
+
+	attack_damage = old_attack_damage + 15
+	speed = old_speed + 40
+
+	health_changed.emit(health, max_health)
 
 
 func upgrade_max_health(amount: int):
@@ -341,48 +300,29 @@ func upgrade_speed(amount: float):
 
 
 func _on_animation_finished():
-	if state == PlayerState.SPAWNING:
+	if state == PlayerState.ATTACKING:
 		state = PlayerState.NORMAL
-		play_animation_base("idle")
-
-	elif state == PlayerState.ATTACKING:
-		state = PlayerState.NORMAL
-		play_animation_base("idle")
+		play_animation("idle")
 
 	elif state == PlayerState.HURT:
 		state = PlayerState.NORMAL
-		play_animation_base("idle")
+		play_animation("idle")
 
 	elif state == PlayerState.DEAD:
-		pass
+		_on_player_died()
 
-func add_rage(amount: int):
-	if has_transformed:
-		return
+func transform_back_to_player():
+	print("Transforming back to player")
 
-	rage += amount
-
-	if rage >= max_rage:
-		rage = max_rage
-		transform_to_demon()
-
-func transform_to_demon():
-	if has_transformed:
-		return
-
-	print("Transforming to demon")
-
-	has_transformed = true
-
-	var DemonScene = load("res://scenes/characters/demon.tscn")
-	var demon = DemonScene.instantiate()
+	var PlayerScene = load("res://scenes/characters/player.tscn")
+	var player = PlayerScene.instantiate()
 	var parent = get_parent()
 
-	parent.add_child(demon)
-	demon.global_position = global_position
+	parent.add_child(player)
+	player.global_position = global_position
 
-	if demon.has_method("receive_stats_from_player"):
-		demon.receive_stats_from_player(
+	if player.has_method("receive_stats_from_demon"):
+		player.receive_stats_from_demon(
 			health,
 			max_health,
 			attack_damage,
@@ -390,20 +330,3 @@ func transform_to_demon():
 		)
 
 	queue_free()
-
-func receive_stats_from_demon(
-	old_health: int,
-	_old_max_health: int,
-	_old_attack_damage: int,
-	_old_speed: float
-):
-	max_health = 100
-	health = min(old_health, max_health)
-
-	attack_damage = 10
-	speed = 250.0
-
-	rage = 0
-	has_transformed = false
-
-	health_changed.emit(health, max_health)
