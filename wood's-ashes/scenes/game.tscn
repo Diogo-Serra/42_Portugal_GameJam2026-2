@@ -4,6 +4,20 @@
 [ext_resource type="PackedScene" uid="uid://dty7gb66ou1km" path="res://scenes/characters/player.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cxxchmvg341vm" path="res://scenes/characters/EnemySpawner.tscn" id="3_p57ef"]
 [ext_resource type="FontFile" uid="uid://cxna5wwgu0upf" path="res://assets/Fonts/Star Crush.otf" id="5_iywne"]
+[ext_resource type="Script" uid="uid://drkcvqv7sooe" path="res://scenes/Health_Bar.gd" id="5_p57ef"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p57ef"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iywne"]
+bg_color = Color(0, 1, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
 bg_color = Color(1, 0, 0, 1)
@@ -26,6 +40,7 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -20.0
+<<<<<<< Updated upstream
 offset_top = 29.0
 offset_right = 20.0
 offset_bottom = 52.0
@@ -42,3 +57,21 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_lbhrr")
 max_value = 60.0
 show_percentage = false
 [node name="EnemySpawner3" parent="." unique_id=2103695454 instance=ExtResource("3_p57ef")]
+=======
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("5_iywne")
+
+[node name="HealthBar" type="ProgressBar" parent="UI" unique_id=1826416705]
+offset_left = 959.0
+offset_top = 87.0
+offset_right = 1141.0
+offset_bottom = 114.0
+theme_override_styles/background = SubResource("StyleBoxFlat_p57ef")
+theme_override_styles/fill = SubResource("StyleBoxFlat_iywne")
+value = 100.0
+fill_mode = 1
+show_percentage = false
+script = ExtResource("5_p57ef")
+>>>>>>> Stashed changes
