@@ -4,10 +4,7 @@ enum Behaviour { FIGHTER, COWARD, RANDOM }
 enum AIState { WANDER, CHASE, ATTACK }
 
 @export var behaviour := Behaviour.RANDOM
-@export var detect_range := 140.0
-@export var attack_range := 28.0
-@export var attack_damage := 1
-@export var attack_cooldown := 1.2
+@export var detect_range := 70.0
 @export var wander_radius := 100.0
 
 var ai_state := AIState.WANDER
@@ -19,6 +16,10 @@ var player_ref: Node2D = null
 
 func _ready():
 	super()
+	attack_range = 18.0
+	attack_damage = 1
+	attack_cooldown = 6.0
+	rage_on_death = 0.5
 	add_to_group("villagers")
 
 	_pick_new_target()
@@ -36,7 +37,7 @@ func get_player() -> Node2D:
 func _physics_process(delta):
 	super(delta)
 
-	if dead:
+	if state == EnemyState.DEAD:
 		return
 
 	var p: Node2D = get_player()
@@ -82,7 +83,7 @@ func _coward_ai(p: Node2D):
 	var dir: Vector2 = (global_position - p.global_position).normalized()
 	velocity = dir * speed
 	face_direction(dir)
-	play_anim("walk")
+	play_animation("walk")
 
 
 func _wander():
@@ -92,19 +93,19 @@ func _wander():
 	var dir: Vector2 = (wander_target - global_position).normalized()
 	velocity = dir * speed * 0.5
 	face_direction(dir)
-	play_anim("walk")
+	play_animation("walk")
 
 
 func _chase(p: Node2D):
 	var dir: Vector2 = (p.global_position - global_position).normalized()
 	velocity = dir * speed
 	face_direction(dir)
-	play_anim("walk")
+	play_animation("walk")
 
 
 func _attack(p: Node2D):
 	velocity = Vector2.ZERO
-	play_anim("attack")
+	play_animation("attack")
 
 	if attack_timer > 0:
 		return

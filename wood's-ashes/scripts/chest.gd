@@ -12,6 +12,7 @@ func _ready() -> void:
 	z_index = int(global_position.y) + 38
 	prompt_label.visible = false
 	sprite.frame = 0
+	add_to_group("chests")
 	$InteractionArea.body_entered.connect(_on_body_entered)
 	$InteractionArea.body_exited.connect(_on_body_exited)
 
@@ -43,13 +44,14 @@ func open_chest() -> void:
 func _on_life_chosen() -> void:
 	var player = get_tree().get_first_node_in_group("player")
 	if player:
-		player.upgrade_max_health(20)  # heals + increases max HP by 20
+		player.upgrade_max_health(20)
 	print("Player chose Life!")
 
 func _on_damage_chosen() -> void:
 	var player = get_tree().get_first_node_in_group("player")
 	if player:
-		player.upgrade_attack_damage(5)  # increases attack damage by 5
+		player.upgrade_attack_damage(10)
+		player.upgrade_attack_range(30.0)
 	print("Player chose Damage!")
 
 func _on_rare_chosen() -> void:
@@ -57,3 +59,9 @@ func _on_rare_chosen() -> void:
 	if player:
 		player.upgrade_speed(10)
 	print("Player got the RARE reward!")
+
+func reset() -> void:
+	is_open = false
+	player_in_range = false
+	prompt_label.visible = false
+	sprite.frame = 0

@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Enemy
 
 @export var speed := 80.0
 @export var max_health := 30
@@ -6,8 +7,8 @@ extends CharacterBody2D
 @export var hurt_time := 0.15
 
 @export var attack_damage := 10
-@export var attack_range := 45.0
-@export var attack_cooldown := 1.0
+@export var attack_range := 40.0
+@export var attack_cooldown := 4.0
 @export var attack_impact_frame := 2
 
 var health := 30
@@ -17,6 +18,7 @@ var knockback_velocity := Vector2.ZERO
 
 var attack_cooldown_timer := 0.0
 var attack_has_hit := false
+var rage_on_death := 5.0
 
 enum EnemyState {
 	NORMAL,
@@ -168,6 +170,15 @@ func update_sprite_direction():
 	if player.global_position.x > global_position.x:
 		sprite.flip_h = false
 	elif player.global_position.x < global_position.x:
+		sprite.flip_h = true
+
+
+func face_direction(dir: Vector2):
+	if sprite == null:
+		return
+	if dir.x > 0:
+		sprite.flip_h = false
+	elif dir.x < 0:
 		sprite.flip_h = true
 
 

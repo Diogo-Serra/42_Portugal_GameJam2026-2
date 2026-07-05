@@ -5,6 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://cxxchmvg341vm" path="res://scenes/characters/EnemySpawner.tscn" id="3_p57ef"]
 [ext_resource type="FontFile" uid="uid://cxna5wwgu0upf" path="res://assets/Fonts/Star Crush.otf" id="5_iywne"]
 [ext_resource type="Script" uid="uid://cpm2s5q3shuuq" path="res://scenes/Health_Bar.gd" id="5_p57ef"]
+[ext_resource type="Script" path="res://scripts/chest_reset_zone.gd" id="99_reset"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m02gy"]
+radius = 154.63506
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
+bg_color = Color(1, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p57ef"]
 corner_radius_top_left = 20
@@ -19,28 +26,24 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
-bg_color = Color(1, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8ku5"]
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eu64u"]
-bg_color = Color(0, 1, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
 [node name="Game" type="Node2D" unique_id=1747429142]
 
 [node name="1layer_map" parent="." unique_id=102117543 instance=ExtResource("1_yqjtg")]
 
+[node name="Area2D" type="Area2D" parent="." unique_id=1572146]
+script = ExtResource("99_reset")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1462889567]
+position = Vector2(586, 352)
+shape = SubResource("CircleShape2D_m02gy")
+
 [node name="Player" parent="." unique_id=953319153 instance=ExtResource("2_lnu2h")]
-position = Vector2(586, 341)
+position = Vector2(588, 345)
+speed = 250.0
+max_health = 100
+attack_damage = 10
+attack_size = Vector2(160, 160)
+attack_cooldown = 0.15
 
 [node name="EnemySpawner" parent="." unique_id=64854175 instance=ExtResource("3_p57ef")]
 

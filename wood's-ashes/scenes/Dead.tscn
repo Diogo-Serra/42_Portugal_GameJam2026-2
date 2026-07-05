@@ -36,7 +36,7 @@ offset_right = 467.0
 offset_bottom = 191.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_nt3hv")
-text = "You didn't get your revenge Ars"
+text = "You didn't get your revenge Arc"
 
 [node name="back" type="Button" parent="Control" unique_id=1668531723]
 layout_mode = 0

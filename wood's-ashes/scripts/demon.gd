@@ -14,10 +14,10 @@ signal health_changed(current_health, max_health)
 
 @export var max_health := 150
 @export var attack_damage := 25
-@export var attack_size := Vector2(100.0, 55.0)
-@export var attack_cooldown := 0.25
+@export var attack_size := Vector2(300.0, 300.0)
+@export var attack_cooldown := 0.1
 
-@export var attack_offset := Vector2(65.0, 50.0)
+@export var attack_offset := Vector2(0.0, 0.0)
 @export var attack_impact_frame := 3
 
 @export var max_rage := 100
@@ -47,6 +47,9 @@ enum PlayerState {
 }
 
 var state: PlayerState = PlayerState.NORMAL
+
+var hurt_invincibility_timer := 0.0
+const HURT_INVINCIBILITY_DURATION := 0.8
 
 
 func _ready():
@@ -90,6 +93,9 @@ func on_time_up() -> void:
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 func _physics_process(delta):
+	if hurt_invincibility_timer > 0:
+		hurt_invincibility_timer -= delta
+
 	if state == PlayerState.DEAD:
 		velocity = Vector2.ZERO
 		return
@@ -112,7 +118,7 @@ func _physics_process(delta):
 		attack()
 		return
 
-	if state == PlayerState.ATTACKING or state == PlayerState.HURT:
+	if state == PlayerState.ATTACKING:
 		velocity = Vector2.ZERO
 		move_and_slide()
 		return
@@ -248,6 +254,10 @@ func take_damage(amount: int):
 	if state == PlayerState.DEAD:
 		return
 
+	if hurt_invincibility_timer > 0:
+		return
+
+	hurt_invincibility_timer = HURT_INVINCIBILITY_DURATION
 	health -= amount
 	health_changed.emit(health, max_health)
 
@@ -258,8 +268,8 @@ func take_damage(amount: int):
 
 
 func get_hit():
-	state = PlayerState.HURT
-	velocity = Vector2.ZERO
+	if state == PlayerState.ATTACKING:
+		return
 	update_sprite_direction()
 	play_animation("hurt")
 
@@ -292,14 +302,14 @@ func _on_player_died() -> void:
 func receive_stats_from_player(
 	_old_health: int,
 	old_max_health: int,
-	old_attack_damage: int,
+	_old_attack_damage: int,
 	old_speed: float, 
 	old_time_left: float
 ):
 	max_health = old_max_health + 50
 	health = max_health
 
-	attack_damage = old_attack_damage + 15
+	attack_damage = 999
 	speed = old_speed + 40
 	
 	time_left = old_time_left
@@ -309,7 +319,7 @@ func receive_stats_from_player(
 
 func upgrade_max_health(amount: int):
 	max_health += amount
-	health += amount
+	health = max_health
 	health_changed.emit(health, max_health)
 
 
