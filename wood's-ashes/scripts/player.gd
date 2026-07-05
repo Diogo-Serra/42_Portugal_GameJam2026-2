@@ -48,8 +48,6 @@ var attack_cooldown_timer := 0.0
 
 var attack_has_hit := false
 var hit_enemies_this_attack := []
-<<<<<<< Updated upstream
-=======
 
 var is_basic_form := true
 
@@ -62,7 +60,6 @@ var _basic_circle_offset: Vector2
 var _basic_rect_size: Vector2
 var _basic_rect_offset: Vector2
 
->>>>>>> Stashed changes
 const DeathScreen = preload("res://scenes/Dead.tscn")
 
 enum PlayerState {
@@ -112,11 +109,8 @@ func _ready():
 
 
 func _physics_process(delta):
-<<<<<<< Updated upstream
 	z_index = int(global_position.y + current_sort_offset)
 
-=======
->>>>>>> Stashed changes
 	if state == PlayerState.DEAD:
 		velocity = Vector2.ZERO
 		return
