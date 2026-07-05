@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dk7mmfl1j7hew"]
 
+[ext_resource type="Script" uid="uid://7nbfsjgtr8gj" path="res://scripts/enemy.gd" id="1_1rk7y"]
 [ext_resource type="Texture2D" uid="uid://chso3sj3kvt7c" path="res://assets/characters/Villagers/1 Old_man/Old_man_attack.png" id="1_epmmo"]
 [ext_resource type="Texture2D" uid="uid://2xmvnjr7scqt" path="res://assets/characters/Villagers/1 Old_man/Old_man_hurt.png" id="2_1rk7y"]
 [ext_resource type="Texture2D" uid="uid://bq0dt1wknlftw" path="res://assets/characters/Villagers/1 Old_man/Old_man_idle.png" id="3_g7kfa"]
@@ -180,6 +181,7 @@ radius = 7.0
 [node name="Old_man" type="CharacterBody2D" unique_id=1057223506]
 collision_layer = 4
 collision_mask = 5
+script = ExtResource("1_1rk7y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1018324000]
 sprite_frames = SubResource("SpriteFrames_a8ku5")
