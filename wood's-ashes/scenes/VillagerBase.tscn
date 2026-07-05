@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dih8ox8si3e6r"]
+
+[ext_resource type="Script" uid="uid://uvjpottu8o8w" path="res://scripts/villagers.gd" id="1_hta2a"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lkpa7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jtwau"]
+
+[node name="VillagerBase" type="CharacterBody2D" unique_id=2054103294]
+script = ExtResource("1_hta2a")
+behaviour = null
+detect_range = null
+attack_range = null
+attack_damage = null
+attack_cooldown = null
+wander_radius = null
+max_health = null
+speed = null
+knockback_force = null
+hurt_time = null
+corpse_mode = null
+corpse_lifetime = null
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=519602569]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618090992]
+shape = SubResource("CapsuleShape2D_lkpa7")
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=1567287817]
+collision_layer = 4
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=385064158 groups=["enemies", "villagers"]]
+shape = SubResource("CapsuleShape2D_jtwau")
