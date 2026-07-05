@@ -78,7 +78,6 @@ var state: PlayerState = PlayerState.NORMAL
 func _ready():
 	add_to_group("player")
 	health = max_health
-	z_as_relative = false
 
 	# Save basic form collision data so we can restore it on form swap
 	if collision.shape is CapsuleShape2D:
@@ -113,8 +112,11 @@ func _ready():
 
 
 func _physics_process(delta):
+<<<<<<< Updated upstream
 	z_index = int(global_position.y + current_sort_offset)
 
+=======
+>>>>>>> Stashed changes
 	if state == PlayerState.DEAD:
 		velocity = Vector2.ZERO
 		return
@@ -164,7 +166,12 @@ func handle_movement():
 =======
 func toggle_form():
 	is_basic_form = !is_basic_form
+<<<<<<< Updated upstream
 	update_collision_for_form()
+=======
+	if has_node("FormController"):
+		$FormController.apply_form(is_basic_form)
+>>>>>>> Stashed changes
 	update_sprite_direction()
 	play_animation_base("idle")
 

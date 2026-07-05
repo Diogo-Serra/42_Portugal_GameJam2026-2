@@ -2,6 +2,15 @@
 
 [ext_resource type="Script" uid="uid://cycn7p4tqtn40" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://dalj45w7y0t0y" path="res://assets/characters/demon_slime_FREE_v1.0_288x160_spritesheet.png" id="2_g2els"]
+<<<<<<< Updated upstream
+=======
+[ext_resource type="Texture2D" uid="uid://b8ymb8imqjrh" path="res://assets/characters/DemonKinBasicAtk001-Sheet.png" id="3_fjrip"]
+[ext_resource type="Texture2D" uid="uid://cbfjpy1f0rcja" path="res://assets/characters/DemonKinHurt001-Sheet.png" id="4_smehm"]
+[ext_resource type="Texture2D" uid="uid://cyf6c06l85hwt" path="res://assets/characters/DemonKinIdle001-Sheet.png" id="5_ur7pv"]
+[ext_resource type="Texture2D" uid="uid://b12b7gi5yavf2" path="res://assets/characters/DemonKinWalk001-Sheet.png" id="6_y4r1p"]
+[ext_resource type="Texture2D" uid="uid://bbya3u3mfycfk" path="res://assets/characters/DemonKinDeath001-Sheet.png" id="7_d2wvv"]
+[ext_resource type="Script" uid="uid://b1sxsr4johfwg" path="res://scripts/player_form_controller.gd" id="99_formctrl"]
+>>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_60mlk"]
 atlas = ExtResource("2_g2els")
@@ -439,14 +448,22 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m02gy"]
-radius = 7.0
+radius = 5.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m02gy"]
+<<<<<<< Updated upstream
 size = Vector2(13, 5)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_31fhe"]
 radius = 4.0
 height = 38.0
+=======
+size = Vector2(10, 4)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_31fhe"]
+radius = 5.0
+height = 22.0
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(11, 11)
@@ -466,6 +483,7 @@ autoplay = "idle"
 speed_scale = 1.5
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1989808191]
+<<<<<<< Updated upstream
 position = Vector2(2, -3)
 shape = SubResource("CircleShape2D_m02gy")
 
@@ -475,6 +493,17 @@ shape = SubResource("RectangleShape2D_m02gy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=959339598]
 position = Vector2(2, -4)
+=======
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_m02gy")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=414606501]
+position = Vector2(2, 14)
+shape = SubResource("RectangleShape2D_m02gy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=959339598]
+position = Vector2(3, 5)
+>>>>>>> Stashed changes
 shape = SubResource("CapsuleShape2D_31fhe")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1672621343]
@@ -487,6 +516,13 @@ position = Vector2(2, 24)
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1315201593]
+<<<<<<< Updated upstream
 position = Vector2(0, -27)
+=======
+position = Vector2(0, -21)
+>>>>>>> Stashed changes
 shape = SubResource("RectangleShape2D_g2els")
 debug_color = Color(0.9984773, 0, 0.120927565, 1)
+
+[node name="FormController" type="Node" parent="." unique_id=811223344]
+script = ExtResource("99_formctrl")

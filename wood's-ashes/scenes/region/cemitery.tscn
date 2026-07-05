@@ -395,13 +395,13 @@ tile_map_data = PackedByteArray(0, 0, 7, 0, 0, 0, 0, 0, 26, 0, 12, 0, 0, 0, 255,
 tile_set = SubResource("TileSet_m02gy")
 
 [node name="pillar1" parent="." unique_id=56820012 instance=ExtResource("3_g3c1b")]
-position = Vector2(-49, -63)
+position = Vector2(-49, -64)
 
 [node name="pillar2" parent="." unique_id=1826215161 instance=ExtResource("3_g3c1b")]
 position = Vector2(80, -64)
 
 [node name="pillar3" parent="." unique_id=1811671928 instance=ExtResource("3_g3c1b")]
-position = Vector2(-49, 33)
+position = Vector2(-49, 32)
 
 [node name="pillar4" parent="." unique_id=357935333 instance=ExtResource("3_g3c1b")]
 position = Vector2(80, 32)
