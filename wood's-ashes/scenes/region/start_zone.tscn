@@ -615,6 +615,7 @@ sources/1 = SubResource("TileSetAtlasSource_8h3by")
 
 [node name="start_zone" type="TileMapLayer" unique_id=812287001]
 z_index = 1
+position = Vector2(465, 278)
 tile_map_data = PackedByteArray(0, 0, 1, 0, 255, 255, 0, 0, 22, 0, 10, 0, 0, 0, 1, 0, 7, 0, 0, 0, 22, 0, 10, 0, 0, 0, 11, 0, 7, 0, 0, 0, 22, 0, 10, 0, 0, 0, 11, 0, 255, 255, 0, 0, 22, 0, 10, 0, 0, 0, 16, 0, 0, 0, 0, 0, 6, 0, 10, 0, 0, 0)
 tile_set = SubResource("TileSet_m02gy")
 
@@ -668,3 +669,36 @@ position = Vector2(144, 63)
 
 [node name="saint" parent="." unique_id=1086125946 instance=ExtResource("8_8h3by")]
 position = Vector2(224, -121)
+
+[node name="bush7" parent="." unique_id=1282446028 instance=ExtResource("4_8h3by")]
+position = Vector2(-250, -179)
+
+[node name="tree7" parent="." unique_id=237279782 instance=ExtResource("5_35bby")]
+position = Vector2(-404, -310)
+
+[node name="tree8" parent="." unique_id=1662954178 instance=ExtResource("5_35bby")]
+position = Vector2(-433, 193)
+
+[node name="bush8" parent="." unique_id=1111766998 instance=ExtResource("4_8h3by")]
+position = Vector2(-316, 107)
+
+[node name="bush9" parent="." unique_id=236152225 instance=ExtResource("4_8h3by")]
+position = Vector2(-388, -85)
+
+[node name="bush10" parent="." unique_id=261085093 instance=ExtResource("3_h048p")]
+position = Vector2(-284, 289)
+
+[node name="tree9" parent="." unique_id=733859581 instance=ExtResource("5_35bby")]
+position = Vector2(-457, -55)
+
+[node name="tree10" parent="." unique_id=1749447630 instance=ExtResource("5_35bby")]
+position = Vector2(513, -272)
+
+[node name="bush11" parent="." unique_id=2094889192 instance=ExtResource("3_h048p")]
+position = Vector2(320, -239)
+
+[node name="bush12" parent="." unique_id=33211136 instance=ExtResource("3_h048p")]
+position = Vector2(462, 32)
+
+[node name="bush13" parent="." unique_id=1970616805 instance=ExtResource("3_h048p")]
+position = Vector2(533, 248)
