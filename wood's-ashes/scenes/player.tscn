@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bj0xsr3tke8jv"]
+[gd_scene format=3 uid="uid://qqxe16n0740v"]
 
 [ext_resource type="Script" uid="uid://cycn7p4tqtn40" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://dalj45w7y0t0y" path="res://assets/characters/demon_slime_FREE_v1.0_288x160_spritesheet.png" id="2_g2els"]
