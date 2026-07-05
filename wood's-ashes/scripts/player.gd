@@ -29,7 +29,7 @@ var hit_enemies_this_attack := []
 
 var is_basic_form := true
 
-var time_left := 600.0
+var time_left := 3.0
 var timer_running := true
 
 const DeathScreen = preload("res://scenes/Dead.tscn")
