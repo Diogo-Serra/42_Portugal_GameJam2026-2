@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://hgn0qqum3hex"]
 
+[ext_resource type="Script" uid="uid://bysrtobj00001" path="res://scripts/ysort_object.gd" id="2_ysort"]
 [ext_resource type="Texture2D" uid="uid://bvkogtg13vmts" path="res://assets/ruins/Extra/TX Props with Shadow.png" id="1_2q3x4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eeb2i"]
@@ -396,6 +397,8 @@ sources/0 = SubResource("TileSetAtlasSource_eeb2i")
 radius = 24.020824
 
 [node name="ruinwell" type="TileMapLayer" unique_id=655028148]
+script = ExtResource("2_ysort")
+sort_y_offset = 39.0
 z_index = 1
 tile_map_data = PackedByteArray(0, 0, 3, 0, 2, 0, 0, 0, 26, 0, 22, 0, 0, 0)
 tile_set = SubResource("TileSet_m02gy")

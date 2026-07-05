@@ -48,6 +48,7 @@ var state: PlayerState = PlayerState.NORMAL
 func _ready():
 	add_to_group("player")
 	health = max_health
+	z_as_relative = false
 
 	update_attack_hitbox_size()
 	update_attack_hitbox_position()
@@ -65,6 +66,8 @@ func _ready():
 
 
 func _physics_process(delta):
+	z_index = int(global_position.y) + 45
+
 	if state == PlayerState.DEAD:
 		velocity = Vector2.ZERO
 		return
