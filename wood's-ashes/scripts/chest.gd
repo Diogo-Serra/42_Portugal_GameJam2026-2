@@ -38,7 +38,13 @@ func open_chest() -> void:
 	popup.damage_chosen.connect(_on_damage_chosen)
 
 func _on_life_chosen() -> void:
+	var player = get_tree().get_first_node_in_group("player")
+	if player:
+		player.upgrade_max_health(20)  # heals + increases max HP by 20
 	print("Player chose Life!")
 
 func _on_damage_chosen() -> void:
+	var player = get_tree().get_first_node_in_group("player")
+	if player:
+		player.upgrade_attack_damage(5)  # increases attack damage by 5
 	print("Player chose Damage!")

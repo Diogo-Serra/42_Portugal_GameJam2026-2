@@ -439,16 +439,15 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_31fhe"]
-radius = 15.0
+radius = 9.0
 height = 18.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 
-[node name="Player" type="CharacterBody2D" unique_id=953319153]
+[node name="Player" type="CharacterBody2D" unique_id=953319153 groups=["player"]]
 collision_layer = 2
-collision_mask = 1
 script = ExtResource("1_g2els")
-attack_size = Vector2(42.0, 24.0)
+attack_size = Vector2(42, 24)
 attack_offset = Vector2(33, 15)
 attack_impact_frame = 9
 
