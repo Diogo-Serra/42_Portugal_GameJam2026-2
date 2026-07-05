@@ -126,7 +126,6 @@ func attack():
 	update_attack_hitbox_position()
 
 	sprite.play("attack")
-	take_damage(200)
 	
 	print(max_health)
 	print(attack_damage)
