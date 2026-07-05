@@ -120,7 +120,7 @@ func shoot_projectile():
 		projectile.setup(direction, attack_damage)
 
 
-func take_damage(amount: int, attacker_position: Vector2):
+func take_damage(amount: int, _attacker_position: Vector2):
 	if state == EnemyState.DEAD:
 		return
 
