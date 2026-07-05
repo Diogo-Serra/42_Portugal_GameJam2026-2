@@ -449,11 +449,10 @@ radius = 4.0
 height = 28.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cyopu"]
-size = Vector2(11, 11)
+size = Vector2(60.125, 11)
 
 [node name="Demon" type="CharacterBody2D" unique_id=321044694 groups=["player"]]
 script = ExtResource("2_script")
-is_basic_form = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=278833579]
 sprite_frames = SubResource("SpriteFrames_dqrhk")
@@ -470,7 +469,7 @@ position = Vector2(0, 25)
 shape = SubResource("CircleShape2D_ipfnv")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=685340086]
-position = Vector2(6, 68)
+position = Vector2(2, 66)
 shape = SubResource("RectangleShape2D_i1jby")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1240376189]
@@ -487,6 +486,6 @@ position = Vector2(2, 24)
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1255144237]
-position = Vector2(-2, 2)
+position = Vector2(-2, 41)
 shape = SubResource("RectangleShape2D_cyopu")
 debug_color = Color(0.9984773, 0, 0.120927565, 1)

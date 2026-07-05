@@ -738,19 +738,18 @@ animations = [{
 radius = 7.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m02gy"]
-size = Vector2(29, 5)
+size = Vector2(12, 5)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_31fhe"]
 radius = 4.0
-height = 24.0
+height = 34.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(11, 11)
+size = Vector2(30, 11)
 
 [node name="Player" type="CharacterBody2D" unique_id=953319153 groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_g2els")
-attack_size = Vector2(42, 24)
 attack_offset = Vector2(33, 15)
 attack_impact_frame = 9
 
@@ -761,15 +760,15 @@ autoplay = "spawn"
 speed_scale = 1.5
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1989808191]
-position = Vector2(-4, 14)
+position = Vector2(3, -4)
 shape = SubResource("CircleShape2D_m02gy")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=414606501]
-position = Vector2(4, 45)
+position = Vector2(2, 13)
 shape = SubResource("RectangleShape2D_m02gy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=959339598]
-position = Vector2(4, 20)
+position = Vector2(2, -11)
 shape = SubResource("CapsuleShape2D_31fhe")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1672621343]
@@ -782,6 +781,6 @@ position = Vector2(2, 24)
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1315201593]
-position = Vector2(1, 0)
+position = Vector2(6, -34.5)
 shape = SubResource("RectangleShape2D_g2els")
 debug_color = Color(0.9984773, 0, 0.120927565, 1)

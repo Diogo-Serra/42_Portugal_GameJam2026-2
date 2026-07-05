@@ -29,7 +29,7 @@ var hit_enemies_this_attack := []
 
 var is_basic_form := true
 
-var time_left := 3.0
+var time_left := 60.0
 var timer_running := true
 
 const DeathScreen = preload("res://scenes/Dead.tscn")
@@ -83,7 +83,7 @@ func _process(delta: float) -> void:
 	update_timer_label()
 
 func update_timer_label() -> void:
-	var minutes := int(time_left) / 60
+	var minutes := int(time_left / 60)
 	var seconds := int(time_left) % 60
 	timer_label.text = "%02d:%02d" % [minutes, seconds]
 
