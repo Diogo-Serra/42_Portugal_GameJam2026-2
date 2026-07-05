@@ -49,11 +49,15 @@ theme_override_font_sizes/font_size = 50
 text = "Back"
 
 [node name="Label" type="Label" parent="." unique_id=576186091]
-layout_mode = 0
-offset_left = 397.0
-offset_top = 13.0
-offset_right = 762.0
-offset_bottom = 108.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -177.0
+offset_top = 28.0
+offset_right = 178.0
+offset_bottom = 123.0
+grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0.5764706, 0.11372549, 0.60784316, 1)
 theme_override_constants/outline_size = 30
@@ -61,21 +65,24 @@ theme_override_fonts/font = ExtResource("2_yjkok")
 theme_override_font_sizes/font_size = 100
 text = "Controls"
 
-[node name="Control" type="Control" parent="." unique_id=1378398349]
-anchors_preset = 0
-offset_left = 27.0
-offset_top = 106.0
-offset_right = 98.0
-offset_bottom = 175.0
+[node name="Movement" type="Control" parent="." unique_id=1378398349]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 49.0
+offset_top = 66.0
+offset_right = 49.0
+offset_bottom = 66.0
+grow_vertical = 2
 
-[node name="Control" type="Control" parent="Control" unique_id=1039049115]
+[node name="Control" type="Control" parent="Movement" unique_id=1039049115]
 anchors_preset = 0
 offset_left = -9.0
 offset_top = -14.0
 offset_right = 31.0
 offset_bottom = 26.0
 
-[node name="Tecla_W4" type="TextureRect" parent="Control/Control" unique_id=2031621103]
+[node name="Tecla_W4" type="TextureRect" parent="Movement/Control" unique_id=2031621103]
 layout_mode = 0
 offset_left = 238.0
 offset_top = 289.0
@@ -83,7 +90,7 @@ offset_right = 334.0
 offset_bottom = 385.0
 texture = ExtResource("3_1sggn")
 
-[node name="Label5" type="Label" parent="Control/Control/Tecla_W4" unique_id=743061063]
+[node name="Label5" type="Label" parent="Movement/Control/Tecla_W4" unique_id=743061063]
 layout_mode = 0
 offset_left = 33.0
 offset_top = 25.0
@@ -96,7 +103,7 @@ theme_override_fonts/font = ExtResource("2_yjkok")
 theme_override_font_sizes/font_size = 50
 text = "D"
 
-[node name="Tecla_W3" type="TextureRect" parent="Control/Control" unique_id=1646173465]
+[node name="Tecla_W3" type="TextureRect" parent="Movement/Control" unique_id=1646173465]
 layout_mode = 0
 offset_left = 141.0
 offset_top = 288.0
@@ -104,7 +111,7 @@ offset_right = 237.0
 offset_bottom = 384.0
 texture = ExtResource("3_1sggn")
 
-[node name="Label3" type="Label" parent="Control/Control/Tecla_W3" unique_id=1103587769]
+[node name="Label3" type="Label" parent="Movement/Control/Tecla_W3" unique_id=1103587769]
 layout_mode = 0
 offset_left = 34.0
 offset_top = 25.0
@@ -117,7 +124,7 @@ theme_override_fonts/font = ExtResource("2_yjkok")
 theme_override_font_sizes/font_size = 50
 text = "S"
 
-[node name="Tecla_W2" type="TextureRect" parent="Control/Control" unique_id=590660140]
+[node name="Tecla_W2" type="TextureRect" parent="Movement/Control" unique_id=590660140]
 layout_mode = 0
 offset_left = 45.0
 offset_top = 288.0
@@ -125,7 +132,7 @@ offset_right = 141.0
 offset_bottom = 384.0
 texture = ExtResource("3_1sggn")
 
-[node name="Label2" type="Label" parent="Control/Control/Tecla_W2" unique_id=237389471]
+[node name="Label2" type="Label" parent="Movement/Control/Tecla_W2" unique_id=237389471]
 layout_mode = 0
 offset_left = 28.0
 offset_top = 26.0
@@ -139,7 +146,7 @@ theme_override_font_sizes/font_size = 50
 text = "A
 "
 
-[node name="Tecla_W" type="TextureRect" parent="Control/Control" unique_id=1157937506]
+[node name="Tecla_W" type="TextureRect" parent="Movement/Control" unique_id=1157937506]
 layout_mode = 0
 offset_left = 140.0
 offset_top = 190.0
@@ -147,7 +154,7 @@ offset_right = 236.0
 offset_bottom = 286.0
 texture = ExtResource("3_1sggn")
 
-[node name="Label4" type="Label" parent="Control/Control/Tecla_W" unique_id=1481275005]
+[node name="Label4" type="Label" parent="Movement/Control/Tecla_W" unique_id=1481275005]
 layout_mode = 0
 offset_left = 27.0
 offset_top = 23.0
@@ -160,7 +167,7 @@ theme_override_fonts/font = ExtResource("2_yjkok")
 theme_override_font_sizes/font_size = 50
 text = "W"
 
-[node name="Label" type="Label" parent="Control" unique_id=790723971]
+[node name="Label" type="Label" parent="Movement" unique_id=790723971]
 layout_mode = 0
 offset_left = 76.0
 offset_top = 120.0
@@ -172,14 +179,21 @@ theme_override_fonts/font = ExtResource("2_yjkok")
 theme_override_font_sizes/font_size = 50
 text = "Movement"
 
-[node name="Control2" type="Control" parent="." unique_id=1345870631]
-anchors_preset = 0
-offset_left = 541.0
-offset_top = 238.0
-offset_right = 581.0
-offset_bottom = 278.0
+[node name="Attack" type="Control" parent="." unique_id=1345870631]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -121.0
+offset_right = -76.0
+offset_bottom = -121.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Label" type="Label" parent="Control2" unique_id=801314116]
+[node name="Label" type="Label" parent="Attack" unique_id=801314116]
 layout_mode = 0
 offset_left = 24.0
 offset_top = -6.0
@@ -191,7 +205,7 @@ theme_override_fonts/font = ExtResource("2_yjkok")
 theme_override_font_sizes/font_size = 50
 text = "Attack"
 
-[node name="TextureRect" type="TextureRect" parent="Control2" unique_id=1007137659]
+[node name="TextureRect" type="TextureRect" parent="Attack" unique_id=1007137659]
 layout_mode = 0
 offset_left = 43.0
 offset_top = 48.0
@@ -199,7 +213,7 @@ offset_right = 139.0
 offset_bottom = 144.0
 texture = ExtResource("3_1sggn")
 
-[node name="Label3" type="Label" parent="Control2/TextureRect" unique_id=898702412]
+[node name="Label3" type="Label" parent="Attack/TextureRect" unique_id=898702412]
 layout_mode = 0
 offset_left = -57.0
 offset_top = 98.0
@@ -211,7 +225,7 @@ theme_override_fonts/font = ExtResource("2_yjkok")
 theme_override_font_sizes/font_size = 50
 text = "Space Bar"
 
-[node name="Label2" type="Label" parent="Control2/TextureRect" unique_id=1420107271]
+[node name="Label2" type="Label" parent="Attack/TextureRect" unique_id=1420107271]
 layout_mode = 0
 offset_left = -27.0
 offset_top = -11.0
@@ -224,14 +238,21 @@ theme_override_fonts/font = ExtResource("2_yjkok")
 theme_override_font_sizes/font_size = 60
 text = "   ␣"
 
-[node name="Control3" type="Control" parent="." unique_id=1280078978]
-anchors_preset = 0
-offset_left = 894.0
-offset_top = 246.0
-offset_right = 934.0
-offset_bottom = 286.0
+[node name="Interact" type="Control" parent="." unique_id=1280078978]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 223.0
+offset_top = -118.0
+offset_right = 223.0
+offset_bottom = -118.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Label" type="Label" parent="Control3" unique_id=1148344393]
+[node name="Label" type="Label" parent="Interact" unique_id=1148344393]
 layout_mode = 0
 offset_left = 24.0
 offset_top = -6.0
@@ -243,7 +264,7 @@ theme_override_fonts/font = ExtResource("2_yjkok")
 theme_override_font_sizes/font_size = 50
 text = "Interact"
 
-[node name="TextureRect" type="TextureRect" parent="Control3" unique_id=1819901944]
+[node name="TextureRect" type="TextureRect" parent="Interact" unique_id=1819901944]
 layout_mode = 0
 offset_left = 69.0
 offset_top = 45.0
@@ -251,7 +272,7 @@ offset_right = 165.0
 offset_bottom = 141.0
 texture = ExtResource("3_1sggn")
 
-[node name="Label2" type="Label" parent="Control3/TextureRect" unique_id=167336324]
+[node name="Label2" type="Label" parent="Interact/TextureRect" unique_id=167336324]
 layout_mode = 0
 offset_left = 34.0
 offset_top = 23.0
