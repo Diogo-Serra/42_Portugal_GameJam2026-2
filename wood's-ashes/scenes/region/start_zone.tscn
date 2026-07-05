@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://ma1qtwhhetev"]
+[gd_scene format=3 uid="uid://ma1qtwhhetev"]
 
 [ext_resource type="Texture2D" uid="uid://bvkogtg13vmts" path="res://assets/ruins/Extra/TX Props with Shadow.png" id="1_yg55y"]
 [ext_resource type="PackedScene" uid="uid://c0ymsi8latujs" path="res://scenes/objects/tree_1.tscn" id="2_7b6u6"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://mvxdgf5h2ese" path="res://scenes/objects/bush_2.tscn" id="3_h048p"]
 [ext_resource type="PackedScene" uid="uid://bb8sl03rxxycy" path="res://scenes/objects/bush_1.tscn" id="4_8h3by"]
 [ext_resource type="PackedScene" uid="uid://dbmsoscag0xth" path="res://scenes/objects/tree_2.tscn" id="5_35bby"]
+[ext_resource type="PackedScene" uid="uid://dlpgtobps031y" path="res://scenes/objects/pillar_1.tscn" id="7_h048p"]
+[ext_resource type="PackedScene" uid="uid://c1m10tovo5vdo" path="res://scenes/objects/saint.tscn" id="8_8h3by"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_epuki"]
 texture = ExtResource("1_yg55y")
@@ -611,96 +613,10 @@ texture = ExtResource("2_h048p")
 sources/0 = SubResource("TileSetAtlasSource_epuki")
 sources/1 = SubResource("TileSetAtlasSource_8h3by")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m02gy"]
-size = Vector2(20, 24)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_flns0"]
-size = Vector2(31, 26)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0f5bk"]
-size = Vector2(59, 22)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_31fhe"]
-size = Vector2(29, 60)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k5rcn"]
-size = Vector2(21, 28)
-
 [node name="start_zone" type="TileMapLayer" unique_id=812287001]
 z_index = 1
-tile_map_data = PackedByteArray("AAABAP//AAAWAAoAAAABAAcAAAAWAAoAAAALAAcAAAAWAAoAAAALAP//AAAWAAoAAAAFAA0AAAASAA8AAAAHAA0AAAASAA8AAAAFAPz/AAASAA8AAAAHAPz/AAASAA8AAAAQAAAAAAAGAAoAAAAQAPz/AAAcAAEAAAA=")
+tile_map_data = PackedByteArray(0, 0, 1, 0, 255, 255, 0, 0, 22, 0, 10, 0, 0, 0, 1, 0, 7, 0, 0, 0, 22, 0, 10, 0, 0, 0, 11, 0, 7, 0, 0, 0, 22, 0, 10, 0, 0, 0, 11, 0, 255, 255, 0, 0, 22, 0, 10, 0, 0, 0, 16, 0, 0, 0, 0, 0, 6, 0, 10, 0, 0, 0)
 tile_set = SubResource("TileSet_m02gy")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=918877662]
-z_index = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1128239965]
-position = Vector2(184, -4)
-shape = SubResource("RectangleShape2D_m02gy")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2" unique_id=144934204]
-position = Vector2(184.5, 21)
-shape = SubResource("RectangleShape2D_flns0")
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1850374240]
-z_index = 1
-position = Vector2(-1, 128)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=878413505]
-position = Vector2(184, -4)
-shape = SubResource("RectangleShape2D_m02gy")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1140689378]
-position = Vector2(184.5, 21)
-shape = SubResource("RectangleShape2D_flns0")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1879866326]
-z_index = 1
-position = Vector2(-1, 128)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1582033206]
-position = Vector2(24, -4)
-shape = SubResource("RectangleShape2D_m02gy")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1646079549]
-position = Vector2(24.5, 21)
-shape = SubResource("RectangleShape2D_flns0")
-
-[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=1322506968]
-z_index = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=601186598]
-position = Vector2(104.5, -52)
-shape = SubResource("RectangleShape2D_0f5bk")
-
-[node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=1084216000]
-z_index = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" unique_id=1152555692]
-position = Vector2(104, 220)
-shape = SubResource("RectangleShape2D_0f5bk")
-
-[node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=122824467]
-z_index = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=1552654681]
-position = Vector2(264.5, -50)
-shape = SubResource("RectangleShape2D_31fhe")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D7" unique_id=958023670]
-position = Vector2(263.5, 10)
-shape = SubResource("RectangleShape2D_k5rcn")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1254050830]
-z_index = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2117102516]
-position = Vector2(24, -4)
-shape = SubResource("RectangleShape2D_m02gy")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1143861087]
-position = Vector2(24.5, 21)
-shape = SubResource("RectangleShape2D_flns0")
 
 [node name="tree1" parent="." unique_id=147964418 instance=ExtResource("2_7b6u6")]
 position = Vector2(-150, -220)
@@ -737,3 +653,18 @@ position = Vector2(287, 97)
 
 [node name="tree6" parent="." unique_id=935722332 instance=ExtResource("2_7b6u6")]
 position = Vector2(342, -166)
+
+[node name="pillar1" parent="." unique_id=56820012 instance=ExtResource("7_h048p")]
+position = Vector2(-16, -64)
+
+[node name="pillar2" parent="." unique_id=864243322 instance=ExtResource("7_h048p")]
+position = Vector2(145, -65)
+
+[node name="pillar3" parent="." unique_id=1359126864 instance=ExtResource("7_h048p")]
+position = Vector2(-17, 64)
+
+[node name="pillar4" parent="." unique_id=1451142454 instance=ExtResource("7_h048p")]
+position = Vector2(144, 63)
+
+[node name="saint" parent="." unique_id=1086125946 instance=ExtResource("8_8h3by")]
+position = Vector2(224, -121)

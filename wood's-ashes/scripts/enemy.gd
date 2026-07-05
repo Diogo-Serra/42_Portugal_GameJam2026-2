@@ -26,6 +26,7 @@ var state: EnemyState = EnemyState.NORMAL
 func _ready():
 	health = max_health
 	add_to_group("enemies")
+	z_as_relative = false
 
 	if sprite != null:
 		if not sprite.animation_finished.is_connected(_on_animation_finished):
@@ -36,6 +37,8 @@ func _ready():
 
 
 func _physics_process(delta):
+	z_index = int(global_position.y) + 45
+
 	if state == EnemyState.DEAD:
 		velocity = Vector2.ZERO
 		return

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dlpgtobps031y"]
 
+[ext_resource type="Script" uid="uid://bysrtobj00001" path="res://scripts/ysort_object.gd" id="2_ysort"]
 [ext_resource type="Texture2D" uid="uid://bvkogtg13vmts" path="res://assets/ruins/Extra/TX Props with Shadow.png" id="1_40q4f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5nyn8"]
@@ -403,6 +404,8 @@ size = Vector2(19, 22)
 size = Vector2(30, 25)
 
 [node name="pillar1" type="TileMapLayer" unique_id=56820012]
+script = ExtResource("2_ysort")
+sort_y_offset = 86.0
 z_index = 1
 tile_map_data = PackedByteArray(0, 0, 2, 0, 3, 0, 0, 0, 22, 0, 10, 0, 0, 0)
 tile_set = SubResource("TileSet_m02gy")

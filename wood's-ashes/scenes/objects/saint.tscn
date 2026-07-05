@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c1m10tovo5vdo"]
 
+[ext_resource type="Script" uid="uid://bysrtobj00001" path="res://scripts/ysort_object.gd" id="2_ysort"]
 [ext_resource type="Texture2D" uid="uid://bvkogtg13vmts" path="res://assets/ruins/Extra/TX Props with Shadow.png" id="1_1fvg4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1fvg4"]
@@ -400,6 +401,8 @@ size = Vector2(20, 42)
 size = Vector2(35, 23)
 
 [node name="saint" type="TileMapLayer" unique_id=1086125946]
+script = ExtResource("2_ysort")
+sort_y_offset = 81.0
 z_index = 1
 tile_map_data = PackedByteArray(0, 0, 2, 0, 3, 0, 0, 0, 27, 0, 1, 0, 0, 0)
 tile_set = SubResource("TileSet_m02gy")

@@ -8,6 +8,8 @@ var player_in_range: bool = false
 var is_open: bool = false
 
 func _ready() -> void:
+	z_as_relative = false
+	z_index = int(global_position.y) + 38
 	prompt_label.visible = false
 	sprite.frame = 0
 	$InteractionArea.body_entered.connect(_on_body_entered)
