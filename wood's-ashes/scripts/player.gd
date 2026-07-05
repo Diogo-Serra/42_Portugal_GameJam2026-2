@@ -33,6 +33,8 @@ var attack_cooldown_timer := 0.0
 
 var attack_has_hit := false
 var hit_enemies_this_attack := []
+const DeathScreen = preload("res://scenes/Dead.tscn")
+@onready var player = $Player 
 
 enum PlayerState {
 	NORMAL,
@@ -125,7 +127,10 @@ func attack():
 	update_attack_hitbox_position()
 
 	sprite.play("attack")
-
+	take_damage(200)
+	
+	print(max_health)
+	print(attack_damage)
 
 func _on_sprite_frame_changed():
 	if state != PlayerState.ATTACKING:
@@ -236,17 +241,21 @@ func die():
 	sprite.play("death")
 
 	died.emit()
+	_on_player_died()
 
+func _on_player_died() -> void:
+	get_tree().paused = true
+	var death_screen = DeathScreen.instantiate()
+	death_screen.process_mode = Node.PROCESS_MODE_ALWAYS
+	get_tree().root.add_child(death_screen)
 
 func upgrade_max_health(amount: int):
 	max_health += amount
 	health += amount
 	health_changed.emit(health, max_health)
 
-
 func upgrade_attack_damage(amount: int):
 	attack_damage += amount
-
 
 func upgrade_attack_range(amount: float):
 	attack_size.x += amount
@@ -256,7 +265,6 @@ func upgrade_attack_range(amount: float):
 
 func upgrade_speed(amount: float):
 	speed += amount
-
 
 func _on_animation_finished():
 	if state == PlayerState.ATTACKING:

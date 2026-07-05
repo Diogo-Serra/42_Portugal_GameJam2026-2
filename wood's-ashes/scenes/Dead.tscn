@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://w2qkerboka22"]
+
+[ext_resource type="Script" uid="uid://342llvab2pk4" path="res://scripts/death_screen.gd" id="1_3khxc"]
+[ext_resource type="FontFile" uid="uid://cxna5wwgu0upf" path="res://assets/Fonts/Star Crush.otf" id="2_nt3hv"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=508252612]
+script = ExtResource("1_3khxc")
+
+[node name="Control" type="Control" parent="." unique_id=2090088287]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Darken" type="ColorRect" parent="Control" unique_id=1321175544]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="Control" unique_id=802528017]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 52.0
+offset_right = 943.0
+offset_bottom = 242.0
+theme_override_colors/font_color = Color(0.59907895, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_nt3hv")
+theme_override_font_sizes/font_size = 200
+text = "You Died"
+
+[node name="Label2" type="Label" parent="Control/Label" unique_id=26508684]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 175.0
+offset_right = 467.0
+offset_bottom = 191.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_nt3hv")
+text = "You didn't get your revenge Ars"
+
+[node name="back" type="Button" parent="Control" unique_id=1668531723]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 356.0
+offset_right = 742.0
+offset_bottom = 395.0
+theme_override_fonts/font = ExtResource("2_nt3hv")
+text = "Main Menu"
+
+[connection signal="pressed" from="Control/back" to="." method="_on_back_pressed"]

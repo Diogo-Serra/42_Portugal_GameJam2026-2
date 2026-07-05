@@ -74,6 +74,14 @@ theme_override_fonts/font = ExtResource("2_o0wkl")
 theme_override_font_sizes/font_size = 50
 text = "Choose your reward"
 
+[node name="TextureRect" type="TextureRect" parent="Panel/Label" unique_id=1614263973]
+layout_mode = 0
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 455.0
+offset_bottom = 70.0
+texture = ExtResource("3_o0wkl")
+
 [node name="DescriptionLabel" type="Label" parent="Panel" unique_id=402865859]
 layout_mode = 0
 offset_left = -3.0
@@ -82,10 +90,3 @@ offset_right = 37.0
 offset_bottom = 173.0
 theme_override_fonts/font = ExtResource("2_o0wkl")
 theme_override_font_sizes/font_size = 30
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1614263973]
-offset_left = 360.0
-offset_top = 227.0
-offset_right = 824.0
-offset_bottom = 306.0
-texture = ExtResource("3_o0wkl")
