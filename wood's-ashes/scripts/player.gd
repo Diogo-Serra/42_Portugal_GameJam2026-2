@@ -5,6 +5,7 @@ signal health_changed(current_health, max_health)
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
+@onready var timer_label: Label = get_node("/root/Game/UI/TimerLabel")
 
 @onready var attack_area: Area2D = $AttackArea
 @onready var attack_shape: CollisionShape2D = $AttackArea/CollisionShape2D
@@ -28,6 +29,9 @@ var hit_enemies_this_attack := []
 
 var is_basic_form := true
 
+var time_left := 600.0
+var timer_running := true
+
 const DeathScreen = preload("res://scenes/Dead.tscn")
 
 enum PlayerState {
@@ -47,6 +51,7 @@ func _ready():
 	health = max_health
 	z_as_relative = false
 
+	update_timer_label()
 	update_attack_hitbox_size()
 	update_attack_hitbox_position()
 
@@ -67,6 +72,24 @@ func _ready():
 		state = PlayerState.NORMAL
 		play_animation_base("idle")
 
+func _process(delta: float) -> void:
+	if not timer_running:
+		return
+	time_left -= delta
+	if time_left <= 0:
+		time_left = 0
+		timer_running = false
+		on_time_up()
+	update_timer_label()
+
+func update_timer_label() -> void:
+	var minutes := int(time_left) / 60
+	var seconds := int(time_left) % 60
+	timer_label.text = "%02d:%02d" % [minutes, seconds]
+
+func on_time_up() -> void:
+	print("Time's up!")
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 func _physics_process(delta):
 	z_index = int(global_position.y) + 45
