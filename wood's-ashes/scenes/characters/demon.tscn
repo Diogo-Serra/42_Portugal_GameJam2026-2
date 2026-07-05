@@ -453,6 +453,15 @@ size = Vector2(60.125, 11)
 
 [node name="Demon" type="CharacterBody2D" unique_id=321044694 groups=["player"]]
 script = ExtResource("3_4wxgv")
+speed = null
+max_health = null
+attack_damage = null
+attack_size = null
+attack_cooldown = null
+attack_offset = null
+attack_impact_frame = null
+max_rage = null
+rage_drain_per_second = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=278833579]
 sprite_frames = SubResource("SpriteFrames_dqrhk")
