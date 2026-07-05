@@ -48,11 +48,13 @@ func _physics_process(delta):
 		velocity = Vector2.ZERO
 		return
 
+	if player == null or not is_instance_valid(player):
+		player = get_tree().get_first_node_in_group("player")
+		if player == null:
+			return
+
 	if attack_timer > 0:
 		attack_timer -= delta
-
-	if player == null:
-		return
 
 	if state == EnemyState.ATTACKING or state == EnemyState.HURT:
 		velocity = Vector2.ZERO
@@ -70,7 +72,7 @@ func _physics_process(delta):
 
 	if distance_to_player > keep_distance:
 		velocity = direction_to_player * speed
-		play_animation("run")
+		play_animation("walk")
 	else:
 		velocity = Vector2.ZERO
 		play_animation("idle")
