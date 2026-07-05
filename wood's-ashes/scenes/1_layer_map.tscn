@@ -1,8 +1,12 @@
 [gd_scene format=4 uid="uid://dr5f6broahr8m"]
 
 [ext_resource type="Texture2D" uid="uid://c72f1aw0yyuvy" path="res://assets/tilesets/TileSet_V1_water.png" id="1_ne1wp"]
-[ext_resource type="PackedScene" uid="uid://b4jdho645mer7" path="res://scenes/region/start_area.tscn" id="2_ilq1s"]
-[ext_resource type="PackedScene" uid="uid://uy6oycr12i31" path="res://scenes/objects/chest.tscn" id="3_qprrj"]
+[ext_resource type="PackedScene" uid="uid://bkutov5ast8o0" path="res://scenes/region/cemitery.tscn" id="2_ilq1s"]
+[ext_resource type="PackedScene" uid="uid://ma1qtwhhetev" path="res://scenes/region/start_zone.tscn" id="3_lgbkm"]
+[ext_resource type="PackedScene" uid="uid://xlwv6p285g5l" path="res://scenes/region/chest_area_1.tscn" id="4_apqwv"]
+[ext_resource type="PackedScene" uid="uid://cgxb6uxmaq5on" path="res://scenes/region/cemitery_2.tscn" id="5_s2itx"]
+[ext_resource type="PackedScene" uid="uid://cmgcso2bs2qmt" path="res://scenes/region/forest_2.tscn" id="6_iqgqh"]
+[ext_resource type="PackedScene" uid="uid://cd1cb76v7cwen" path="res://scenes/region/chest_area_2.tscn" id="7_57der"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilq1s"]
 texture = ExtResource("1_ne1wp")
@@ -416,8 +420,41 @@ shape = SubResource("WorldBoundaryShape2D_31fhe")
 position = Vector2(3895, -9)
 shape = SubResource("WorldBoundaryShape2D_k5rcn")
 
-[node name="start_area" parent="." unique_id=1385541177 instance=ExtResource("2_ilq1s")]
-position = Vector2(291, 125)
+[node name="cemitery" parent="." unique_id=1629375297 instance=ExtResource("2_ilq1s")]
+position = Vector2(59, 57)
 
-[node name="chest" parent="." unique_id=35712856 instance=ExtResource("3_qprrj")]
-position = Vector2(796, 104)
+[node name="start_zone" parent="." unique_id=812287001 instance=ExtResource("3_lgbkm")]
+position = Vector2(382, 243)
+
+[node name="cemitery2" parent="." unique_id=1974177871 instance=ExtResource("2_ilq1s")]
+position = Vector2(902, 527)
+
+[node name="chest_area1" parent="." unique_id=1048155401 instance=ExtResource("4_apqwv")]
+position = Vector2(1160, 11)
+
+[node name="cemitery3" parent="." unique_id=311490328 instance=ExtResource("5_s2itx")]
+position = Vector2(834, 125)
+
+[node name="forest2" parent="." unique_id=1766388196 instance=ExtResource("6_iqgqh")]
+position = Vector2(1183, 592)
+
+[node name="cemitery5" parent="." unique_id=66803721 instance=ExtResource("2_ilq1s")]
+position = Vector2(2288, 415)
+
+[node name="chest_area2" parent="." unique_id=371242800 instance=ExtResource("4_apqwv")]
+position = Vector2(2733, 584)
+
+[node name="chest_area_2" parent="." unique_id=506836552 instance=ExtResource("7_57der")]
+position = Vector2(2775, -27)
+
+[node name="cemitery6" parent="." unique_id=1331640458 instance=ExtResource("5_s2itx")]
+position = Vector2(2349, 99)
+
+[node name="chest_area_3" parent="." unique_id=633432120 instance=ExtResource("7_57der")]
+position = Vector2(6, 596)
+
+[node name="cemitery8" parent="." unique_id=642110440 instance=ExtResource("2_ilq1s")]
+position = Vector2(63, 531)
+
+[node name="chest_area3" parent="." unique_id=1093791368 instance=ExtResource("4_apqwv")]
+position = Vector2(1989, 584)

@@ -34,7 +34,6 @@ var attack_cooldown_timer := 0.0
 var attack_has_hit := false
 var hit_enemies_this_attack := []
 const DeathScreen = preload("res://scenes/Dead.tscn")
-@onready var player = $Player 
 
 enum PlayerState {
 	NORMAL,
@@ -238,7 +237,7 @@ func die():
 	collision.set_deferred("disabled", true)
 
 	update_sprite_direction()
-	sprite.play("death")
+	sprite.play("die")
 
 	died.emit()
 	_on_player_died()

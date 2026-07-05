@@ -9,11 +9,9 @@
 
 [node name="1layer_map" parent="." unique_id=102117543 instance=ExtResource("1_yqjtg")]
 
-[node name="Objects" type="Node2D" parent="1layer_map" unique_id=181097562]
+[node name="Player" parent="." unique_id=953319153 instance=ExtResource("2_lnu2h")]
+position = Vector2(482, 276)
 
-[node name="Player" parent="1layer_map/Objects" unique_id=953319153 instance=ExtResource("2_lnu2h")]
-position = Vector2(456, 247)
-
-[node name="EnemySpawner" parent="1layer_map/Objects" unique_id=64854175 node_paths=PackedStringArray("player") instance=ExtResource("3_p57ef")]
+[node name="EnemySpawner" parent="." unique_id=64854175 node_paths=PackedStringArray("player") instance=ExtResource("3_p57ef")]
 enemy_scene = ExtResource("5_u5sy4")
 player = NodePath("../Player")
