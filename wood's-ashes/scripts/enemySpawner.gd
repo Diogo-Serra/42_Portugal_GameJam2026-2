@@ -7,6 +7,15 @@ extends Node2D
 @export var spawn_distance := 500.0
 
 var timer := 0.0
+<<<<<<< Updated upstream
+=======
+var game_time := 0.0
+
+
+func get_player() -> Node2D:
+	return get_tree().get_first_node_in_group("player") as Node2D
+
+>>>>>>> Stashed changes
 
 func _process(delta):
 	timer += delta
@@ -16,8 +25,14 @@ func _process(delta):
 		spawn_enemy()
 
 func spawn_enemy():
+<<<<<<< Updated upstream
 	if enemy_scene == null:
 		print("Enemy Scene não foi definido")
+=======
+	var player := get_player()
+	if player == null:
+		print("Player not found")
+>>>>>>> Stashed changes
 		return
 
 	if player == null:

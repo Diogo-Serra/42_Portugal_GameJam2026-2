@@ -17,7 +17,7 @@ signal health_changed(current_health, max_health)
 @export var attack_cooldown := 0.35
 
 @export var attack_offset := Vector2(45.0, 40.0)
-@export var attack_impact_frame := 3
+@export var attack_impact_frame := 2
 
 var health: int
 var last_horizontal_direction := 1
@@ -26,8 +26,14 @@ var attack_cooldown_timer := 0.0
 var attack_has_hit := false
 var hit_enemies_this_attack := []
 
-var is_basic_form := true
+@export var is_basic_form := true
 
+<<<<<<< Updated upstream
+=======
+var time_left := 120.0
+var timer_running := true
+
+>>>>>>> Stashed changes
 const DeathScreen = preload("res://scenes/Dead.tscn")
 
 enum PlayerState {
@@ -67,6 +73,27 @@ func _ready():
 		state = PlayerState.NORMAL
 		play_animation_base("idle")
 
+<<<<<<< Updated upstream
+=======
+func _process(delta: float) -> void:
+	if not timer_running:
+		return
+	time_left -= delta
+	if time_left <= 0:
+		time_left = 0
+		timer_running = false
+		on_time_up()
+	update_timer_label()
+
+func update_timer_label() -> void:
+	var minutes := int(time_left / 60)
+	var seconds := int(time_left) % 60
+	timer_label.text = "%02d:%02d" % [minutes, seconds]
+
+func on_time_up() -> void:
+	print("Time's up!")
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+>>>>>>> Stashed changes
 
 func _physics_process(delta):
 	z_index = int(global_position.y) + 45
@@ -121,9 +148,26 @@ func handle_movement():
 
 
 func toggle_form():
-	is_basic_form = !is_basic_form
-	update_sprite_direction()
-	play_animation_base("idle")
+	var target_path := "res://scenes/demon.tscn" if is_basic_form else "res://scenes/characters/player.tscn"
+	var target_scene := load(target_path) as PackedScene
+	if target_scene == null:
+		push_error("Could not load scene: " + target_path)
+		return
+	var new_player = target_scene.instantiate()
+
+	new_player.set("is_basic_form", not is_basic_form)
+	new_player.set("health", health)
+	new_player.set("max_health", max_health)
+	new_player.set("time_left", time_left)
+	new_player.set("timer_running", timer_running)
+	new_player.set("last_horizontal_direction", last_horizontal_direction)
+	new_player.set("attack_damage", attack_damage)
+	new_player.set("speed", speed)
+	new_player.set("attack_size", attack_size)
+
+	get_parent().add_child(new_player)
+	new_player.global_position = global_position
+	queue_free()
 
 
 func get_animation_name(base_name: String) -> String:
