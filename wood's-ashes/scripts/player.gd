@@ -103,11 +103,9 @@ func _process(delta: float) -> void:
 func on_rage_full() -> void:
 	print("RAGE FULL!")
 	is_enraged = true
-	attack_damage *= 4
-	toggle_form()
+	transform_to_demon()
 	await get_tree().create_timer(10.0).timeout
-	toggle_form()
-	attack_damage /= 4
+	transform_to_demon()
 	is_enraged = false
 
 func update_timer_label() -> void:
@@ -133,10 +131,6 @@ func _physics_process(delta):
 
 	if attack_cooldown_timer > 0:
 		attack_cooldown_timer -= delta
-
-	if Input.is_action_just_pressed("transform") and state == PlayerState.NORMAL:
-		toggle_form()
-		return
 
 	if Input.is_action_just_pressed("attack") and can_attack():
 		attack()
@@ -408,7 +402,8 @@ func transform_to_demon():
 			health,
 			max_health,
 			attack_damage,
-			speed
+			speed,
+			time_left
 		)
 
 	queue_free()
@@ -417,7 +412,8 @@ func receive_stats_from_demon(
 	old_health: int,
 	_old_max_health: int,
 	_old_attack_damage: int,
-	_old_speed: float
+	_old_speed: float,
+	old_time_left: float
 ):
 	max_health = 100
 	health = min(old_health, max_health)
@@ -427,5 +423,7 @@ func receive_stats_from_demon(
 
 	rage = 0
 	has_transformed = false
+	
+	time_left = old_time_left
 
 	health_changed.emit(health, max_health)

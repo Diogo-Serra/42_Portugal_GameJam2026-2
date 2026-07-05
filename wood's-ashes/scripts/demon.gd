@@ -25,6 +25,11 @@ signal health_changed(current_health, max_health)
 
 var rage := 100.0
 
+@onready var timer_label: Label = get_node("/root/Game/UI/TimerLabel")
+
+var time_left := 600.0
+var timer_running := true
+
 var health: int
 var last_horizontal_direction := 1
 var attack_cooldown_timer := 0.0
@@ -63,6 +68,26 @@ func _ready():
 	play_animation("idle")
 	health_changed.emit(health, max_health)
 
+func _process(delta: float) -> void:
+	if not timer_running:
+		return
+
+	time_left -= delta
+	if time_left <= 0:
+		time_left = 0
+		timer_running = false
+		on_time_up()
+
+	update_timer_label()
+
+func update_timer_label() -> void:
+	var minutes := int(time_left / 60)
+	var seconds := int(time_left) % 60
+	timer_label.text = "%02d:%02d" % [minutes, seconds]
+
+func on_time_up() -> void:
+	print("Time's up!")
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 func _physics_process(delta):
 	if state == PlayerState.DEAD:
@@ -268,13 +293,16 @@ func receive_stats_from_player(
 	old_health: int,
 	old_max_health: int,
 	old_attack_damage: int,
-	old_speed: float
+	old_speed: float, 
+	old_time_left: float
 ):
 	max_health = old_max_health + 50
 	health = max_health
 
 	attack_damage = old_attack_damage + 15
 	speed = old_speed + 40
+	
+	time_left = old_time_left
 
 	health_changed.emit(health, max_health)
 
@@ -326,7 +354,8 @@ func transform_back_to_player():
 			health,
 			max_health,
 			attack_damage,
-			speed
+			speed,
+			time_left
 		)
 
 	queue_free()
