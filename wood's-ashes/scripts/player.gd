@@ -47,6 +47,7 @@ var state: PlayerState = PlayerState.NORMAL
 
 func _ready():
 	add_to_group("player")
+	randomize()
 	health = max_health
 	z_as_relative = false
 
