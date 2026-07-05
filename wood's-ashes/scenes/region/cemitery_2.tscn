@@ -11,16 +11,17 @@
 [sub_resource type="TileSet" id="TileSet_m02gy"]
 
 [node name="cemitery2" type="TileMapLayer" unique_id=311490328]
+position = Vector2(427, 207)
 tile_set = SubResource("TileSet_m02gy")
 
 [node name="coffin1" parent="." unique_id=1376293668 instance=ExtResource("1_f1gag")]
-position = Vector2(70, 42)
+position = Vector2(71, 68)
 
 [node name="coffin2" parent="." unique_id=883118638 instance=ExtResource("1_f1gag")]
-position = Vector2(114, 42)
+position = Vector2(115, 68)
 
 [node name="coffin3" parent="." unique_id=191024473 instance=ExtResource("1_f1gag")]
-position = Vector2(158, 42)
+position = Vector2(159, 68)
 
 [node name="saint" parent="." unique_id=1086125946 instance=ExtResource("2_lursc")]
 position = Vector2(101, -67)
@@ -51,3 +52,45 @@ position = Vector2(317, 58)
 
 [node name="tree4" parent="." unique_id=403637032 instance=ExtResource("6_7r6of")]
 position = Vector2(319, -121)
+
+[node name="tree5" parent="." unique_id=1158760295 instance=ExtResource("6_7r6of")]
+position = Vector2(-393, 255)
+
+[node name="tree6" parent="." unique_id=167321614 instance=ExtResource("7_ex36x")]
+position = Vector2(-346, -215)
+
+[node name="ruinwell2" parent="." unique_id=1518441649 instance=ExtResource("5_ld863")]
+position = Vector2(-318, 34)
+
+[node name="bush5" parent="." unique_id=111090233 instance=ExtResource("4_012mo")]
+position = Vector2(-186, 217)
+
+[node name="bush6" parent="." unique_id=673729312 instance=ExtResource("3_l2bqj")]
+position = Vector2(-85, 317)
+
+[node name="bush7" parent="." unique_id=737682351 instance=ExtResource("3_l2bqj")]
+position = Vector2(-186, -67)
+
+[node name="bush8" parent="." unique_id=1557594902 instance=ExtResource("3_l2bqj")]
+position = Vector2(-383, 150)
+
+[node name="bush9" parent="." unique_id=1451862696 instance=ExtResource("3_l2bqj")]
+position = Vector2(377, 282)
+
+[node name="tree7" parent="." unique_id=1356390612 instance=ExtResource("7_ex36x")]
+position = Vector2(525, -209)
+
+[node name="tree8" parent="." unique_id=910356051 instance=ExtResource("6_7r6of")]
+position = Vector2(530, 247)
+
+[node name="tree9" parent="." unique_id=131176461 instance=ExtResource("6_7r6of")]
+position = Vector2(-85, -212)
+
+[node name="bush10" parent="." unique_id=119594137 instance=ExtResource("3_l2bqj")]
+position = Vector2(146, -172)
+
+[node name="bush11" parent="." unique_id=1278498239 instance=ExtResource("3_l2bqj")]
+position = Vector2(554, 59)
+
+[node name="bush12" parent="." unique_id=2107309756 instance=ExtResource("3_l2bqj")]
+position = Vector2(-172, 86)

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bkutov5ast8o0"]
 
 [ext_resource type="Texture2D" uid="uid://bvkogtg13vmts" path="res://assets/ruins/Extra/TX Props with Shadow.png" id="1_jjs2g"]
-[ext_resource type="PackedScene" uid="uid://dlpgtobps031y" path="res://scenes/objects/pillar_1.tscn" id="3_g3c1b"]
 [ext_resource type="PackedScene" uid="uid://c1m10tovo5vdo" path="res://scenes/objects/saint.tscn" id="3_lufer"]
 [ext_resource type="PackedScene" uid="uid://defa7yqiuqicf" path="res://scenes/objects/coffin_1.tscn" id="4_cjjve"]
 [ext_resource type="PackedScene" uid="uid://c0ymsi8latujs" path="res://scenes/objects/tree_1.tscn" id="5_76b5y"]
 [ext_resource type="PackedScene" uid="uid://dbmsoscag0xth" path="res://scenes/objects/tree_2.tscn" id="6_tc2le"]
+[ext_resource type="PackedScene" uid="uid://bb8sl03rxxycy" path="res://scenes/objects/bush_1.tscn" id="7_76b5y"]
 [ext_resource type="PackedScene" uid="uid://mvxdgf5h2ese" path="res://scenes/objects/bush_2.tscn" id="7_pla4o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g5dpj"]
@@ -394,50 +394,61 @@ sources/0 = SubResource("TileSetAtlasSource_g5dpj")
 
 [node name="cemitery" type="TileMapLayer" unique_id=1629375297]
 z_index = 1
-tile_map_data = PackedByteArray(0, 0, 7, 0, 0, 0, 0, 0, 26, 0, 12, 0, 0, 0, 255, 255, 0, 0, 0, 0, 26, 0, 12, 0, 0, 0)
 tile_set = SubResource("TileSet_m02gy")
 
-[node name="saint" parent="." unique_id=1086125946 instance=ExtResource("3_lufer")]
-position = Vector2(16, -115)
-
-[node name="pillar1" parent="." unique_id=56820012 instance=ExtResource("3_g3c1b")]
-position = Vector2(-49, -63)
-
-[node name="pillar2" parent="." unique_id=1826215161 instance=ExtResource("3_g3c1b")]
-position = Vector2(80, -64)
-
-[node name="pillar3" parent="." unique_id=1811671928 instance=ExtResource("3_g3c1b")]
-position = Vector2(-49, 33)
-
-[node name="pillar4" parent="." unique_id=357935333 instance=ExtResource("3_g3c1b")]
-position = Vector2(80, 32)
-
 [node name="coffin1" parent="." unique_id=1376293668 instance=ExtResource("4_cjjve")]
-position = Vector2(33, 20)
+position = Vector2(396, 205)
 
-[node name="coffin2" parent="." unique_id=2120167488 instance=ExtResource("4_cjjve")]
-position = Vector2(33, 108)
+[node name="coffin2" parent="." unique_id=1973032798 instance=ExtResource("4_cjjve")]
+position = Vector2(540, 205)
+
+[node name="coffin3" parent="." unique_id=1164909283 instance=ExtResource("4_cjjve")]
+position = Vector2(540, 348)
+
+[node name="coffin4" parent="." unique_id=1479979207 instance=ExtResource("4_cjjve")]
+position = Vector2(396, 348)
+
+[node name="saint" parent="." unique_id=1086125946 instance=ExtResource("3_lufer")]
+position = Vector2(450, 48)
 
 [node name="tree1" parent="." unique_id=147964418 instance=ExtResource("5_76b5y")]
-position = Vector2(-181, 124)
+position = Vector2(47, 449)
 
-[node name="tree2" parent="." unique_id=67925733 instance=ExtResource("6_tc2le")]
-position = Vector2(-162, -58)
+[node name="tree2" parent="." unique_id=946842111 instance=ExtResource("5_76b5y")]
+position = Vector2(104, -1)
 
-[node name="tree3" parent="." unique_id=1447935703 instance=ExtResource("6_tc2le")]
-position = Vector2(141, 129)
+[node name="tree3" parent="." unique_id=67925733 instance=ExtResource("6_tc2le")]
+position = Vector2(167, 247)
 
-[node name="tree4" parent="." unique_id=1209767135 instance=ExtResource("5_76b5y")]
-position = Vector2(145, -197)
+[node name="tree4" parent="." unique_id=883038832 instance=ExtResource("5_76b5y")]
+position = Vector2(720, -1)
+
+[node name="tree5" parent="." unique_id=93065581 instance=ExtResource("6_tc2le")]
+position = Vector2(987, 441)
+
+[node name="tree6" parent="." unique_id=1557515931 instance=ExtResource("6_tc2le")]
+position = Vector2(634, 423)
 
 [node name="bush2" parent="." unique_id=699216350 instance=ExtResource("7_pla4o")]
-position = Vector2(-30, -144)
+position = Vector2(363, 505)
 
-[node name="bush3" parent="." unique_id=1612689381 instance=ExtResource("7_pla4o")]
-position = Vector2(-223, 98)
+[node name="bush3" parent="." unique_id=923009072 instance=ExtResource("7_pla4o")]
+position = Vector2(50, 269)
 
-[node name="bush4" parent="." unique_id=1747542282 instance=ExtResource("7_pla4o")]
-position = Vector2(-4, 218)
+[node name="bush4" parent="." unique_id=782742965 instance=ExtResource("7_pla4o")]
+position = Vector2(297, 63)
 
-[node name="bush5" parent="." unique_id=1548148918 instance=ExtResource("7_pla4o")]
-position = Vector2(223, 17)
+[node name="bush5" parent="." unique_id=1548061576 instance=ExtResource("7_pla4o")]
+position = Vector2(597, 117)
+
+[node name="bush6" parent="." unique_id=276228714 instance=ExtResource("7_pla4o")]
+position = Vector2(758, 294)
+
+[node name="bush7" parent="." unique_id=751649026 instance=ExtResource("7_pla4o")]
+position = Vector2(1035, 324)
+
+[node name="bush8" parent="." unique_id=1186826018 instance=ExtResource("7_pla4o")]
+position = Vector2(975, 59)
+
+[node name="bush1" parent="." unique_id=1472767714 instance=ExtResource("7_76b5y")]
+position = Vector2(763, 120)
