@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://xlwv6p285g5l"]
+
+[ext_resource type="PackedScene" uid="uid://c1m10tovo5vdo" path="res://scenes/objects/saint.tscn" id="1_jw8ia"]
+[ext_resource type="PackedScene" uid="uid://dauwqfhlndmm5" path="res://scenes/objects/portal.tscn" id="2_ljhxs"]
+[ext_resource type="PackedScene" uid="uid://uy6oycr12i31" path="res://scenes/objects/chest.tscn" id="3_636xh"]
+[ext_resource type="PackedScene" uid="uid://hgn0qqum3hex" path="res://scenes/objects/ruinwell.tscn" id="4_i4san"]
+[ext_resource type="PackedScene" uid="uid://defa7yqiuqicf" path="res://scenes/objects/coffin_1.tscn" id="5_mbamv"]
+[ext_resource type="PackedScene" uid="uid://c0ymsi8latujs" path="res://scenes/objects/tree_1.tscn" id="6_b1lr6"]
+[ext_resource type="PackedScene" uid="uid://dbmsoscag0xth" path="res://scenes/objects/tree_2.tscn" id="7_dpnjv"]
+[ext_resource type="PackedScene" uid="uid://mvxdgf5h2ese" path="res://scenes/objects/bush_2.tscn" id="8_phbf4"]
+[ext_resource type="PackedScene" uid="uid://bb8sl03rxxycy" path="res://scenes/objects/bush_1.tscn" id="9_escqf"]
+
+[sub_resource type="TileSet" id="TileSet_m02gy"]
+
+[node name="chest_area1" type="TileMapLayer" unique_id=1048155401]
+tile_set = SubResource("TileSet_m02gy")
+
+[node name="saint" parent="." unique_id=1086125946 instance=ExtResource("1_jw8ia")]
+position = Vector2(531, 118)
+
+[node name="portal" parent="." unique_id=1067540629 instance=ExtResource("2_ljhxs")]
+position = Vector2(508, 234)
+
+[node name="chest" parent="." unique_id=35712856 instance=ExtResource("3_636xh")]
+position = Vector2(552, 243)
+
+[node name="ruinwell" parent="." unique_id=655028148 instance=ExtResource("4_i4san")]
+position = Vector2(643, 178)
+
+[node name="coffin1" parent="." unique_id=1376293668 instance=ExtResource("5_mbamv")]
+position = Vector2(433, 172)
+
+[node name="tree1" parent="." unique_id=147964418 instance=ExtResource("6_b1lr6")]
+position = Vector2(337, 245)
+
+[node name="tree2" parent="." unique_id=67925733 instance=ExtResource("7_dpnjv")]
+position = Vector2(418, 6)
+
+[node name="bush2" parent="." unique_id=699216350 instance=ExtResource("8_phbf4")]
+position = Vector2(320, 168)
+
+[node name="bush3" parent="." unique_id=329315217 instance=ExtResource("8_phbf4")]
+position = Vector2(685, 288)
+
+[node name="bush1" parent="." unique_id=1472767714 instance=ExtResource("9_escqf")]
+position = Vector2(443, 210)
+
+[node name="bush4" parent="." unique_id=372309271 instance=ExtResource("8_phbf4")]
+position = Vector2(612, 86)
+
+[node name="tree3" parent="." unique_id=1249549234 instance=ExtResource("6_b1lr6")]
+position = Vector2(734, -3)
+
+[node name="tree4" parent="." unique_id=68201110 instance=ExtResource("7_dpnjv")]
+position = Vector2(628, 353)
+
+[node name="tree5" parent="." unique_id=1705276582 instance=ExtResource("7_dpnjv")]
+position = Vector2(119, 110)
+
+[node name="tree6" parent="." unique_id=1876594857 instance=ExtResource("6_b1lr6")]
+position = Vector2(85, 448)
+
+[node name="tree7" parent="." unique_id=1571305002 instance=ExtResource("6_b1lr6")]
+position = Vector2(843, 278)
+
+[node name="tree8" parent="." unique_id=31748453 instance=ExtResource("7_dpnjv")]
+position = Vector2(957, 72)
+
+[node name="tree9" parent="." unique_id=2069418965 instance=ExtResource("7_dpnjv")]
+position = Vector2(429, 471)
+
+[node name="tree10" parent="." unique_id=798451169 instance=ExtResource("7_dpnjv")]
+position = Vector2(964, 464)
+
+[node name="bush5" parent="." unique_id=1967390755 instance=ExtResource("8_phbf4")]
+position = Vector2(60, 30)
+
+[node name="bush6" parent="." unique_id=1913385698 instance=ExtResource("8_phbf4")]
+position = Vector2(209, 336)
+
+[node name="bush7" parent="." unique_id=813690122 instance=ExtResource("8_phbf4")]
+position = Vector2(824, 180)
+
+[node name="bush8" parent="." unique_id=1165063716 instance=ExtResource("8_phbf4")]
+position = Vector2(792, 538)
+
+[node name="bush9" parent="." unique_id=608296403 instance=ExtResource("8_phbf4")]
+position = Vector2(505, 409)
+
+[node name="bush10" parent="." unique_id=1099516769 instance=ExtResource("8_phbf4")]
+position = Vector2(39, 287)

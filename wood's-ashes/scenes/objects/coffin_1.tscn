@@ -403,10 +403,12 @@ sources/0 = SubResource("TileSetAtlasSource_py6fv")
 size = Vector2(32, 44)
 
 [node name="coffin1" type="TileMapLayer" unique_id=1376293668]
+z_index = 1
 tile_map_data = PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 18, 0, 9, 0, 0, 0)
 tile_set = SubResource("TileSet_m02gy")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1050234199]
+z_index = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1524058335]
 position = Vector2(24, 48)
