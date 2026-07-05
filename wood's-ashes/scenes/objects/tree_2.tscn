@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dbmsoscag0xth"]
 
+[ext_resource type="Script" uid="uid://bysrtobj00001" path="res://scripts/ysort_object.gd" id="2_ysort"]
 [ext_resource type="Texture2D" uid="uid://dh61j6ho8kiii" path="res://assets/ruins/Extra/TX Plant with Shadow.png" id="1_iekdm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iekdm"]
@@ -248,6 +249,8 @@ size = Vector2(10, 34)
 radius = 22.0
 
 [node name="tree2" type="TileMapLayer" unique_id=67925733]
+script = ExtResource("2_ysort")
+sort_y_offset = 118.0
 z_index = 1
 tile_map_data = PackedByteArray(0, 0, 3, 0, 4, 0, 0, 0, 18, 0, 1, 0, 0, 0)
 tile_set = SubResource("TileSet_m02gy")

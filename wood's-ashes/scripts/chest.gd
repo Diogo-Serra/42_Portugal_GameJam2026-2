@@ -8,6 +8,8 @@ var player_in_range: bool = false
 var is_open: bool = false
 
 func _ready() -> void:
+	z_as_relative = false
+	z_index = int(global_position.y) + 38
 	prompt_label.visible = false
 	sprite.frame = 0
 	$InteractionArea.body_entered.connect(_on_body_entered)
@@ -36,6 +38,7 @@ func open_chest() -> void:
 	get_tree().root.add_child(popup)
 	popup.life_chosen.connect(_on_life_chosen)
 	popup.damage_chosen.connect(_on_damage_chosen)
+	popup.rare_chosen.connect(_on_rare_chosen)
 
 func _on_life_chosen() -> void:
 	var player = get_tree().get_first_node_in_group("player")
@@ -48,3 +51,9 @@ func _on_damage_chosen() -> void:
 	if player:
 		player.upgrade_attack_damage(5)  # increases attack damage by 5
 	print("Player chose Damage!")
+
+func _on_rare_chosen() -> void:
+	var player = get_tree().get_first_node_in_group("player")
+	if player:
+		player.upgrade_speed(10)
+	print("Player got the RARE reward!")

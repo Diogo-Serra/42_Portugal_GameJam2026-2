@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://defa7yqiuqicf"]
 
+[ext_resource type="Script" uid="uid://bysrtobj00001" path="res://scripts/ysort_object.gd" id="2_ysort"]
 [ext_resource type="Texture2D" uid="uid://bvkogtg13vmts" path="res://assets/ruins/Extra/TX Props with Shadow.png" id="1_bnhxv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_py6fv"]
@@ -403,6 +404,8 @@ sources/0 = SubResource("TileSetAtlasSource_py6fv")
 size = Vector2(32, 44)
 
 [node name="coffin1" type="TileMapLayer" unique_id=1376293668]
+script = ExtResource("2_ysort")
+sort_y_offset = 48.0
 z_index = 1
 tile_map_data = PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 18, 0, 9, 0, 0, 0)
 tile_set = SubResource("TileSet_m02gy")

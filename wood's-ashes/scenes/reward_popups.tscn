@@ -47,6 +47,23 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_mhg5p")
 theme_override_styles/hover = SubResource("StyleBoxTexture_bgxkr")
 text = "⚔️ Damage"
 
+[node name="RareButton" type="Button" parent="Panel" unique_id=1130525091]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 126.0
+offset_right = 274.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0.69919544, 2.0816549e-06, 6.738305e-07, 1)
+theme_override_colors/font_pressed_color = Color(0.69803923, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.69803923, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.69803923, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o0wkl")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_r3ed2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mhg5p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bgxkr")
+text = "✨Speed✨"
+
 [node name="LifeButton" type="Button" parent="Panel" unique_id=2104521906]
 layout_mode = 0
 offset_left = -54.0
@@ -84,9 +101,8 @@ texture = ExtResource("3_o0wkl")
 
 [node name="DescriptionLabel" type="Label" parent="Panel" unique_id=402865859]
 layout_mode = 0
-offset_left = -3.0
-offset_top = 144.0
-offset_right = 37.0
-offset_bottom = 173.0
+offset_left = -40.0
+offset_top = 198.0
+offset_bottom = 227.0
 theme_override_fonts/font = ExtResource("2_o0wkl")
 theme_override_font_sizes/font_size = 30
