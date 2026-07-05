@@ -290,7 +290,7 @@ func _on_player_died() -> void:
 
 
 func receive_stats_from_player(
-	old_health: int,
+	_old_health: int,
 	old_max_health: int,
 	old_attack_damage: int,
 	old_speed: float, 

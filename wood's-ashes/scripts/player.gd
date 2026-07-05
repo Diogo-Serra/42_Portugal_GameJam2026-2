@@ -390,7 +390,6 @@ func transform_to_demon():
 
 	has_transformed = true
 
-	var DemonScene = load("res://scenes/characters/demon.tscn")
 	var demon = DemonScene.instantiate()
 	var parent = get_parent()
 
