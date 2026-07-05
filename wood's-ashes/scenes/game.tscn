@@ -4,14 +4,16 @@
 [ext_resource type="PackedScene" uid="uid://dty7gb66ou1km" path="res://scenes/characters/player.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cxxchmvg341vm" path="res://scenes/characters/EnemySpawner.tscn" id="3_p57ef"]
 [ext_resource type="FontFile" uid="uid://cxna5wwgu0upf" path="res://assets/Fonts/Star Crush.otf" id="5_iywne"]
+[ext_resource type="FontFile" uid="uid://cxna5wwgu0upf" path="res://assets/Fonts/Star Crush.otf" id="5_iywne"]
 
 [node name="Game" type="Node2D" unique_id=1747429142]
 
 [node name="1layer_map" parent="." unique_id=102117543 instance=ExtResource("1_yqjtg")]
 
 [node name="Player" parent="." unique_id=953319153 instance=ExtResource("2_lnu2h")]
-position = Vector2(482, 276)
+position = Vector2(586, 341)
 
+[node name="EnemySpawner" parent="." unique_id=64854175 instance=ExtResource("3_p57ef")]
 [node name="EnemySpawner" parent="." unique_id=64854175 instance=ExtResource("3_p57ef")]
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=298031936]
