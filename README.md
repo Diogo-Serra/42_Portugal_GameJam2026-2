@@ -14,6 +14,12 @@
 - [pbongiov](https://github.com/PedroLouzada)
 - [psilva-p](https://github.com/Retr02k)
 
+## Final Standings
+
+#5 Place - Wood's Ashes
+
+![Final results](resources/final.png)
+
 ## Rules
 
 - Teams of 1-4 members
